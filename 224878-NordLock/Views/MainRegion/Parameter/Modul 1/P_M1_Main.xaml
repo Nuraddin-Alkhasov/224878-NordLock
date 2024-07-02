@@ -1,0 +1,38 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M1_Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource MainViewBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="4">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@HandMenu.Text1" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+            </Border>
+        </Grid>
+        <vw:NavigationButton Grid.ColumnSpan="4" Grid.Row="1" Background="Transparent" BorderThickness="0" RegionName="MainRegion" ViewName="Parameter_Main"/>
+
+        <vw:NavigationButton Grid.Column="0" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text5"  SymbolMargin="0,0,0,5"  Grid.Row="1" RegionName="MainRegion" ViewName="P_M1_LD" />
+        <vw:NavigationButton Grid.Column="1" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text6"  SymbolMargin="0,0,0,10"  Grid.Row="1" RegionName="MainRegion" ViewName="P_M1_HC"/>
+        <vw:NavigationButton Grid.Column="2" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text7"  SymbolMargin="0,0,0,10"  Grid.Row="1" RegionName="MainRegion" ViewName="P_M1_DC"/>
+        <vw:NavigationButton Grid.Column="3" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text8"  SymbolMargin="0,0,0,5"  Grid.Row="1" RegionName="MainRegion" ViewName="P_M1_KBD"/>
+        <vw:Switch Margin="0,0,20,20" Width="200" Height="60" HorizontalAlignment="Right" LocalizableTextOn="@Buttons.Text19" LocalizableTextOff="@Buttons.Text17" Style="{DynamicResource S_Status}" LocalizableLabelText="@Parameter.Text48" VerticalAlignment="Bottom" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.01 Main.DB LD HMI.PC.General.Maschinen Lampe EIn" Grid.Column="3" Grid.RowSpan="2" AuthorizationRight="Lighting" />
+    </Grid>
+</vw:View>

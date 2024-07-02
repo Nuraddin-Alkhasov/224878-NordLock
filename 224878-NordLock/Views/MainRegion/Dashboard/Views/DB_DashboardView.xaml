@@ -1,0 +1,15 @@
+﻿<vw:View x:Class="HMI.Dashboard.DB_DashboardView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+    DataContext="{vw:AdapterBinding DashboardAdapter}" Background="{DynamicResource MainViewBackgroundBrush}" Width="1840" Height="1000">
+    <Grid x:Name="LayoutRoot" >
+
+        <vw:Dashboard Margin="10" Name="dashboard" AddDashboardWidgetCommand="{Binding AddDashboardWidgetCommand}" IsInEditModeChanged="dashboard_IsInEditModeChanged" DashboardWidgetHostStyle="{DynamicResource DWH_DashBoard}" />
+
+
+        <vw:ToggleButton HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Width="160" Height="40" LocalizableTextOn="@Buttons.Text25" LocalizableTextOff="@Buttons.Text18" IsChecked="{Binding IsInEditMode, ElementName=dashboard}" Style="{DynamicResource TB_Dashboard}" AuthorizationRight="Dashboard" />
+
+    </Grid>
+
+</vw:View>

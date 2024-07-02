@@ -1,0 +1,22 @@
+﻿<vw:View  x:Class="HMI.Dashboard.DB_Widget_Prod"
+          xmlns:vw="http://inosoft.com/visiwin7"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+          Width="585" Height="470" Background="Transparent">
+    <Grid  >
+        <Border CornerRadius="5" Background="{DynamicResource FP_Dark}"/>
+        <vw:TextBlock Grid.Row="0" TextAlignment="Left" Padding="10, 6, 0, 0" Height="35" VerticalAlignment="Top" Foreground="White" FontSize="18" LocalizableText="@Dashboard.Text15"  />
+        
+        <lvc:PieChart x:Name="pieeee" Height="420" LegendLocation="None" VerticalAlignment="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" Margin="10">
+            
+            <lvc:PieChart.Series>
+                <lvc:PieSeries x:Name="notToday" Values="20" FontSize="18" DataLabels="True" Fill="{DynamicResource FP_Blue}" LabelPoint="{Binding PointLabel}"/>
+                <lvc:PieSeries x:Name="Today" Values="20"  FontSize="18" DataLabels="True" Fill="{DynamicResource FP_Yellow}" LabelPoint="{Binding PointLabel}"/>
+              
+            </lvc:PieChart.Series>
+        </lvc:PieChart>
+        <vw:TextBlock Grid.Row="0" TextAlignment="Right" Padding="10, 6, 0, 0" Height="35" VerticalAlignment="Top" Foreground="White" FontSize="20"  LocalizableText="@Units.kg" Margin="520,425,10,0" FontWeight="Bold"  />
+
+    </Grid>
+</vw:View>

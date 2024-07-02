@@ -1,0 +1,83 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M4_Mani_FinePos_P"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7"
+VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid x:Name="A" Margin="10" Opacity="0" Loaded="A_Loaded">
+        <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text1">
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <StackPanel>
+                    <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text167" >
+                        <StackPanel Margin="5" Width="200">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text192" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,0].Fahr" RawLimitMin="-100" RawLimitMax="100" />
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text193" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,0].Hub" RawLimitMin="-100" RawLimitMax="100"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text194" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,0].Drehen" RawLimitMin="-10" RawLimitMax="10"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text195" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,0].Arm" RawLimitMin="-100" RawLimitMax="100"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,5,0,0" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text168" >
+                        <StackPanel Margin="5" Width="200">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text192" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,1].Fahr" RawLimitMin="-100" RawLimitMax="100" />
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text193" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,1].Hub" RawLimitMin="-100" RawLimitMax="100"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text194" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,1].Drehen" RawLimitMin="-10" RawLimitMax="10"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text195" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,1].Arm" RawLimitMin="-100" RawLimitMax="100"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,5,0,0" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text169" >
+                        <StackPanel Margin="5" Width="200">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text192" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,2].Fahr" RawLimitMin="-100" RawLimitMax="100" />
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text193" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,2].Hub" RawLimitMin="-100" RawLimitMax="100"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text194" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,2].Drehen" RawLimitMin="-10" RawLimitMax="10"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text195" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,2].Arm" RawLimitMin="-100" RawLimitMax="100"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+
+
+                </StackPanel>
+                <StackPanel Margin="10,0,0,0">
+                    <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text170" >
+                        <StackPanel Margin="5" Width="200">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text192" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,3].Fahr" RawLimitMin="-100" RawLimitMax="100" />
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text193" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,3].Hub" RawLimitMin="-100" RawLimitMax="100"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text194" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,3].Drehen" RawLimitMin="-10" RawLimitMax="10"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text195" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,3].Arm" RawLimitMin="-100" RawLimitMax="100"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,5,0,0"  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text171" >
+                        <StackPanel Margin="5" Width="200">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text192" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,4].Fahr" RawLimitMin="-100" RawLimitMax="100" />
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text193" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,4].Hub" RawLimitMin="-100" RawLimitMax="100"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text194" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,4].Drehen" RawLimitMin="-10" RawLimitMax="10"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text195" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,4].Arm" RawLimitMin="-100" RawLimitMax="100"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,5,0,0" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text172" >
+                        <StackPanel Margin="5" Width="200">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text192" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,5].Fahr" RawLimitMin="-100" RawLimitMax="100" />
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text193" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,5].Hub" RawLimitMin="-100" RawLimitMax="100"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text194" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,5].Drehen" RawLimitMin="-10" RawLimitMax="10"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text195" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,5].Arm" RawLimitMin="-100" RawLimitMax="100"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+
+
+                </StackPanel>
+
+                <StackPanel Margin="10,0,0,0">
+                    <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text173" >
+                        <StackPanel Margin="5" Width="200">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text192" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,6].Fahr" RawLimitMin="-100" RawLimitMax="100" />
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text193" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,6].Hub" RawLimitMin="-100" RawLimitMax="100"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text194" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,6].Drehen" RawLimitMin="-10" RawLimitMax="10"/>
+                            <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text195" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0.000" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.Handshake.Data[0,6].Arm" RawLimitMin="-100" RawLimitMax="100"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                </StackPanel>
+
+            </StackPanel>
+        </vw:GroupBox>
+    </Grid>
+
+
+
+</vw:View>

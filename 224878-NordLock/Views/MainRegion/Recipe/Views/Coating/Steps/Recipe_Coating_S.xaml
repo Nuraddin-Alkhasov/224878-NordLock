@@ -1,0 +1,18 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Coating_S"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+
+    <vw:GroupBox  x:Name="A" Opacity="0"  Style="{DynamicResource GB_Group}" Margin="10" IsVisibleChanged="A_IsVisibleChanged" >
+        <StackPanel Margin="10">
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="Recipe.CoatingStep.Schleudern.Rotor Drehzahl 1" LocalizableLabelText="@RecipeSystem.Text20" LocalizableUnitText="@Units.Rpm" AuthorizationRight="CoatingProgramm" RawLimitMax="230" RawLimitMin="0" FormatString="{}0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="Recipe.CoatingStep.Schleudern.Rotor Drehzeit 1" LocalizableLabelText="@RecipeSystem.Text21" LocalizableUnitText="@Units.s" AuthorizationRight="CoatingProgramm" RawLimitMax="59" RawLimitMin="0"  FormatString="{}0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="Recipe.CoatingStep.Schleudern.Rotor Drehzahl 2" LocalizableLabelText="@RecipeSystem.Text20" LocalizableUnitText="@Units.Rpm" AuthorizationRight="CoatingProgramm" RawLimitMax="230" RawLimitMin="0" FormatString="{}0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="Recipe.CoatingStep.Schleudern.Planet Drehzeit 2" LocalizableLabelText="@RecipeSystem.Text22" LocalizableUnitText="@Units.s" AuthorizationRight="CoatingProgramm" RawLimitMax="59" RawLimitMin="0" FormatString="{}0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="Recipe.CoatingStep.Schleudern.Planet Drehzahl 2" LocalizableLabelText="@RecipeSystem.Text23" LocalizableUnitText="@Units.Rpm" AuthorizationRight="CoatingProgramm" RawLimitMax="0" RawLimitMin="-3" FormatString="{}0.0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="Recipe.CoatingStep.Schleudern.Rotor Drehzahl 3" LocalizableLabelText="@RecipeSystem.Text20" LocalizableUnitText="@Units.Rpm" AuthorizationRight="CoatingProgramm" RawLimitMax="230" RawLimitMin="0" FormatString="{}0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="Recipe.CoatingStep.Schleudern.Rotor Drehzeit 3" LocalizableLabelText="@RecipeSystem.Text21" LocalizableUnitText="@Units.s" AuthorizationRight="CoatingProgramm" RawLimitMax="59" RawLimitMin="0" FormatString="{}0"/>
+        </StackPanel>
+    </vw:GroupBox>
+</vw:View>

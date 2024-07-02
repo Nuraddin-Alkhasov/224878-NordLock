@@ -1,0 +1,29 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <DataTemplate x:Key="MBAsterixIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_asterix_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBErrorIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_error_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBExclamationIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_exclamation_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBHandIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_hand_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBInformationIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_information_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBQuestionIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_question_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBStopIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_stop_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+    <DataTemplate x:Key="MBWarningIcon">
+        <Image Source="/Resources/Images/MessageBox/mb_warning_48x48.png" Stretch="Fill" Height="48" Width="48" />
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="HMI.UserControls.Recipe_Template"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        MinWidth="10" MinHeight="10" Background="Transparent" Margin="0,0,10,10" >
+
+    <vw:RadioButton x:Name="A" Style="{DynamicResource RB_Group}" SymbolMargin="20,0,0,0" GroupName="G_CoatingSteps" Opacity="0" Loaded="UserControl_Loaded">
+        <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Right">
+            <StackPanel Margin="0,0,10,0">
+                <vw:TextVarOut x:Name="_name"  Width="550" Height="40" Style="{DynamicResource TVO_Main}" LocalizableLabelText="@RecipeSystem.Text27" TextLengthMin="1" />
+                <vw:TextVarOut x:Name="_descr" Height="40" Style="{DynamicResource TVO_Main}" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text28" TextLengthMin="1" />
+            </StackPanel>
+            <vw:Button x:Name="_del" Width="90" Height="90" Style="{DynamicResource B_Red}" LocalizableText="@Buttons.Text9" />
+        </StackPanel>
+    </vw:RadioButton>
+</UserControl>

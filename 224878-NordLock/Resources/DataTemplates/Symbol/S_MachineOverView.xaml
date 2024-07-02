@@ -1,0 +1,184 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <DataTemplate x:Key="Layer00">
+        <Image Source="/Resources/Images/MachineOverview/Layer00.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="Dryer">
+        <Image Source="/Resources/Images/MachineOverview/Dryer.png" Stretch="Fill" Width="1305" Height="257" />
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="HNT">
+        <Image Source="/Resources/Images/MachineOverview/HNT.png" Stretch="Fill" Width="88" Height="120" />
+    </DataTemplate>
+    <DataTemplate x:Key="HVT">
+        <Image Source="/Resources/Images/MachineOverview/HVT.png" Stretch="Fill" Width="71" Height="122" />
+    </DataTemplate>
+    <DataTemplate x:Key="Rail">
+        <Image Source="/Resources/Images/MachineOverview/Rail.png" Stretch="Fill" Width="65" Height="251" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="KZ">
+        <Image Source="/Resources/Images/MachineOverview/KZ.png" Stretch="Fill" Width="411" Height="217" />
+    </DataTemplate>
+    <DataTemplate x:Key="KZDoorOpen">
+        <Image Source="/Resources/Images/MachineOverview/KZDoorOpen.png" Stretch="Fill" Width="93" Height="84" />
+    </DataTemplate>
+    <DataTemplate x:Key="KZDoorClosed">
+        <Image Source="/Resources/Images/MachineOverview/KZDoorClosed.png" Stretch="Fill" Width="93" Height="84" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="Shelves">
+        <Image Source="/Resources/Images/MachineOverview/Shelves.png" Stretch="Fill" Width="642" Height="121" />
+    </DataTemplate>
+    <DataTemplate x:Key="QSDoorOpen">
+        <Image Source="/Resources/Images/MachineOverview/QSDoorOpen.png" Stretch="Fill" Width="75" Height="16" />
+    </DataTemplate>
+    <DataTemplate x:Key="QSDoorClosed">
+        <Image Source="/Resources/Images/MachineOverview/QSDoorClosed.png" Stretch="Fill" Width="75" Height="16" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="BBD">
+        <Image Source="/Resources/Images/MachineOverview/BBD.png" Stretch="Fill" Width="72" Height="43" />
+    </DataTemplate>
+    <DataTemplate x:Key="Box">
+        <Image Source="/Resources/Images/MachineOverview/Box.png" Stretch="Fill" Width="38" Height="42" />
+    </DataTemplate>
+  
+    <DataTemplate x:Key="OvenBelts">
+        <Image Source="/Resources/Images/MachineOverview/OvenBelts.png" Stretch="Fill" Width="107" Height="188" />
+    </DataTemplate>
+    <DataTemplate x:Key="CoatingCabine">
+        <Image Source="/Resources/Images/MachineOverview/CoatingCabine.png" Stretch="Fill" Width="219" Height="196" />
+    </DataTemplate>
+    <DataTemplate x:Key="CoatingDoorClosed">
+        <Image Source="/Resources/Images/MachineOverview/CoatingDoorClosed.png" Stretch="Fill" Width="107" Height="96"/>
+    </DataTemplate>
+    <DataTemplate x:Key="CoatingDoorOpen">
+        <Image Source="/Resources/Images/MachineOverview/CoatingDoorOpen.png" Stretch="Fill" Width="107" Height="96" />
+    </DataTemplate>
+    <DataTemplate x:Key="BC">
+        <Image Source="/Resources/Images/MachineOverview/BC.png" Stretch="Fill" Width="112" Height="188" />
+    </DataTemplate>
+    <DataTemplate x:Key="BCDoorClosed">
+        <Image Source="/Resources/Images/MachineOverview/BCDoorClosed.png" Stretch="Fill" Width="38" Height="124" />
+    </DataTemplate>
+    <DataTemplate x:Key="BCDoorOpen">
+        <Image Source="/Resources/Images/MachineOverview/BCDoorOpen.png" Stretch="Fill" Width="38" Height="124" />
+    </DataTemplate>
+    <DataTemplate x:Key="KR">
+        <Image Source="/Resources/Images/MachineOverview/KR.png" Stretch="Fill" Width="138" Height="199" />
+    </DataTemplate>
+    <DataTemplate x:Key="KBS">
+        <Image Source="/Resources/Images/MachineOverview/KBS.png" Stretch="Fill" Width="70" Height="37" />
+    </DataTemplate>
+    <DataTemplate x:Key="LD">
+        <Image Source="/Resources/Images/MachineOverview/LD.png" Stretch="Fill" Width="234" Height="220" />
+    </DataTemplate>
+    <DataTemplate x:Key="Template">
+        <Image Source="/Resources/Images/MachineOverview/Template.png" Stretch="Fill" Width="1840" Height="1000" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="M4Mani1">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4Mani1.png" Stretch="Fill" Width="235" Height="223" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4Mani2">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4Mani2.png" Stretch="Fill" Width="235" Height="223" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4Mani3">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4Mani3.png" Stretch="Fill" Width="235" Height="223" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4Mani4">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4Mani4.png" Stretch="Fill" Width="235" Height="223" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4Mani5">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4Mani5.png" Stretch="Fill" Width="235" Height="223" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4Mani6">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4Mani6.png" Stretch="Fill" Width="235" Height="223" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4Mani7">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4Mani7.png" Stretch="Fill" Width="235" Height="223" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4ManiFix">
+        <Image Source="/Resources/Images/MachineOverview/M4Mani/M4ManiFix.png" Stretch="Fill" Width="99" Height="34" />
+    </DataTemplate>
+    <DataTemplate x:Key="M4Rail">
+        <Image Source="/Resources/Images/MachineOverview/M4Rail.png" Stretch="Fill" Width="922" Height="126" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="M3Mani1">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani1.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+    <DataTemplate x:Key="M3Mani2">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani2.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+    <DataTemplate x:Key="M3Mani3">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani3.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+    <DataTemplate x:Key="M3Mani4">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani4.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+    <DataTemplate x:Key="M3Mani5">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani5.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+    <DataTemplate x:Key="M3Mani6">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani6.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+    <DataTemplate x:Key="M3Mani7">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani7.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+    <DataTemplate x:Key="M3Mani8">
+        <Image Source="/Resources/Images/MachineOverview/M3Mani/M3Mani8.png" Stretch="Fill" Width="268" Height="359" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="LiftandTilter">
+        <Image Source="/Resources/Images/MachineOverview/LiftandTilter1.png" Stretch="Fill" Width="1815" Height="990" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="StationLD">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SLD.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationKR">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SKR1.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationKRTray">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SKR2.png" Stretch="Fill" Width="387" Height="224" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationBC">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SBC.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationCC">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SCC.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="SBC_SD">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SBC_SD.png" Stretch="Fill" Width="288" Height="159" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="StationCCLTB">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SCCLTB.png" Stretch="Fill" Width="353" Height="236" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationOven">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SO.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationCZ">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SCZ.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationTB">
+        <Image Source="/Resources/Images/MachineOverview/Stations/STB.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationQS">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SQS.png" Stretch="Fill" Width="1840" Height="890" />
+    </DataTemplate>
+    <DataTemplate x:Key="SQS_Door">
+        <Image Source="/Resources/Images/MachineOverview/Stations/SQS_Door.png" Stretch="Fill" Width="241" Height="135" />
+    </DataTemplate>
+    
+
+    <DataTemplate x:Key="Motor">
+        <Image Source="/Resources/Images/MachineOverview/Motor.png" Stretch="Fill" Width="54" Height="35" />
+    </DataTemplate>
+</ResourceDictionary>

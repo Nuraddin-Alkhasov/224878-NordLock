@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="HMI.UserControls.MV_Dryer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" xmlns:UC="clr-namespace:HMI.UserControls">
+    <Grid x:Name="A" Opacity="0" Loaded="UserControl_Loaded">
+        <vw:PictureBox SymbolResourceKey="Dryer" Width="1305" Height="357"  Margin="3" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <UC:MVTrayVertical x:Name="Tray1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1243,96,0,0"
+                           IsTray="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Ofen.Tablett[47].Status.Tablett.Belegt"
+                           IsDischarge="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Ofen.Tablett[47].Status.Tablett.Function.Discharge"
+                           IsMaterial="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Ofen.Tablett[47].Status.Charge.Material vorhanden"
+                           ActualCoatingLayer="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Ofen.Tablett[47].Status.Charge.Beschichtungen.Ist"
+                           SetCoatingLayer="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Ofen.Tablett[47].Status.Charge.Beschichtungen.Soll" 
+                           Module="4" M4_Station="3" OvenTray="47" Header="@Status.Text86" Type="Tray" />
+
+        <Border  Height="60" Width="115" CornerRadius="4" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1050,76,0,0" BorderBrush="Black" BorderThickness="1" Background="{DynamicResource FP_Blue_Gradient}">
+            <Grid >
+                <vw:NumericVarOut x:Name="OUmluft" Style="{DynamicResource NVO_Main}" Height="30"  Background="{DynamicResource FP_LightGreen_Gradient}" Foreground="White" LocalizableUnitText="@Units.Rpm" Margin="2,0,2,2" Value="2500" TextAlignment="Center" VerticalAlignment="Bottom" FormatString="{}0"/>
+                <vw:TextBlock LocalizableText="@MainView.Text50" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Margin="0,2,0,0"/>
+            </Grid>
+        </Border>
+        <Border  Height="60" Width="115" CornerRadius="4" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="274,69,0,0" BorderBrush="Black" BorderThickness="1" Background="{DynamicResource FP_Blue_Gradient}">
+            <Grid >
+                <vw:NumericVarOut x:Name="PHZUmluft" Style="{DynamicResource NVO_Main}" Height="30"  Background="{DynamicResource FP_LightGreen_Gradient}" Foreground="White" LocalizableUnitText="@Units.Rpm" Margin="2,0,2,2" Value="2500" TextAlignment="Center" VerticalAlignment="Bottom" FormatString="{}0"/>
+                <vw:TextBlock LocalizableText="@MainView.Text50" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Margin="0,2,0,0"/>
+            </Grid>
+        </Border>
+        <Border x:Name="B_PHZTemp" Height="60" Width="90" CornerRadius="4" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="26,83,0,0" BorderBrush="Black" BorderThickness="1" Background="{DynamicResource FP_Green_Gradient}">
+            <Grid>
+                <vw:NumericVarOut x:Name="PHZTemp" Style="{DynamicResource NVO_Main}" Width="84" Height="30" HorizontalAlignment="Left"  Background="{DynamicResource FP_LightGreen_Gradient}" Foreground="White" LocalizableUnitText="@Units.C" Margin="2,0,0,2" Value="500" TextAlignment="Center" VerticalAlignment="Bottom" FormatString="{}0"/>
+                <vw:TextBlock LocalizableText="@Parameter.Text129" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Margin="0,2,0,0"/>
+            </Grid>
+        </Border>
+        <Border x:Name="B_OTemp" Height="60" Width="90" CornerRadius="4" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="650,90,0,0" BorderBrush="Black" BorderThickness="1" Background="{DynamicResource FP_Green_Gradient}">
+            <Grid>
+                <vw:NumericVarOut x:Name="OTemp" Style="{DynamicResource NVO_Main}" Width="84" Height="30" HorizontalAlignment="Left"  Background="{DynamicResource FP_LightGreen_Gradient}" Foreground="White" LocalizableUnitText="@Units.C" Margin="2,0,0,2" Value="500" TextAlignment="Center" VerticalAlignment="Bottom" FormatString="{}0"/>
+                <vw:TextBlock LocalizableText="@Parameter.Text129" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Margin="0,2,0,0"/>
+            </Grid>
+        </Border>
+        <vw:Button x:Name="vh" Height="80" Width="140" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text78" IsEnabled="False" Opacity="1" BlinkBrush="{DynamicResource FP_Yellow_Gradient}" Margin="0,-50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <vw:Button x:Name="phzNL" Height="80" Width="100" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text49" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_Yellow_Gradient}" Margin="277,-50,934,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <vw:Button x:Name="phzPT" Height="80" Width="100" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text79" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_Blue_Gradient}" Margin="16,-50,1195,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <vw:Button x:Name="oNL" Height="80" Width="100" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text49" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_Yellow_Gradient}" Margin="1120,-50,91,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <vw:Button x:Name="oPT" Height="80" Width="100" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text79" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_Blue_Gradient}" Margin="950,-50,261,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <vw:Button x:Name="emptym" Height="80" Width="100" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text68" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_Yellow_Gradient}" Margin="535,67,676,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <vw:Button x:Name="emptya" Height="80" Width="100" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text69" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_Yellow_Gradient}" Margin="535,67,676,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <vw:Button x:Name="takt" Height="80" Width="100" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text67" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_LightGreen}" Margin="420,67,791,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        
+        <StackPanel Orientation="Horizontal" Margin="735,177,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <vw:NumericVarOut x:Name="Tmin" Style="{DynamicResource NVO_Main}" Width="100" Height="40" LocalizableUnitText="@Units.m" />
+            <vw:NumericVarOut x:Name="Tsec" Style="{DynamicResource NVO_Main}" Width="100" Height="40" Margin="10,0,0,0" LocalizableUnitText="@Units.s" />
+        </StackPanel>
+        <vw:GroupBox Style="{DynamicResource GB_Group_ns}" HorizontalAlignment="Left" VerticalAlignment="Top" LocalizableHeaderText="@MainView.Text81" Margin="747,11,0,0" Visibility="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Auto Leerfahren Status, Converter={StaticResource BoolToVisibility_1_1}}">
+            <StackPanel Orientation="Horizontal" Margin="5,10,5,10">
+                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="76" Height="40" LocalizableUnitText="@Units.m" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Auto leerfahren Countdown.Minute"/>
+                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="87" Height="40" Margin="10,0,0,0" LocalizableUnitText="@Units.s" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Auto leerfahren Countdown.Second"/>
+            </StackPanel>
+        </vw:GroupBox>
+        <vw:Button Click="Button_Click_3"  Style="{DynamicResource B_Station}" HorizontalAlignment="Left" Width="1246" Margin="0,0,0,98" />
+
+
+    </Grid>
+
+</UserControl>

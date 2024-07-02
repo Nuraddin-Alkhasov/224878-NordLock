@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="HMI.UserControls.MV_KR"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" xmlns:UC="clr-namespace:HMI.UserControls">
+    <Grid x:Name="A" Opacity="0" Loaded="UserControl_Loaded">
+        <vw:PictureBox SymbolResourceKey="KR" Width="138" Height="199" Margin="3" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <vw:Button Click="Button_Click_1"  Style="{DynamicResource B_Station}" />
+
+
+    </Grid>
+
+</UserControl>

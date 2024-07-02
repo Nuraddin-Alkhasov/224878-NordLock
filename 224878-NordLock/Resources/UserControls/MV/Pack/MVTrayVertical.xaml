@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="HMI.UserControls.MVTrayVertical"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7">
+    <Grid >
+        <Grid x:Name="A" Opacity="0">
+            <vw:PictureBox x:Name="tray" SymbolResourceKey="TrayVerticalNormal"  Width="30" Height="68" Margin="3">
+                <vw:PictureBox.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </vw:PictureBox.Effect>
+            </vw:PictureBox>
+            <Grid x:Name="ismaterial" Opacity="0">
+            <vw:Border x:Name="tl"  Background="White" Width="24" Height="24" BorderThickness="1" BorderBrush="Black" Margin="6,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <vw:Border x:Name="tr"  Background="White" Width="24" Height="24" BorderThickness="1" BorderBrush="Black" Margin="6,0,0,10" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+            <vw:NumericVarOut x:Name="aCL" BorderThickness="0" Background="Transparent" Width="24" TextAlignment="Center" Height="24" Margin="4,9,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <vw:NumericVarOut x:Name="sCL" BorderThickness="0" Background="Transparent" Width="24" TextAlignment="Center" Height="24" Margin="4,0,0,11" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </Grid>
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </StackPanel.Effect>
+                <Border x:Name="discharge" Visibility="Collapsed" Background="{DynamicResource FP_Yellow_Gradient}" Margin="0,0,1,0"  BorderThickness="1" BorderBrush="Black" CornerRadius="3" Width="15" Height="15" >
+                    <vw:TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="10" FontWeight="Bold" Foreground="{DynamicResource FP_Red}" LocalizableText="@MainView.Text84" />
+                </Border>
+                <Border x:Name="quality" Visibility="Collapsed" Background="{DynamicResource FP_Yellow_Gradient}"  BorderThickness="1" BorderBrush="Black" CornerRadius="3" Width="15" Height="15" >
+                    <vw:TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="10" FontWeight="Bold" Foreground="{DynamicResource FP_Blue}" LocalizableText="@MainView.Text85" />
+                </Border>
+            </StackPanel>
+        </Grid>
+        <vw:Button Click="Button_Click" Style="{DynamicResource B_Material}" />
+    </Grid>
+
+</UserControl>

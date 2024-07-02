@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/Button/Buttons.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/DashboardWidgetHost/DashboardWidgetHosts.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/DataGridRow/DataGridRows.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/GroupBox/GroupBoxes.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/GroupItem/GroupItems.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/ListBox/ListBoxes.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/ListBoxItem/ListBoxItems.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/NavigationRadioButton/NavigationRadioButtons.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/ProgressBar/ProgressBars.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/RadioButton/RadioButtons.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/Switch/Switches.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/TabItem/TabItems.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/TextVarIn/TextVarIns.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/TextVarOut/TextVarOuts.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/ToggleButton/ToggleButtons.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/ToolBar/ToolBars.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/TouchKeyboard/TouchKeyboards.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/UpDownNumericVarIn/UpDownNumericVarIns.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/TextBlock/TextBlocks.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/NumericVarIn/NumericVarIns.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/PasswordVarIn/PasswordVarIns.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/NumericVarOut/NumericVarOuts.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/DataGrid/DataGrids.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/ControlStyles/ScrollViewer/ScrollViewers.xaml" />
+        
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

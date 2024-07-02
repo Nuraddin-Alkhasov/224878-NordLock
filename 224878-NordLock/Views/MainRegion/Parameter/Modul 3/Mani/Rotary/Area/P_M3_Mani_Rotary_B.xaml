@@ -1,0 +1,69 @@
+﻿<vw:View 
+x:Class="HMI.Parameter.P_M3_Mani_Rotary_B"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
+    <Grid x:Name="A" Margin="10" Opacity="0" Loaded="A_Loaded">
+        <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text8">
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions >
+                <StackPanel Grid.Column="0">
+                    <vw:GroupBox Margin="0,0,0,0" Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text67">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korb befüllen.OG" RawLimitMax="280" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korb befüllen.UG" RawLimitMax="280"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,10,0,0"  Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text76">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbreinigung.OG" RawLimitMax="280" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbreinigung.UG" RawLimitMax="280"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,10,0,0"  Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text69">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Beschichten.OG" RawLimitMax="280" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Beschichten.UG" RawLimitMax="280"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,10,0,0"  Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text70">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Auskippstation.OG" RawLimitMax="280" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Auskippstation.UG" RawLimitMax="280"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                    <vw:GroupBox Margin="0,0,0,0"  Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text83">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbspeicher 1.OG" RawLimitMax="280" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbspeicher 1.UG" RawLimitMax="280"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,10,0,0"  Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text90">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbspeicher 2.OG" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbspeicher 2.UG"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,10,0,0"  Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text66">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbwechsel.OG" RawLimitMax="280" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Korbwechsel.UG" RawLimitMax="280"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                    <vw:GroupBox Margin="0,10,0,0"  Background="{DynamicResource FP_Yellow}" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text65">
+                        <StackPanel Margin="10">
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Rückführung.OG" RawLimitMax="280" />
+                            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Parameter.Bereiche.Rückführung.UG" RawLimitMax="280"/>
+                        </StackPanel>
+                    </vw:GroupBox>
+                </StackPanel>
+            </Grid>
+        </vw:GroupBox>
+        <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,50,0" FontSize="14" LocalizableLabelText="@Parameter.Text4" LocalizableUnitText="@Units.grad" Foreground="White" Background="{DynamicResource FP_LightGreen}" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Actual value.Aktuelle Position in °"/>
+    </Grid>
+</vw:View>

@@ -1,0 +1,29 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+
+    <Style x:Key="LBI_Diagnose" TargetType="DataGridRow">
+        <Setter Property="Height" Value="45"/>
+            <Style.Triggers >
+                <DataTrigger Binding="{Binding Group.Name}" Value="Warnings">
+                    <Setter Property="Background"  Value="{DynamicResource FP_Yellow}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Group.Name}" Value="Errors">
+                    <Setter Property="Background" Value="{DynamicResource FP_Red}" />
+                </DataTrigger>
+
+            <Trigger Property="IsMouseOver"  Value="true">
+                <Setter Property="Background" Value="{DynamicResource FP_Blue}"/>
+            </Trigger>
+           
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsSelected" Value="true" />
+                    <Condition Property="Selector.IsSelectionActive" Value="true" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" Value="{DynamicResource FP_Blue}"/>
+                </MultiTrigger>
+        </Style.Triggers>
+
+        </Style>
+</ResourceDictionary>

@@ -1,0 +1,53 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.MachineOverview.MO_DO_PStatus"
+	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	    xmlns:vw="http://inosoft.com/visiwin7" 
+	    Width="420" Height="290" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <vw:Button  Style="{DynamicResource B_Gray}" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="0,0,10,0"/>
+        <vw:TextBlock   TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0"/>
+        <vw:Button  Style="{DynamicResource B_Gray}" Width="30" Height="30"  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Margin="0,0,10,0"/>
+        <vw:TextBlock   TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="1" />
+        <vw:Button  Style="{DynamicResource B_Gray}" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Row="2"/>
+        <vw:TextBlock   TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="2" />
+        <vw:Button  Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3"/>
+        <vw:TextBlock Margin="0,0,60,0" TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="3" />
+        <vw:Button   Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="6"/>
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="5" />
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5"/>
+        <vw:TextBlock TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="6" />
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Margin="0,0,60,0" />
+
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4"/>
+
+        <vw:TextBlock TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="2" Grid.Column="1" />
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="1" Margin="0,0,60,0" Grid.Row="1" />
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1"/>
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="6" Grid.Column="1" />
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0,0,60,0" Grid.Row="4"  />
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center"  Margin="0,0,60,0" Grid.Row="3" Grid.Column="1"/>
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center"  Margin="0,0,60,0" Grid.Row="4" Grid.Column="1"/>
+        <vw:TextBlock  TextAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Center"  Margin="0,0,60,0" Grid.Row="5" Grid.Column="1"/>
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5"/>
+        <vw:Button  Text="" Style="{DynamicResource B_Gray}" Width="30" Height="30" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6"/>
+
+    </Grid>
+</vw:View>

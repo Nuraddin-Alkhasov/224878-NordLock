@@ -1,0 +1,241 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <Style x:Key="TVI_RecipeBrowser" TargetType="{x:Type vw:TextVarIn}">
+        <Setter Property="Background" Value="{DynamicResource InputBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource InputFontBrush}"/>
+        <Setter Property="BlinkBrush" Value="{DynamicResource InputBlinkBrush}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource InputBorderBrush}"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="3"/>
+        <Setter Property="LabelText" Value=""/>
+        <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="ValidationErrorTemplate" Value="{DynamicResource EmptyValidationTemplate}"/>
+        <Setter Property="SymbolHorizontalAlignment" Value="Right"/>
+        <Setter Property="SymbolMargin" Value="{DynamicResource LabelMargin}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="TextAlignment" Value="Right"/>
+        <Setter Property="WatermarkTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Foreground="#FF868686" FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" Margin="{Binding BorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" Padding="{Binding Padding, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" TextAlignment="{Binding TextAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" Text="{Binding WatermarkText, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vw:TextVarIn}">
+                    <Grid Focusable="False">
+                        <Grid x:Name="Grid" Margin="{DynamicResource LabelFeeder}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{DynamicResource LabelWidth}"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <vw:SymbolPresenter Grid.Column="0" Focusable="False" HorizontalAlignment="{TemplateBinding SymbolHorizontalAlignment}" IsHitTestVisible="False" Margin="{TemplateBinding SymbolMargin}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" SymbolResourceKey="{TemplateBinding SymbolResourceKey}" Symbol="{TemplateBinding Symbol}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{TemplateBinding SymbolVerticalAlignment}"/>
+                            <TextBlock Grid.Column="0" HorizontalAlignment="Right" IsHitTestVisible="False" Margin="{DynamicResource LabelMargin}" TextAlignment="Right" Text="{TemplateBinding LabelText}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="White"/>
+                            <Border x:Name="PART_HitArea" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1" CornerRadius="{TemplateBinding CornerRadius}">
+                                <Grid>
+                                    <ContentPresenter x:Name="WatermarkPresenter" ContentTemplate="{TemplateBinding WatermarkTemplate}" Margin="{TemplateBinding BorderThickness}" Visibility="Collapsed"/>
+                                    <TextBlock FontWeight="Normal" Focusable="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" TextAlignment="{TemplateBinding TextAlignment}" Text="{TemplateBinding Text}" KeyboardNavigation.TabIndex="{TemplateBinding TabIndex}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                        <TextBlock.FontSize>
+                                            <TemplateBinding Property="FontSize">
+                                                <TemplateBinding.Converter>
+                                                    <vw:InputOutputFontSizeConverter/>
+                                                </TemplateBinding.Converter>
+                                            </TemplateBinding>
+                                        </TextBlock.FontSize>
+                                    </TextBlock>
+                                    <Border x:Name="VerticalInputShadow" BorderBrush="{DynamicResource ShadowLightDoubleVerticalBrush}" BorderThickness="0,4" CornerRadius="{TemplateBinding CornerRadius}"/>
+                                    <Border x:Name="HorizontalInputShadow" BorderBrush="{DynamicResource ShadowDarkDoubleHorizontalBrush}" BorderThickness="4,0" CornerRadius="{TemplateBinding CornerRadius}"/>
+                                </Grid>
+                            </Border>
+                            <vw:SymbolPresenter x:Name="InputErrorSymbol" Grid.Column="1" Focusable="False" HorizontalAlignment="Right" Margin="0,-12,-8,0" Symbol="{DynamicResource InputErrorSymbol}" Visibility="Collapsed" VerticalAlignment="Top">
+                                <vw:SymbolPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <Image Height="24" Stretch="Fill" Width="24">
+                                            <Image.Source>
+                                                <BitmapImage UriSource="pack://application:,,,/VisiWin7.Styles.WPF;component/Images/input_error_24x24.png"/>
+                                            </Image.Source>
+                                        </Image>
+                                    </DataTemplate>
+                                </vw:SymbolPresenter.ContentTemplate>
+                            </vw:SymbolPresenter>
+                            <Border x:Name="ConnectionError" BorderBrush="{DynamicResource ConnectionErrorBorderBrush}" BorderThickness="1" Background="{DynamicResource ConnectionErrorBackgroundBrush}" Grid.Column="1" CornerRadius="5" Margin="-4" Visibility="Collapsed"/>
+                            <vw:SymbolPresenter x:Name="ConnectionErrorSymbol" Grid.Column="1" Focusable="False" HorizontalAlignment="Right" Margin="0,-17,-10,0" Symbol="{DynamicResource ConnectionErrorSymbol}" Visibility="Collapsed" VerticalAlignment="Top">
+                                <vw:SymbolPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <Image Height="24" Stretch="Fill" Width="24">
+                                            <Image.Source>
+                                                <BitmapImage UriSource="pack://application:,,,/VisiWin7.Styles.WPF;component/Images/connection_error_24x24.png"/>
+                                            </Image.Source>
+                                        </Image>
+                                    </DataTemplate>
+                                </vw:SymbolPresenter.ContentTemplate>
+                            </vw:SymbolPresenter>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="PART_HitArea" Value="0.3"/>
+                        </Trigger>
+                        <Trigger Property="IsQualityGood" Value="False">
+                            <Setter Property="Visibility" TargetName="ConnectionError" Value="Visible"/>
+                            <Setter Property="Visibility" TargetName="ConnectionErrorSymbol" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="AreAnyTouchesCapturedWithin" Value="True">
+                            <Setter Property="Visibility" TargetName="VerticalInputShadow" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="HorizontalInputShadow" Value="Collapsed"/>
+                            <Setter Property="Background" TargetName="PART_HitArea" Value="{DynamicResource InputSelectedBackgroundBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="PART_HitArea" Value="{DynamicResource InputSelectedFontBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseCaptureWithin" Value="True">
+                            <Setter Property="Visibility" TargetName="VerticalInputShadow" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="HorizontalInputShadow" Value="Collapsed"/>
+                            <Setter Property="Background" TargetName="PART_HitArea" Value="{DynamicResource InputSelectedBackgroundBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="PART_HitArea" Value="{DynamicResource InputSelectedFontBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsInputValid" Value="False">
+                            <Setter Property="Visibility" TargetName="VerticalInputShadow" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="HorizontalInputShadow" Value="Collapsed"/>
+                            <Setter Property="Background" TargetName="PART_HitArea" Value="{DynamicResource InputFailBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="PART_HitArea" Value="{DynamicResource InputSelectedFontBrush}"/>
+                            <Setter Property="Visibility" TargetName="InputErrorSymbol" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Visibility" TargetName="WatermarkPresenter" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Visibility" TargetName="WatermarkPresenter" Value="Visible"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="BlinkMode" Value="BlinkBrush"/>
+                                <Condition Property="BlinkState" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="PART_HitArea" Value="{Binding BlinkBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="BlinkMode" Value="Visibility"/>
+                                <Condition Property="BlinkState" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility" TargetName="PART_HitArea" Value="Hidden"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsInEditMode" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type vw:TextVarIn}">
+                            <Grid Focusable="False">
+                                <Grid x:Name="Grid" Margin="{DynamicResource LabelFeeder}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="{DynamicResource LabelWidth}"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <vw:SymbolPresenter Grid.Column="0" Focusable="False" HorizontalAlignment="{TemplateBinding SymbolHorizontalAlignment}" IsHitTestVisible="False" Margin="{TemplateBinding SymbolMargin}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" SymbolResourceKey="{TemplateBinding SymbolResourceKey}" Symbol="{TemplateBinding Symbol}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{TemplateBinding SymbolVerticalAlignment}"/>
+                                    <TextBlock Grid.Column="0" HorizontalAlignment="Right" IsHitTestVisible="False" Margin="{DynamicResource LabelMargin}" TextAlignment="Right" Text="{TemplateBinding LabelText}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    <Border x:Name="PART_HitArea" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="1" CornerRadius="{TemplateBinding CornerRadius}">
+                                        <Grid>
+                                            <ContentPresenter x:Name="WatermarkPresenter" ContentTemplate="{TemplateBinding WatermarkTemplate}" Margin="{TemplateBinding BorderThickness}" Visibility="Collapsed"/>
+                                            <TextBox x:Name="PART_TextBox" BorderThickness="0" Background="Transparent" FontWeight="Normal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" SelectionOpacity="0.3" Style="{DynamicResource VarInTextBoxStyle}" SelectionBrush="{DynamicResource InputSelectionBackgroundBrush}" TextAlignment="{TemplateBinding TextAlignment}" TabIndex="{TemplateBinding TabIndex}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                                <TextBox.FontSize>
+                                                    <TemplateBinding Property="FontSize">
+                                                        <TemplateBinding.Converter>
+                                                            <vw:InputOutputFontSizeConverter/>
+                                                        </TemplateBinding.Converter>
+                                                    </TemplateBinding>
+                                                </TextBox.FontSize>
+                                            </TextBox>
+                                            <Border x:Name="VerticalInputShadow" BorderBrush="{DynamicResource ShadowLightDoubleVerticalBrush}" BorderThickness="0,4" CornerRadius="{TemplateBinding CornerRadius}"/>
+                                            <Border x:Name="HorizontalInputShadow" BorderBrush="{DynamicResource ShadowDarkDoubleHorizontalBrush}" BorderThickness="4,0" CornerRadius="{TemplateBinding CornerRadius}"/>
+                                        </Grid>
+                                    </Border>
+                                    <vw:SymbolPresenter x:Name="InputErrorSymbol" Grid.Column="1" Focusable="False" HorizontalAlignment="Right" Margin="0,-12,-8,0" Symbol="{DynamicResource InputErrorSymbol}" Visibility="Collapsed" VerticalAlignment="Top">
+                                        <vw:SymbolPresenter.ContentTemplate>
+                                            <DataTemplate>
+                                                <Image Height="24" Stretch="Fill" Width="24">
+                                                    <Image.Source>
+                                                        <BitmapImage UriSource="pack://application:,,,/VisiWin7.Styles.WPF;component/Images/input_error_24x24.png"/>
+                                                    </Image.Source>
+                                                </Image>
+                                            </DataTemplate>
+                                        </vw:SymbolPresenter.ContentTemplate>
+                                    </vw:SymbolPresenter>
+                                    <Border x:Name="ConnectionError" BorderBrush="{DynamicResource ConnectionErrorBorderBrush}" BorderThickness="1" Background="{DynamicResource ConnectionErrorBackgroundBrush}" Grid.Column="1" CornerRadius="5" Margin="-4" Visibility="Collapsed"/>
+                                    <vw:SymbolPresenter x:Name="ConnectionErrorSymbol" Grid.Column="1" Focusable="False" HorizontalAlignment="Right" Margin="0,-17,-10,0" Symbol="{DynamicResource ConnectionErrorSymbol}" Visibility="Collapsed" VerticalAlignment="Top">
+                                        <vw:SymbolPresenter.ContentTemplate>
+                                            <DataTemplate>
+                                                <Image Height="24" Stretch="Fill" Width="24">
+                                                    <Image.Source>
+                                                        <BitmapImage UriSource="pack://application:,,,/VisiWin7.Styles.WPF;component/Images/connection_error_24x24.png"/>
+                                                    </Image.Source>
+                                                </Image>
+                                            </DataTemplate>
+                                        </vw:SymbolPresenter.ContentTemplate>
+                                    </vw:SymbolPresenter>
+                                </Grid>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" TargetName="PART_HitArea" Value="0.3"/>
+                                </Trigger>
+                                <Trigger Property="IsQualityGood" Value="False">
+                                    <Setter Property="Visibility" TargetName="ConnectionError" Value="Visible"/>
+                                    <Setter Property="Visibility" TargetName="ConnectionErrorSymbol" Value="Visible"/>
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                    <Setter Property="Visibility" TargetName="VerticalInputShadow" Value="Collapsed"/>
+                                    <Setter Property="Visibility" TargetName="HorizontalInputShadow" Value="Collapsed"/>
+                                    <Setter Property="Background" TargetName="PART_HitArea" Value="{DynamicResource InputSelectedBackgroundBrush}"/>
+                                    <Setter Property="Foreground" TargetName="PART_TextBox" Value="{DynamicResource InputSelectedFontBrush}"/>
+                                    <Setter Property="CaretBrush" TargetName="PART_TextBox" Value="{DynamicResource InputSelectedFontBrush}"/>
+                                </Trigger>
+                                <Trigger Property="IsInputValid" Value="False">
+                                    <Setter Property="Visibility" TargetName="VerticalInputShadow" Value="Collapsed"/>
+                                    <Setter Property="Visibility" TargetName="HorizontalInputShadow" Value="Collapsed"/>
+                                    <Setter Property="Background" TargetName="PART_HitArea" Value="{DynamicResource InputFailBrush}"/>
+                                    <Setter Property="Foreground" TargetName="PART_TextBox" Value="{DynamicResource InputSelectedFontBrush}"/>
+                                    <Setter Property="CaretBrush" TargetName="PART_TextBox" Value="{DynamicResource InputSelectedFontBrush}"/>
+                                    <Setter Property="Visibility" TargetName="InputErrorSymbol" Value="Visible"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="">
+                                    <Setter Property="Visibility" TargetName="WatermarkPresenter" Value="Visible"/>
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Visibility" TargetName="WatermarkPresenter" Value="Visible"/>
+                                </Trigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="BlinkMode" Value="BlinkBrush"/>
+                                        <Condition Property="BlinkState" Value="True"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Background" TargetName="PART_HitArea" Value="{Binding BlinkBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                </MultiTrigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="BlinkMode" Value="Visibility"/>
+                                        <Condition Property="BlinkState" Value="True"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="Visibility" TargetName="PART_HitArea" Value="Hidden"/>
+                                </MultiTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Padding" Value="8,0"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

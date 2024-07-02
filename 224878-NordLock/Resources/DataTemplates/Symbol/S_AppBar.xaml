@@ -1,0 +1,64 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <DataTemplate x:Key="appbar.dashboard">
+        <Image Source="/Resources/Images/Appbar/appbar.dashboard.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.diagnose">
+        <Image Source="/Resources/Images/Appbar/appbar.diagnose.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.handmenu">
+        <Image Source="/Resources/Images/Appbar/appbar.handmenu.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.home">
+        <Image Source="/Resources/Images/Appbar/appbar.home.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.languages">
+        <Image Source="/Resources/Images/Appbar/appbar.languages.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.parameters">
+        <Image Source="/Resources/Images/Appbar/appbar.parameters.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.protocol">
+        <Image Source="/Resources/Images/Appbar/appbar.protocol.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.recipe">
+        <Image Source="/Resources/Images/Appbar/appbar.recipe.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.settings">
+        <Image Source="/Resources/Images/Appbar/appbar.settings.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.turnoff">
+        <Image Source="/Resources/Images/Appbar/appbar.turnoff.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.user">
+        <Image Source="/Resources/Images/Appbar/appbar.user.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.usermanagement">
+        <Image Source="/Resources/Images/Appbar/appbar.usermanagement.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.log">
+        <Image Source="/Resources/Images/Appbar/appbar.log.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.BS">
+        <Image Source="/Resources/Images/Appbar/appbar.BS.png" Stretch="Fill" Width="35" Height="35" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="appbar.filter">
+        <Image Source="/Resources/Images/Appbar/appbar.filter.png" Stretch="Fill" Width="80" Height="72" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.filter2">
+        <Image Source="/Resources/Images/Appbar/appbar.filter2.png" Stretch="Fill" Width="80" Height="72" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="appbar.open">
+        <Image Source="/Resources/Images/Appbar/appbar.open.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.close">
+        <Image Source="/Resources/Images/Appbar/appbar.close.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+    <DataTemplate x:Key="appbar.close2">
+        <Image Source="/Resources/Images/Appbar/appbar.close2.png" Stretch="Fill" Width="50" Height="50" />
+    </DataTemplate>
+</ResourceDictionary>

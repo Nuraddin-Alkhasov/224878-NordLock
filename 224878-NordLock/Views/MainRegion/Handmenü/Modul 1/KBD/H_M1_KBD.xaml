@@ -1,0 +1,31 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M1_KBD"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid >
+        <Grid Width="1500" Height="330" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <vw:TextBlock Margin="0,60,0,0" LocalizableText="@HandMenu.Text8" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="700" Height="40" VerticalAlignment="Top" Margin="0,100,0,0" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.Actual value.Drehantrieb Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_KBD}, StateMode=Value}"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" LocalizableText="@Buttons.Text48" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.PC.Drehantrieb.Ein 0 Grad"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" LocalizableText="@Buttons.Text49" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.PC.Drehantrieb.Ein 180 Grad"/>
+
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center"  Style="{DynamicResource B_Red}" KeyMode="KeyMode" LocalizableText="@Buttons.Text23" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.PC.Drehantrieb.Aus" />
+            <GroupBox Header="{vw:LocalizedTextBinding LocalizableText=@HandMenu.Text25}" FontWeight="Bold" FontSize="16" Foreground="#FFFFFFFF" Height="160" Width="300" Margin="400,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <Grid>
+                    <vw:Key Width="100" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource B_Gray}" LocalizableText="@Buttons.Text50" KeyMode="KeyMode" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.PC.Waage Links.Zero" Margin="0,0,10,10" Text="" AuthorizationRight="Service"/>
+                    <vw:Key Width="100" Height="60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource B_Gray}" LocalizableText="@Buttons.Text51" KeyMode="KeyMode" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.PC.Waage Links.Tara" Margin="10,0,0,10" Text="" AuthorizationRight="Service"/>
+                    <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="14" LocalizableLabelText="@HandMenu.Text24" LocalizableUnitText="@Units.kg" FormatString="{}0.0" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.Actual value.Korb links Gewicht" Foreground="White" Background="{DynamicResource FP_LightGreen}" LabelText="" Margin="0,10,0,0"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="{vw:LocalizedTextBinding LocalizableText=@HandMenu.Text26}" FontWeight="Bold" FontSize="16" Foreground="#FFFFFFFF" Height="160" Width="300" Margin="800,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <Grid>
+                    <vw:Key Width="100" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource B_Gray}" LocalizableText="@Buttons.Text50" KeyMode="KeyMode" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.PC.Waage Rechts.Zero" Margin="0,0,10,10" Text="" AuthorizationRight="Service"/>
+                    <vw:Key Width="100" Height="60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{DynamicResource B_Gray}" LocalizableText="@Buttons.Text51" KeyMode="KeyMode" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.PC.Waage Rechts.Tara" Margin="10,0,0,10" Text="" AuthorizationRight="Service"/>
+                    <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="14" LocalizableLabelText="@HandMenu.Text24" LocalizableUnitText="@Units.kg" FormatString="0.0" VariableName="NL.PLC.Blocks.1 Modul 1.04 Basket filling station.DB KBD HMI.Actual value.Korb rechts Gewicht" Foreground="White" Background="{DynamicResource FP_LightGreen}" LabelText="" Margin="0,10,0,0"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+    </Grid>
+</vw:View>

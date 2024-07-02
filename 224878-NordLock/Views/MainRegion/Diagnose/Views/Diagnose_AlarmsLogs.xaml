@@ -1,0 +1,44 @@
+﻿<vw:View 
+    x:Class="HMI.Diagnose.Diagnose_AlarmsLogs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7" 
+    Width="1840" Height="890" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <vw:View.Resources>
+        <Style x:Key="RightAlignStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextAlignment" Value="Right" />
+        </Style>
+        <Style x:Key="CenterAlignStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextAlignment" Value="Center" />
+        </Style>
+    </vw:View.Resources>
+
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="HistoricalAlarmAdapter"/>
+    </vw:View.DataContext>
+
+    <Grid x:Name="LayoutRoot" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="38"/>
+        </Grid.RowDefinitions>
+        <Grid.Effect>
+            <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+        </Grid.Effect>
+        <Grid ClipToBounds="True">
+            <DataGrid ItemContainerStyle="{DynamicResource LBI_Diagnose}" BorderThickness="2" ItemsSource="{Binding HistoricalAlarms}" AutoGenerateColumns="False" IsReadOnly="True" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" PreviewTouchDown="PreviewTouchDown" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{vw:LocalizedText Text=@[ClientSystem].Components.AlarmList.ActivationTime}" Binding="{Binding ActivationTime, StringFormat=dd.MM.yyyy HH:mm:ss}" Width="180" Foreground="White" ElementStyle="{StaticResource CenterAlignStyle}"/>
+                    <DataGridTextColumn  Header="{vw:LocalizedText Text=@[ClientSystem].Components.AlarmList.Count}"  Width="60" Binding="{Binding Name}" Foreground="White" ElementStyle="{StaticResource RightAlignStyle}"/>
+                    <DataGridTextColumn  Header="{vw:LocalizedText Text=@[ClientSystem].Components.AlarmList.Text}"  Width="1343" Binding="{Binding Text}" Foreground="White" />
+                    <DataGridTextColumn  Header="{vw:LocalizedText Text=@[ClientSystem].Components.AlarmList.Group}"  Width="200" Binding="{Binding Group.Name}" Foreground="White" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <vw:NavigationButton x:Name="ButtonOpenMenu" Style="{DynamicResource B_Filter}" Height="72" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1740,760,0,0" Command="{Binding ShowRequestHistoricalAlarmsDialogCommand}" AuthorizationMode="Visibility" AuthorizationRight="Diagnose"/>
+
+        </Grid>
+        <ProgressBar Grid.Row="1" Margin="0,10,0,0" IsIndeterminate="{Binding IsRequestingHistoricalAlarms}" BorderThickness="3"/>
+        
+    </Grid>
+</vw:View>

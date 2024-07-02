@@ -1,0 +1,70 @@
+﻿<ResourceDictionary
+	                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:vw="http://inosoft.com/visiwin7">
+    <!-- Resource dictionary entries should be defined here. -->
+    <Style x:Key="RB_RecipeGroup" TargetType="{x:Type vw:RadioButton}">
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="CornerRadius" Value="4"/>
+        <Setter Property="Background" Value="{DynamicResource FP_Dark}"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BlinkBrush" Value="{DynamicResource FP_Blue}"/>
+        <Setter Property="SymbolVerticalAlignment" Value="Center"/>
+        <Setter Property="SymbolHorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vw:RadioButton}">
+                    <Grid >
+                        <Border x:Name="BtnShadow" Background="{TemplateBinding BorderBrush}" CornerRadius="{TemplateBinding CornerRadius}">
+                            <Border.Effect>
+                                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                            </Border.Effect>
+                        </Border>
+                        <Border x:Name="OuterBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}"/>
+                        <Grid Margin="2" SnapsToDevicePixels="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="43"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Border x:Name="HeaderBackground" Grid.Row="0" Background="{DynamicResource FP_Dark}" CornerRadius="2,2,0,0">
+                                <vw:TextBlock Margin="20,12,0,0" LocalizableText="{TemplateBinding LocalizableLabelText}" Foreground="{TemplateBinding Foreground}"/>
+                            </Border>
+                            <Border x:Name="BackgroundBorder" Grid.Row="1" Background="{TemplateBinding Background}" CornerRadius="0,0,2,2">
+                                <Grid  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
+                                    <vw:SymbolPresenter x:Name="SymbolPresenter"  HorizontalAlignment="{TemplateBinding SymbolHorizontalAlignment}" Margin="{TemplateBinding SymbolMargin}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" SymbolResourceKey="{TemplateBinding SymbolResourceKey}" Symbol="{TemplateBinding Symbol}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" VerticalAlignment="{TemplateBinding SymbolVerticalAlignment}">
+                                        <vw:SymbolPresenter.Effect>
+                                            <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                                        </vw:SymbolPresenter.Effect>
+                                    </vw:SymbolPresenter>
+                                    <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Grid.Row="1" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="1"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="HeaderBackground" Property="Background" Value="{DynamicResource FP_Yellow}"/>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{DynamicResource FP_Yellow}"/>
+                            <Setter TargetName="BtnShadow" Property="Visibility" Value="Hidden"/>
+                            <Setter Property="Background" Value="{DynamicResource FP_Yellow}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="BlinkMode" Value="BlinkBrush"/>
+                                <Condition Property="BlinkState" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="BackgroundBorder" Value="{Binding BlinkBrush, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

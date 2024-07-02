@@ -1,0 +1,51 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_LD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="800">
+
+    <vw:GroupBox x:Name="A" Opacity="0" Style="{DynamicResource GB_Group}" Margin="10" Loaded="View_Loaded" Unloaded="A_Unloaded">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Shakes number" LocalizableLabelText="@RecipeSystem.Text35" LocalizableUnitText="@Units.s" AuthorizationRight="Article" RawLimitMax="10" RawLimitMin="0" FormatString="{}0"/>
+            <vw:RadioButton x:Name="O1" Grid.Column="1" IsChecked="True" Style="{DynamicResource RB_Group}" Margin="10,10,0,0" LocalizableLabelText="@RecipeSystem.Text38" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[1].Wait" LocalizableUnitText="@Units.s" LocalizableLabelText="@RecipeSystem.Text43" AuthorizationRight="Article" RawLimitMax="59" RawLimitMin="0" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[1].Open" LocalizableUnitText="@Units.ms" LocalizableLabelText="@RecipeSystem.Text44" AuthorizationRight="Article" RawLimitMax="2000" RawLimitMin="0" FormatString="{}0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton x:Name="O2" Grid.Row="1" Style="{DynamicResource RB_Group}"  Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text39">
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[2].Wait" LocalizableUnitText="@Units.s" LocalizableLabelText="@RecipeSystem.Text43" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[2].Open" LocalizableUnitText="@Units.ms" LocalizableLabelText="@RecipeSystem.Text44" AuthorizationRight="Article" RawLimitMax="2000" FormatString="{}0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton x:Name="O3" Grid.Row="1" Grid.Column="1" Style="{DynamicResource RB_Group}" Margin="10,10,0,0" LocalizableLabelText="@RecipeSystem.Text40">
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[3].Wait" LocalizableUnitText="@Units.s" LocalizableLabelText="@RecipeSystem.Text43" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[3].Open" LocalizableUnitText="@Units.ms" LocalizableLabelText="@RecipeSystem.Text44" AuthorizationRight="Article" RawLimitMax="2000" FormatString="{}0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton x:Name="O4" Grid.Row="2" Style="{DynamicResource RB_Group}" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text41">
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[4].Wait" LocalizableUnitText="@Units.s" LocalizableLabelText="@RecipeSystem.Text43" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[4].Open" LocalizableUnitText="@Units.ms" LocalizableLabelText="@RecipeSystem.Text44" AuthorizationRight="Article" RawLimitMax="2000" FormatString="{}0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton x:Name="O5" Grid.Row="2" Grid.Column="1" Style="{DynamicResource RB_Group}"  Margin="10,10,0,0" LocalizableLabelText="@RecipeSystem.Text42" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[5].Wait" LocalizableUnitText="@Units.s" LocalizableLabelText="@RecipeSystem.Text43" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.LD.Lid[5].Open" LocalizableUnitText="@Units.ms" LocalizableLabelText="@RecipeSystem.Text44" AuthorizationRight="Article" RawLimitMax="2000" FormatString="{}0"/>
+                </StackPanel>
+            </vw:RadioButton>
+        </Grid>
+    </vw:GroupBox>
+</vw:View>

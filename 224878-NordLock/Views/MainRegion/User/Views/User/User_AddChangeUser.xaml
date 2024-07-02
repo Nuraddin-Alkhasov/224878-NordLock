@@ -1,0 +1,77 @@
+﻿<vw:View
+        x:Class="HMI.User.User_AddChangeUser"
+	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	    xmlns:vw="http://inosoft.com/visiwin7"
+	    Width="480" MinHeight="520" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="UserAdapter"/>
+    </vw:View.DataContext>
+      
+
+    <vw:View.Resources>
+        <vw:UserStateToTextConverter x:Key="UserStateToTextConverter" />
+    </vw:View.Resources>
+
+    <StackPanel x:Name="LayoutRoot" Margin="10" >
+        <vw:TextVarIn Style="{DynamicResource TVI_Main}" LostKeyboardFocusBehavior="WriteInput" Value="{Binding UserName, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" IsEnabled="{Binding IsNameEnabled}" xml:space="preserve" Height="40" LocalizableLabelText="@UserManagement.View.UserName" AuthorizationRight="UserManagement" />
+		<vw:TextVarIn Style="{DynamicResource TVI_Main}" LostKeyboardFocusBehavior="WriteInput" Margin="0,10,0,0" Value="{Binding UserFullName, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" IsEnabled="{Binding IsNameEnabled}" xml:space="preserve" Height="40" LocalizableLabelText="@UserManagement.View.FullUserName" AuthorizationRight="UserManagement"/>
+		<vw:TextVarIn Style="{DynamicResource TVI_Main}"  LostKeyboardFocusBehavior="WriteInput" Margin="0,10,0,0" Value="{Binding Comment, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" IsEnabled="{Binding IsNameEnabled}" xml:space="preserve" Height="40" LocalizableLabelText="@UserManagement.View.Comment" FontSize="14" AuthorizationRight="UserManagement"/>
+
+        <DockPanel  HorizontalAlignment="Right" Margin="0,10,0,0"  >
+            <vw:TextVarIn Style="{DynamicResource TVI_Main}"  LostKeyboardFocusBehavior="WriteInput" Value="{Binding MachineCode, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" Width="205" IsEnabled="{Binding IsChecked, ElementName=CheckBoxCodeEnabled}" xml:space="preserve" Height="40" LocalizableLabelText="@UserManagement.View.Code" FontSize="14" AuthorizationRight="UserManagement" Margin="0,0,10,0"/>
+            <vw:CheckBox x:Name="CheckBoxCodeEnabled" Height="40" Visibility="{Binding UserChangeVisibility}" VerticalContentAlignment="Center" IsChecked="{Binding IsCodeChecked, Mode=TwoWay}" Width="100" LocalizableLabelText="@UserManagement.View.Change" FontSize="14" AuthorizationRight="UserManagement"/>
+        </DockPanel>
+        <vw:ComboBox ItemsSource="{Binding GroupList}" Margin="0,10,0,0"  SelectedItem="{Binding SelectedGroup, Mode=TwoWay}" IsDropDownOpen="False" Width="315" Visibility="Visible" IsEnabled="True" HorizontalAlignment="Right" Height="40" FontSize="14" AuthorizationRight="UserManagement" LocalizableLabelText="@UserManagement.View.UserGroup" FontWeight="SemiBold"/>
+		<DockPanel HorizontalAlignment="Right" Margin="0,10,0,0" >
+            <vw:PasswordVarIn Style="{DynamicResource PVI_Main}" LostKeyboardFocusBehavior="WriteInput" Value="{Binding Password, Mode=TwoWay}" Margin="0,5,10,5" Width="205" Height="40" IsEnabled="{Binding IsChecked, ElementName=CheckBoxPasswordEnabled}" LocalizableLabelText="@UserManagement.View.Password" FontSize="14" AuthorizationRight="UserManagement"/>
+            <vw:CheckBox x:Name="CheckBoxPasswordEnabled" Height="40" Visibility="{Binding UserChangeVisibility}" IsChecked="{Binding IsPasswordChecked, Mode=TwoWay}"  Width="100" LabelText="" LocalizableLabelText="@UserManagement.View.Change" FontSize="14" AuthorizationRight="UserManagement"/>
+        </DockPanel>
+        <vw:PasswordVarIn Style="{DynamicResource PVI_Main}" LostKeyboardFocusBehavior="WriteInput"  Value="{Binding Password2, Mode=TwoWay}" HorizontalAlignment="Right" Width="205" Margin="0,5,110,5" Height="40" IsEnabled="{Binding IsChecked, ElementName=CheckBoxPasswordEnabled}" LocalizableLabelText="@UserManagement.View.SecondPassword" FontSize="14" AuthorizationRight="UserManagement"/>
+		<vw:ComboBox ItemsSource="{Binding StateList}" Margin="0,5,0,5" SelectedItem="{Binding SelectedState, Mode=TwoWay}" Grid.Row="6" IsDropDownOpen="False" Width="315" Visibility="Visible" IsEnabled="True" HorizontalAlignment="Right" Height="40" FontSize="14" AuthorizationRight="UserManagement" LocalizableLabelText="@UserManagement.View.Status" FontWeight="SemiBold" >
+			<vw:ComboBox.ItemTemplate>
+				<DataTemplate>
+		            <TextBlock Text="{Binding Converter={StaticResource UserStateToTextConverter}}"/>
+				</DataTemplate>
+			</vw:ComboBox.ItemTemplate>
+		</vw:ComboBox>
+        <Grid  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            		<vw:TextBlock Text="Deaktivierung" x:Name="VWLabel0" FontSize="14" LocalizableText="@UserManagement.View.Deactivation" VerticalAlignment="Center" TextAlignment="Right" FontWeight="SemiBold"  />
+                    <vw:RadioButton x:Name="DeackNever" Margin="0,5,0,5" Grid.Column="1" IsChecked="{Binding DeackNever}" Width="100" Height="40" Visibility="Visible" IsEnabled="True" FontSize="14" LocalizableLabelText="@UserManagement.View.DeactNever" AuthorizationRight="UserManagement"/>
+		            <vw:RadioButton x:Name="DeackDate" Margin="0,5,0,5" Grid.Row="1" Grid.Column="1" IsChecked="{Binding DeackDate}" Width="100" Height="40" FontSize="14" LocalizableLabelText="@UserManagement.View.DeactOnDate" AuthorizationRight="UserManagement" />
+		            <vw:RadioButton x:Name="DeackTime" Margin="0,5,0,5" Grid.Row="2" Grid.Column="1" IsChecked="{Binding DeackTime}" Height="40" Visibility="Visible" IsEnabled="True" FontSize="14" LocalizableLabelText="@UserManagement.View.DeactAfterTime" Width="100" AuthorizationRight="UserManagement"/>                      
+            </Grid>
+            <Grid  Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+                <vw:DateTimeVarIn Value="{Binding Date, Mode=TwoWay}" Grid.Row="1" Grid.ColumnSpan="3" FontFamily="Segoe UI" Height="40" Visibility="Visible" IsEnabled="{Binding IsChecked, ElementName=DeackDate}" AuthorizationRight="UserManagement" />
+                <vw:NumericVarIn Grid.Row="2" Grid.Column="0" LostKeyboardFocusBehavior="WriteInput" Value="{Binding Days, Mode=TwoWay}" IsEnabled="{Binding IsChecked, ElementName=DeackTime}" VariableName="__UNLINKED_I2" Width="40" Visibility="Visible" Text="0" HorizontalAlignment="Right" RawLimitMax="365" Height="40" LocalizableLabelText="@Units.Days" FontSize="14" AuthorizationRight="UserManagement"/>
+                <vw:NumericVarIn Grid.Row="2" Grid.Column="1" LostKeyboardFocusBehavior="WriteInput" Value="{Binding Hours, Mode=TwoWay}" IsEnabled="{Binding IsChecked, ElementName=DeackTime}" VariableName="__UNLINKED_I2" Width="40" Visibility="Visible" Text="0" HorizontalAlignment="Right" RawLimitMax="23" Height="40" LocalizableLabelText="@Units.h" FontSize="14" AuthorizationRight="UserManagement"/>
+                <vw:NumericVarIn Grid.Row="2" Grid.Column="2" LostKeyboardFocusBehavior="WriteInput" Value="{Binding Minutes, Mode=TwoWay}" IsEnabled="{Binding IsChecked, ElementName=DeackTime}" VariableName="__UNLINKED_I2" Width="40" Visibility="Visible" Text="0" HorizontalAlignment="Right" RawLimitMax="59" Height="40" LocalizableLabelText="@Units.m" FontSize="14" AuthorizationRight="UserManagement"/>
+        </Grid> 
+        </Grid> 
+	</StackPanel>
+</vw:View>

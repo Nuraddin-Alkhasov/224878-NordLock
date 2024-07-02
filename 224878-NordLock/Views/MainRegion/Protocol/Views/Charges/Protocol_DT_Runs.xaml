@@ -1,0 +1,38 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Protocol.Protocol_DT_Runs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <DataGrid x:Name="dgv_runs" ItemsSource="{Binding SelectedCharge.RunList}" SelectedItem="{Binding SelectedRun, Mode=TwoWay }" BorderThickness="0" AutoGenerateColumns="False" IsReadOnly="True"  ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Hidden" >
+        <DataGrid.ItemContainerStyle>
+            <Style TargetType="DataGridRow">
+                <EventSetter Event="PreviewTouchDown" Handler="dgv_runs_PreviewTouchDown"/>
+                <Setter Property="Height" Value="40"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Error}" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource FP_Red}"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Error}" Value="False">
+                        <Setter Property="Background" Value="White"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </DataGrid.ItemContainerStyle>
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text29}" Binding="{Binding RunNr}" ElementStyle="{DynamicResource TB_Right}" Width="100" />
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text7}" Binding="{Binding Start}" ElementStyle="{DynamicResource TB_Center}"  Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text30}" Binding="{Binding Coating_S}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text31}" Binding="{Binding Coating_E}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text39}" Binding="{Binding Preheating_S}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text40}" Binding="{Binding Preheating_E}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text32}" Binding="{Binding Drying_S}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text33}" Binding="{Binding Drying_E}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text34}" Binding="{Binding Cooling_S}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text35}" Binding="{Binding Cooling_E}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@Protocol.Text8}" Binding="{Binding End}" ElementStyle="{DynamicResource TB_Center}" Width="168"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</vw:View>

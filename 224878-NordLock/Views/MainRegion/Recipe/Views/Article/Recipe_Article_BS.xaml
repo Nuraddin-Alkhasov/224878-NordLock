@@ -1,0 +1,23 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_BS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+
+    <vw:GroupBox  x:Name="A" Opacity="0" Style="{DynamicResource GB_Group}"  Margin="10" Loaded="View_Loaded" Unloaded="A_Unloaded">
+        <StackPanel Margin="10">
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.BS.Weight per basket" LocalizableLabelText="@RecipeSystem.Text25" LocalizableUnitText="@Units.kg" AuthorizationRight="Article" FormatString="{}0.0" RawLimitMin="5" RawLimitMax="50" />
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold"  Height="40" Margin="0,10,0,0" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.BS.Weight diff for fine dosing" LocalizableLabelText="@RecipeSystem.Text72" LocalizableUnitText="@Units.kg" AuthorizationRight="Article" FormatString="{}0.0" RawLimitMin="0" RawLimitMax="50" />
+            <vw:GroupBox Style="{DynamicResource GB_Group}" Margin="0,10,0,0"  LocalizableHeaderText="@RecipeSystem.Text98" >
+                <StackPanel Margin="10" HorizontalAlignment="Right">
+
+                    <vw:Switch Width="200" Height="40"  LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@RecipeSystem.Text99" AuthorizationRight="Article" Style="{DynamicResource S_Status}" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.BS.Clean"/>
+                    <vw:Switch Width="200" Height="40" Margin="0,10,0,0" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@RecipeSystem.Text100" AuthorizationRight="Article" Style="{DynamicResource S_Status}" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.BS.Check"/>
+
+                </StackPanel>
+            </vw:GroupBox>
+
+        </StackPanel>
+    </vw:GroupBox>
+
+</vw:View>

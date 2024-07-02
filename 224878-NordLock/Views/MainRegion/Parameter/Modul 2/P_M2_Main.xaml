@@ -1,0 +1,39 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M2_Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource MainViewBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="4">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@HandMenu.Text2" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+            </Border>
+        </Grid>
+        <vw:NavigationButton Grid.ColumnSpan="2" Grid.Row="1" Background="Transparent" BorderThickness="0" RegionName="MainRegion" ViewName="Parameter_Main"/>
+
+        <vw:NavigationButton Grid.Column="0" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@Parameter.Text39"  SymbolMargin="0,0,0,5"  Grid.Row="1" RegionName="MainRegion" ViewName="P_M2_LTB" />
+        <vw:NavigationButton Grid.Column="1" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@Parameter.Lacktyp.Text32"  SymbolMargin="0,0,0,5"  Grid.Row="1" RegionName="MainRegion" ViewName="P_M2_Paint" />
+
+        <vw:NavigationButton Grid.Column="2" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@Parameter.Text40"  SymbolMargin="0,0,0,10"  Grid.Row="1" RegionName="MainRegion" ViewName="P_M2_Ventilators"/>
+        <vw:Switch Grid.Row="1" Grid.Column="2" Margin="0,0,20,20" Width="200" Height="60" LocalizableLabelText="@Parameter.Text48" HorizontalAlignment="Right" LocalizableTextOn="@Buttons.Text19" LocalizableTextOff="@Buttons.Text17" Style="{DynamicResource S_Status}" VerticalAlignment="Bottom" VariableName="NL.PLC.Blocks.2 Modul 2.00 Allgemein.DB Beschichtung Allgemein HMI.PC.Allgemein.Maschinen Lampe EIn" AuthorizationRight="Lighting"/>
+        <vw:Switch Grid.Row="1" Grid.Column="2" Width="200" Height="60" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" Style="{DynamicResource S_Status}" Margin="0,745,20,85" LocalizableLabelText="@MainView.Text59" AuthorizationRight="Service" VariableName="NL.PLC.Blocks.2 Modul 2.00 Allgemein.DB Beschichtung Allgemein HMI.PC.Allgemein.Lüfter Beschichtung aus"/>
+
+    </Grid>
+</vw:View>

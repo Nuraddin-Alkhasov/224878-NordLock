@@ -1,0 +1,83 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_KA"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="1200">
+
+    <vw:GroupBox x:Name="A" Opacity="0" Style="{DynamicResource GB_Group}"  Margin="10" Loaded="View_Loaded" Unloaded="A_Unloaded">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Winkel Folgeband Start" LocalizableLabelText="@RecipeSystem.Text56" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" RawLimitMax="180" FormatString="{}0.0"/>
+            <vw:RadioButton Grid.Column="1" Grid.ColumnSpan="2" IsChecked="True" Style="{DynamicResource RB_Group}" Margin="10,0,0,0"  LocalizableLabelText="@RecipeSystem.Text93" >
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="369*" />
+                        <ColumnDefinition Width="257*"/>
+                        <ColumnDefinition Width="111*"/>
+                    </Grid.ColumnDefinitions>
+                    <vw:Switch Width="200" Height="40" Grid.Column="1" HorizontalAlignment="Right" LocalizableTextOn="@Lists.OnOff.Text1" LocalizableTextOff="@Lists.OnOff.Text2" AuthorizationRight="Article" Style="{DynamicResource S_Status}" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Klopfen.Ein" ValueChanged="Switch_ValueChanged" Grid.ColumnSpan="2"/>
+                    <vw:NumericVarIn x:Name="hits" Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Klopfen.Schläge in Summe" LocalizableLabelText="@RecipeSystem.Text92" AuthorizationRight="Article" RawLimitMax="10" FormatString="{}0"/>
+                </Grid>
+            </vw:RadioButton>
+
+            <vw:RadioButton Grid.Row="1" IsChecked="True" Style="{DynamicResource RB_Group}" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text57" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[1].Angle" LocalizableLabelText="@RecipeSystem.Text63" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" RawLimitMax="180" RawLimitMin="1" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[1].Tilt speed" LocalizableLabelText="@RecipeSystem.Text64" LocalizableUnitText="@Units.grad_sec" AuthorizationRight="Article" RawLimitMax="18" RawLimitMin="1" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[1].Wait time" LocalizableLabelText="@RecipeSystem.Text43" LocalizableUnitText="@Units.s" AuthorizationRight="Article" RawLimitMax="59" RawLimitMin="1" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[1].Spin speed" LocalizableLabelText="@RecipeSystem.Text65" LocalizableUnitText="@Units.Rpm" AuthorizationRight="Article" RawLimitMax="30" RawLimitMin="1" FormatString="{}0.0"/>
+                </StackPanel>
+            </vw:RadioButton>
+
+            <vw:RadioButton Grid.Column="1" Grid.Row="1" Style="{DynamicResource RB_Group}"   Margin="10,10,0,0" LocalizableLabelText="@RecipeSystem.Text58">
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[2].Angle" LocalizableLabelText="@RecipeSystem.Text63" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" RawLimitMax="180" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[2].Tilt speed" LocalizableLabelText="@RecipeSystem.Text64" LocalizableUnitText="@Units.grad_sec" AuthorizationRight="Article" RawLimitMax="18" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[2].Wait time" LocalizableLabelText="@RecipeSystem.Text43" LocalizableUnitText="@Units.s" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[2].Spin speed" LocalizableLabelText="@RecipeSystem.Text65" LocalizableUnitText="@Units.Rpm" AuthorizationRight="Article" RawLimitMax="30" FormatString="{}0.0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton Grid.Row="1" Grid.Column="2"  Style="{DynamicResource RB_Group}"  Margin="10,10,0,0" LocalizableLabelText="@RecipeSystem.Text59" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[3].Angle" LocalizableLabelText="@RecipeSystem.Text63" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" RawLimitMax="180" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[3].Tilt speed" LocalizableLabelText="@RecipeSystem.Text64" LocalizableUnitText="@Units.grad_sec" AuthorizationRight="Article" RawLimitMax="18" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[3].Wait time" LocalizableLabelText="@RecipeSystem.Text43" LocalizableUnitText="@Units.s" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[3].Spin speed" LocalizableLabelText="@RecipeSystem.Text65" LocalizableUnitText="@Units.Rpm" AuthorizationRight="Article" RawLimitMax="30" FormatString="{}0.0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton Grid.Row="2" Style="{DynamicResource RB_Group}"  Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text60" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[4].Angle" LocalizableLabelText="@RecipeSystem.Text63" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" RawLimitMax="180" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[4].Tilt speed" LocalizableLabelText="@RecipeSystem.Text64" LocalizableUnitText="@Units.grad_sec" AuthorizationRight="Article" RawLimitMax="18" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[4].Wait time" LocalizableLabelText="@RecipeSystem.Text43" LocalizableUnitText="@Units.s" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[4].Spin speed" LocalizableLabelText="@RecipeSystem.Text65" LocalizableUnitText="@Units.Rpm" AuthorizationRight="Article" RawLimitMax="30" FormatString="{}0.0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton Grid.Row="2" Grid.Column="1" Style="{DynamicResource RB_Group}" Margin="10,10,0,0" LocalizableLabelText="@RecipeSystem.Text61" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" FontSize="14" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[5].Angle" LocalizableLabelText="@RecipeSystem.Text63" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" RawLimitMax="180" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[5].Tilt speed" LocalizableLabelText="@RecipeSystem.Text64" LocalizableUnitText="@Units.grad_sec" AuthorizationRight="Article" RawLimitMax="18" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[5].Wait time" LocalizableLabelText="@RecipeSystem.Text43" LocalizableUnitText="@Units.s" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[5].Spin speed" LocalizableLabelText="@RecipeSystem.Text65" LocalizableUnitText="@Units.Rpm" AuthorizationRight="Article" RawLimitMax="30" FormatString="{}0.0"/>
+                </StackPanel>
+            </vw:RadioButton>
+            <vw:RadioButton Grid.Row="2" Grid.Column="2" Style="{DynamicResource RB_Group}" Margin="10,10,0,0" LocalizableLabelText="@RecipeSystem.Text62" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[6].Angle" LocalizableLabelText="@RecipeSystem.Text63" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" RawLimitMax="180" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[6].Tilt speed" LocalizableLabelText="@RecipeSystem.Text64" LocalizableUnitText="@Units.grad_sec" AuthorizationRight="Article" RawLimitMax="18" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[6].Wait time" LocalizableLabelText="@RecipeSystem.Text43" LocalizableUnitText="@Units.s" AuthorizationRight="Article" RawLimitMax="59" FormatString="{}0"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Korb Auskippen.Kippinterval[6].Spin speed" LocalizableLabelText="@RecipeSystem.Text65" LocalizableUnitText="@Units.Rpm" AuthorizationRight="Article" RawLimitMax="30" FormatString="{}0.0"/>
+                </StackPanel>
+            </vw:RadioButton>
+        </Grid>
+    </vw:GroupBox>
+</vw:View>

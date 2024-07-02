@@ -1,0 +1,53 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.OperatingHours.OH_M2_Centrifuge"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="820" Height="570" >
+
+    <vw:GroupBox  Style="{DynamicResource GB_Group}" Margin="10" LocalizableHeaderText="@OperatingHours.Text41">
+        <Grid>
+            <TabControl Margin="10" TabStripPlacement="Left" BorderBrush="black" BorderThickness="1">
+                <TabItem x:Name="btn1"  Height="60" Width="200" Style="{DynamicResource TI_Filter}"  Header="{vw:LocalizedTextExtension LocalizedText=@OperatingHours.Text21}" Margin="0,10,0,-10" PreviewTouchDown="Btn1_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@OperatingHours.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource B_Gray}"  LocalizableText="@Buttons.Text2"  Margin="0,0,40,20" KeyMode="KeyMode" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Rotor.Reset" AuthorizationRight="OperatingHours"/>
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" LocalizableUnitText="@Units.h" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Rotor.Temporär.Hour" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableUnitText="@Units.m" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Rotor.Temporär.Minute" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" LocalizableUnitText="@Units.s" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Rotor.Temporär.second" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@OperatingHours.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" LocalizableUnitText="@Units.h" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Rotor.Statisch.Hour" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" LocalizableUnitText="@Units.m" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Rotor.Statisch.Minute" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" LocalizableUnitText="@Units.s" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Rotor.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem x:Name="btn2"  Height="60" Width="200" Style="{DynamicResource TI_Filter}"  Header="{vw:LocalizedTextExtension LocalizedText=@OperatingHours.Text22}" Margin="0,20,0,-20" PreviewTouchDown="Btn2_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@OperatingHours.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource B_Gray}"  LocalizableText="@Buttons.Text2"  Margin="0,0,40,20" KeyMode="KeyMode" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Planet.Reset" AuthorizationRight="OperatingHours"/>
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" LocalizableUnitText="@Units.h" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Planet.Temporär.Hour" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableUnitText="@Units.m" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Planet.Temporär.Minute" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" LocalizableUnitText="@Units.s" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Planet.Temporär.second" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@OperatingHours.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" LocalizableUnitText="@Units.h" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Planet.Statisch.Hour" />
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" LocalizableUnitText="@Units.m" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Planet.Statisch.Minute" />
+                                <vw:NumericVarOut Width="80" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" LocalizableUnitText="@Units.s" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 2.Zentrifuge.Planet.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+            <Rectangle HorizontalAlignment="Left" VerticalAlignment="Stretch" Fill="{DynamicResource FP_Red}" Margin="211,10,0,10" Width="4"/>
+        </Grid>
+    </vw:GroupBox>
+</vw:View>

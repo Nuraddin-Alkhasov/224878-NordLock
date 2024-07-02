@@ -1,0 +1,54 @@
+﻿<vw:View
+    x:Class="HMI.User.User_AddChangeGroup"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+	Width="800" Height="500" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="UserGroupAdapter"/>
+    </vw:View.DataContext>
+
+    <Grid x:Name="LayoutRoot" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <vw:TextVarIn Style="{DynamicResource TVI_Main}" LostKeyboardFocusBehavior="WriteInput" Value="{Binding GroupName, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" FontSize="14" xml:space="preserve" Grid.Row="0" Height="40" IsEnabled="{Binding IsNameEnabled}" LocalizableLabelText="@UserManagement.View.UserGroupName" AuthorizationRight="UserManagement"/>
+		    <vw:TextVarIn Style="{DynamicResource TVI_Main}" LostKeyboardFocusBehavior="WriteInput" Value="{Binding Comment, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" xml:space="preserve" Grid.Row="1" Height="40" LocalizableLabelText="@UserManagement.View.Comment" FontSize="14" AuthorizationRight="UserManagement"/>
+            <vw:CheckBox Text="" IsChecked="{Binding UserRemovable, Mode=TwoWay}" xml:space="preserve" HorizontalAlignment="Right" VerticalAlignment="Center" Width="240" Height="40" Grid.Row="2" LocalizableLabelText="@UserManagement.View.UsersRemovable" FontSize="14" AuthorizationRight="UserManagement" Margin="0,0,110,0" />
+		    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" LostKeyboardFocusBehavior="WriteInput" Value="{Binding TimeToLogOff, Mode=TwoWay}" VariableName="__UNLINKED_I2" Grid.Row="3" Height="40" LocalizableLabelText="@UserManagement.View.TimeToAutoLogOff" LabelText="" LocalizableUnitText="@Units.m" FontSize="14" AuthorizationRight="UserManagement"/>
+		    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  LostKeyboardFocusBehavior="WriteInput" Value="{Binding DaysToNewPassword, Mode=TwoWay}" VariableName="__UNLINKED_I2" Grid.Row="4" Height="40" LocalizableUnitText="@Units.Days" LocalizableLabelText="@UserManagement.View.RenewPassword" FontSize="14" AuthorizationRight="UserManagement"/>
+		    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" LostKeyboardFocusBehavior="WriteInput" Value="{Binding MaxLogIns, Mode=TwoWay}" VariableName="__UNLINKED_I2" Height="40" Grid.Row="5" LocalizableLabelText="@UserManagement.View.MaximumLogOnAttempts" FontSize="14" AuthorizationRight="UserManagement"/>
+        </Grid>
+        <Grid Grid.Column="1"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <vw:TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  x:Name="VWLabel1" FontSize="20"  LocalizableText="@UserManagement.View.Rights" Grid.Column="1" FontWeight="Bold" />
+
+            <vw:ListBox Grid.Row="1" ItemsSource="{Binding RightList}" FontSize="16"  Margin="10,5,0,5" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" AuthorizationRight="UserManagement">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" >
+                            <vw:CheckBox IsChecked="{Binding On}" Height="35"/>
+                            <TextBlock Margin="10,0,0,0" Text="{Binding RightText}" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </vw:ListBox>
+        </Grid>
+
+    </Grid>
+
+</vw:View>

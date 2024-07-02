@@ -1,0 +1,78 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="http://inosoft.com/visiwin7">
+
+    <!-- Row 1 -->
+    <local:TouchKeyMapping	x:Key="TKM_Key01" Regular="1" Shift="!"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key02" Regular="2" Shift="@"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key03" Regular="3" Shift="#"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key04" Regular="4" Shift="$"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key05" Regular="5" Shift="%"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key06" Regular="6" Shift="^"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key07" Regular="7" Shift="&amp;"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key08" Regular="8" Shift="*"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key09" Regular="9" Shift="("/>
+    <local:TouchKeyMapping	x:Key="TKM_Key10" Regular="0" Shift=")"/>
+    <local:TouchKeyMapping	x:Key="TKM_Back" KeyCode="Back" TextCenter="←" Regular="←" Shift="←" Alt="←" AltGr="←" Num="←" Mark="←"/>
+
+    <!-- Row 2 -->
+    <local:TouchKeyMapping	x:Key="TKM_Key11" Regular="q" Shift="Q" />
+    <local:TouchKeyMapping	x:Key="TKM_Key12" Regular="w" Shift="W" />
+    <local:TouchKeyMapping	x:Key="TKM_Key13" Regular="e" Shift="E" />
+    <local:TouchKeyMapping	x:Key="TKM_Key14" Regular="r" Shift="R" />
+    <local:TouchKeyMapping	x:Key="TKM_Key15" Regular="t" Shift="T" />
+    <local:TouchKeyMapping	x:Key="TKM_Key16" Regular="y" Shift="Y" />
+    <local:TouchKeyMapping	x:Key="TKM_Key17" Regular="u" Shift="U" />
+    <local:TouchKeyMapping	x:Key="TKM_Key18" Regular="i" Shift="I" />
+    <local:TouchKeyMapping	x:Key="TKM_Key19" Regular="o" Shift="O" />
+    <local:TouchKeyMapping	x:Key="TKM_Key20" Regular="p" Shift="P" />
+    <local:TouchKeyMapping	x:Key="TKM_Key21" Regular="[" Shift="{}{"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key22" Regular="]" Shift="}"/>
+
+    <!-- Row 3 -->
+    <local:TouchKeyMapping	x:Key="TKM_Key23" Regular="a" Shift="A" />
+    <local:TouchKeyMapping	x:Key="TKM_Key24" Regular="s" Shift="S" />
+    <local:TouchKeyMapping	x:Key="TKM_Key25" Regular="d" Shift="D" />
+    <local:TouchKeyMapping	x:Key="TKM_Key26" Regular="f" Shift="F" />
+    <local:TouchKeyMapping	x:Key="TKM_Key27" Regular="g" Shift="G" />
+    <local:TouchKeyMapping	x:Key="TKM_Key28" Regular="h" Shift="H" />
+    <local:TouchKeyMapping	x:Key="TKM_Key29" Regular="j" Shift="J" />
+    <local:TouchKeyMapping	x:Key="TKM_Key30" Regular="k" Shift="K" />
+    <local:TouchKeyMapping	x:Key="TKM_Key31" Regular="l" Shift="L" />
+    <local:TouchKeyMapping	x:Key="TKM_Key32" Regular="-" Shift="_" />
+    <local:TouchKeyMapping	x:Key="TKM_Return" TextCenter="Enter"/>
+
+    <!-- Row 4 -->
+    <local:TouchKeyMapping	x:Key="TKM_Key33" Regular="y" Shift="Y" />
+    <local:TouchKeyMapping	x:Key="TKM_Key34" Regular="x" Shift="X" />
+    <local:TouchKeyMapping	x:Key="TKM_Key35" Regular="c" Shift="C" />
+    <local:TouchKeyMapping	x:Key="TKM_Key36" Regular="v" Shift="V" />
+    <local:TouchKeyMapping	x:Key="TKM_Key37" Regular="b" Shift="B" />
+    <local:TouchKeyMapping	x:Key="TKM_Key38" Regular="m" Shift="M" />
+    <local:TouchKeyMapping	x:Key="TKM_Key39" Regular="n" Shift="N" />
+    <local:TouchKeyMapping	x:Key="TKM_Key40" Regular=";" Shift=":" />
+    <local:TouchKeyMapping	x:Key="TKM_Key41" Regular="'" Shift="&quot;" />
+    <local:TouchKeyMapping	x:Key="TKM_Key42" Regular="=" Shift="+" />
+
+    <!-- Row 5 -->
+    <local:TouchKeyMapping	x:Key="TKM_LeftShift" KeyCode="LeftShift" Regular="↑" TextCenter="↑" Shift="↑" Num="↑" Mark="↑"/>
+    <local:TouchKeyMapping	x:Key="TKM_Space" KeyCode="Space"/>
+    <local:TouchKeyMapping	x:Key="TKM_Key43" Regular="," Shift="/" />
+    <local:TouchKeyMapping	x:Key="TKM_Key44" Regular="." Shift="\" />
+    <local:TouchKeyMapping	x:Key="TKM_Enter" KeyCode="Enter" />
+
+    <local:TouchKeyMapping	x:Key="TKM_NumPad0" KeyCode="NumPad0" Regular="0"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad1" KeyCode="NumPad1" Regular="1"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad2" KeyCode="NumPad2" Regular="2"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad3" KeyCode="NumPad3" Regular="3"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad4" KeyCode="NumPad4" Regular="4"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad5" KeyCode="NumPad5" Regular="5"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad6" KeyCode="NumPad6" Regular="6"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad7" KeyCode="NumPad7" Regular="7"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad8" KeyCode="NumPad8" Regular="8"/>
+    <local:TouchKeyMapping	x:Key="TKM_NumPad9" KeyCode="NumPad9" Regular="9"/>
+
+    <local:TouchKeyMapping x:Key="TKM_OemCommaNum" KeyCode="OemComma" Regular="." Shift="" TextTopLeft="" TextBottomLeft=""/>
+    <local:TouchKeyMapping x:Key="TKM_OemMinus" KeyCode="OemMinus" Regular="-" Shift="" TextTopLeft="" TextBottomLeft="" />
+</ResourceDictionary>

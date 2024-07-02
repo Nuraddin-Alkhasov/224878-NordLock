@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="HMI.UserControls.MV_UnloadStation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7">
+    <Grid x:Name="A" Opacity="0" Loaded="UserControl_Loaded">
+        <vw:PictureBox SymbolResourceKey="BBD" Width="72" Height="43"  Margin="3,9,3,3" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Grid x:Name="Box" >
+            <vw:PictureBox SymbolResourceKey="Box" Width="38" Height="42"   Margin="9,3,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <vw:PictureBox.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </vw:PictureBox.Effect>
+            </vw:PictureBox>
+            <vw:Border x:Name="isMat" Visibility="Hidden" Background="{DynamicResource FP_LightGreen_Gradient}" Width="29" Height="16" BorderThickness="1" BorderBrush="Black" Margin="13,7,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <vw:NumericVarOut x:Name="weight" Width="100" Height="35" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,15,5,0" FontSize="14" LocalizableUnitText="@Units.kg" Foreground="White" Style="{DynamicResource NVO_Main}" Background="{DynamicResource FP_LightGreen_Gradient}" LabelText="" FormatString="0.0" />
+
+        </Grid>
+
+
+
+        <vw:Button Click="Button_Click_1"  Style="{DynamicResource B_Material}" Margin="0,0,110,0" />
+
+
+    </Grid>
+
+</UserControl>

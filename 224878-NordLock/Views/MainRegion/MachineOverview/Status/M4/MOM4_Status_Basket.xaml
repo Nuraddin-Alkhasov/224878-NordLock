@@ -1,0 +1,73 @@
+﻿<vw:View 
+x:Class="HMI.Views.MainRegion.MachineOverview.MOM4_Status_Basket"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:vw="http://inosoft.com/visiwin7"  Width="750" IsVisibleChanged="View_IsVisibleChanged">
+    <vw:GroupBox HeaderText="Charge" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text8">
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text1" VerticalAlignment="Top" >
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Status.Text2" Margin="0,0,5,0" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Beschichtungszyklen.Soll" />
+                            <vw:TextVarOut Grid.Column="1" Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Status.Text3" Margin="5,0,0,0" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Beschichtungszyklen.Ist" />
+
+                        </Grid>
+                    </vw:GroupBox>
+                    <vw:Switch Width="200" Height="40" Margin="0,5,0,0" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text14" AuthorizationRight="Status" Style="{DynamicResource S_Status}" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Ausschleusen"/>
+
+
+                </StackPanel>
+              
+                <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                    <vw:ComboBox x:Name="PaintList" Width="235" HorizontalAlignment="Right" FontSize="16" FontWeight="SemiBold" Height="40" LocalizableLabelText="@Status.Text6"  BlinkBrush="{DynamicResource FP_Blue}" AuthorizationRight="Status" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Lacktyp"/>
+                    <vw:Switch Width="200" Height="40" Margin="0,10,0,0" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text20" AuthorizationRight="Status" Style="{DynamicResource S_Status}" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Korb Reinigung iO"/>
+                    <vw:Switch Width="200" Height="40" Margin="0,10,0,0" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text15" AuthorizationRight="Status" Style="{DynamicResource S_Status}" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Korb Reinigung aktiv"/>
+
+                </StackPanel>
+
+
+
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0"  Margin="0,0,5,0" >
+                    <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text11"  >
+                        <StackPanel Margin="5">
+                            <vw:Switch x:Name="BL" Width="200" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text16" AuthorizationRight="Status" Style="{DynamicResource S_Status}" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Belegt links" ValueChanged="Switch_ValueChanged"/>
+                            <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text13" Margin="0,5,0,0" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Gewicht links" />
+                        </StackPanel>
+                    </vw:GroupBox>
+
+                </StackPanel>
+                <StackPanel Grid.Column="1" Margin="5,0,0,0"  >
+                    <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text12" >
+                        <StackPanel Margin="5">
+                            <vw:Switch x:Name="BR" Width="200" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text16" AuthorizationRight="Status" Style="{DynamicResource S_Status}" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Belegt rechts" ValueChanged="Switch_ValueChanged"/>
+                            <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text13" Margin="0,5,0,0" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Baskets.Gewicht rechts" />
+                        </StackPanel>
+                    </vw:GroupBox>
+                 
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </vw:GroupBox>
+</vw:View>

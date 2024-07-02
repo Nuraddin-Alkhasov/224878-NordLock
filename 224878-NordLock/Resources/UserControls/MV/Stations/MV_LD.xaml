@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="HMI.UserControls.MV_LD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" xmlns:UC="clr-namespace:HMI.UserControls">
+    <Grid x:Name="A" Opacity="0" Loaded="UserControl_Loaded">
+
+        <vw:PictureBox SymbolResourceKey="LD" Width="234" Height="220" Margin="3" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <UC:MVMaterial IsEnabled="True" Margin="30,98,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Height="44" 
+                       IsMaterial="NL.PLC.Blocks.1 Modul 1.02 Hopper conveyor.DB HC PD.Status.Charge.Material vorhanden" 
+                       ValueWeight="NL.PLC.Blocks.1 Modul 1.02 Hopper conveyor.DB HC HMI.Actual value.Gewicht"/>
+
+        <UC:MVMaterial IsEnabled="False" Margin="12,98,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="17" Height="96"
+                       IsMaterial="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC PD.Status.Charge.Material vorhanden" />
+        <UC:MVMaterial HorizontalAlignment="Left" VerticalAlignment="Top" Margin="175,3,0,0" Height="96" Width="50"
+                       IsMaterial="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.01 Main.DB LD PD.Status.Charge.Material vorhanden"
+                       Type="Box" Module="1" M1_Station="1" Header="@Status.Text22" />
+
+        <vw:Button Click="Button_Click_1"  Style="{DynamicResource B_Station}" Margin="0,0,235,0" />
+        <vw:Button Click="Button_Click_2" Style="{DynamicResource B_Function}" IsEnabled="True" Width="80" HorizontalAlignment="Right"  AuthorizationRight="DataSelection" Margin="0,-10,240,10"/>
+        <vw:Button x:Name="Mod1" Height="60" Width="220" Style="{DynamicResource B_Gray_ns}" IsEnabled="False" IsBlinkEnabled="True" Opacity="1" BlinkBrush="{DynamicResource FP_Yellow_Gradient}" Margin="250,0,10,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <vw:Button x:Name="Mod2" Height="60" Width="220" Style="{DynamicResource B_Gray_ns}" LocalizableText="@MainView.Text64" IsEnabled="False" Opacity="1" Background="{DynamicResource FP_LightGreen_Gradient}" Margin="250,0,10,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+    </Grid>
+
+</UserControl>

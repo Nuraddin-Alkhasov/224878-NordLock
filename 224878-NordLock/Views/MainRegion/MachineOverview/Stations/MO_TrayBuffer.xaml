@@ -1,0 +1,49 @@
+﻿<vw:View
+	x:Class="HMI.Views.MainRegion.MachineOverview.MO_TrayBuffer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7" xmlns:UC="clr-namespace:HMI.UserControls"
+    Background="{DynamicResource MainViewBackgroundBrush}" Width="1840" Height="1000">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="{DynamicResource FP_Blue_Gradient}">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@MainView.Text29" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,23,170,23" />
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <vw:PictureBox  SymbolResourceKey="StationTB" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <vw:NavigationButton Background="Transparent" BorderThickness="0" RegionName="MainRegion" ViewName="MO_MainView"/>
+
+            <Grid x:Name="Trays" Loaded="Trays_Loaded" Unloaded="Trays_Unloaded" >
+
+                
+            </Grid>
+
+
+            <vw:Button Height="130" Width="160" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Style="{DynamicResource B_Gray_Green}" Background="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Produktionsmodus.Lager Rückführen.Status, Converter={StaticResource IntToLinearGradientBrush}}" Click="Priority_Click"  Margin="0,0,1515,140" LocalizableText="@MainView.Text10" AuthorizationRight="OrderPriority" />
+            <StackPanel Orientation="Horizontal" Height="60"  Margin="1,0,0,1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Visibility="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Produktionsmodus.Lager Rückführen.Status, Converter={StaticResource IntToVisVisibility_1_1}}">
+                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="350" FontSize="30" LocalizableLabelText="@MainView.Text74" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Produktionsmodus.Lager Rückführen.Zähler Tabletts bearbeitet"/>
+                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Margin="10,0,0,0" FontSize="30" Width="150" LocalizableLabelText="@MainView.Text75" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.TB.Handshake.from PC.Prority Tabletts Count"/>
+
+            </StackPanel>
+        </Grid>
+
+
+
+
+
+
+    </Grid>
+
+</vw:View>

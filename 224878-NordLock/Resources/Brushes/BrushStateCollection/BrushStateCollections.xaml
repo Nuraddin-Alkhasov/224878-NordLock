@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <vw:BrushStateCollection  x:Key="BSC_Betriebsart">
+        <vw:BrushState Value="0" Brush="{DynamicResource FP_Red}"/>
+        <vw:BrushState Value="1" Brush="{DynamicResource FP_Blue}"/>
+        <vw:BrushState Value="2" Brush="{DynamicResource FP_Yellow}"/>
+        <vw:BrushState Value="3" Brush="{DynamicResource FP_Green}"/>
+    </vw:BrushStateCollection>
+
+    <vw:BrushStateCollection x:Key="MachineONOFF">
+        <vw:BrushState Value="0" Brush="{DynamicResource FP_Gray_Gradient}"/>
+        <vw:BrushState Value="1" Brush="{DynamicResource FP_LightGreen_Gradient}"/>
+        <vw:BrushState Value="2" Brush="{DynamicResource FP_Red_Gradient}"/>
+        <vw:BrushState Value="3" Brush="{DynamicResource FP_Red_Gradient}"/>
+    </vw:BrushStateCollection>
+
+
+    <vw:BrushStateCollection x:Key="Diagnose">
+        <vw:BrushState Value="0" Brush="{DynamicResource FP_Gray}"/>
+        <vw:BrushState Value="1" Brush="{DynamicResource FP_Yellow}"/>
+    </vw:BrushStateCollection>
+    
+    <vw:BrushStateCollection x:Key="ButtonActive">
+        <vw:BrushState Value="0" Brush="{DynamicResource FP_Gray_Gradient}"/>
+        <vw:BrushState Value="1" Brush="{DynamicResource FP_LightGreen_Gradient}"/>
+        <vw:BrushState Value="2" Brush="{DynamicResource FP_Gray_Gradient}"/>
+    </vw:BrushStateCollection>
+
+</ResourceDictionary>

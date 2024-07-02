@@ -1,0 +1,50 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Einträge ins SymbolResourceDictionary sollten hier erfolgen -->
+
+    <DataTemplate x:Key="R_Dip">
+        <Image Source="/Resources/Images/Recipe/dip.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+    <DataTemplate x:Key="R_Spin">
+        <Image Source="/Resources/Images/Recipe/spin.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+    <DataTemplate x:Key="R_Tilt">
+        <Image Source="/Resources/Images/Recipe/roll.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+    <DataTemplate x:Key="R_No">
+        <Image Source="/Resources/Images/Recipe/nor.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+    <DataTemplate x:Key="R_Dip_S">
+        <Image Source="/Resources/Images/Recipe/dip_s.png" Stretch="Fill" Width="60" Height="60" />
+    </DataTemplate>
+    <DataTemplate x:Key="R_Spin_S">
+        <Image Source="/Resources/Images/Recipe/spin_s.png" Stretch="Fill" Width="60" Height="60" />
+    </DataTemplate>
+    <DataTemplate x:Key="R_Tilt_S">
+        <Image Source="/Resources/Images/Recipe/roll_s.png" Stretch="Fill" Width="60" Height="60" />
+    </DataTemplate>
+    
+    
+    <DataTemplate x:Key="R_Article">
+        <Image Source="/Resources/Images/Recipe/article.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+    <DataTemplate x:Key="R_Coat">
+        <Image Source="/Resources/Images/Recipe/coat.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="R_Lack">
+        <Image Source="/Resources/Images/Recipe/lack.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="Arrow_Up">
+        <Image Source="/Resources/Images/Recipe/ArrowUp.png" Stretch="Fill"  Width="50" Height="70" />
+    </DataTemplate>
+    <DataTemplate x:Key="Arrow_Down">
+        <Image Source="/Resources/Images/Recipe/ArrowDown.png" Stretch="Fill" Width="50" Height="70" />
+    </DataTemplate>
+    <DataTemplate x:Key="Machine_Recipe">
+        <Image Source="/Resources/Images/Recipe/machinerecipe.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,0 +1,29 @@
+﻿<vw:View x:Class="HMI.AlphaTouchpadView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        Width="1000" Height="540" KeyboardNavigation.ControlTabNavigation="Once" KeyboardNavigation.TabNavigation="Cycle" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <Border BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5">
+        <Border.Effect>
+            <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+        </Border.Effect>
+        <i:Interaction.Behaviors>
+            <vw:MouseDragElementBehavior ConstrainToParentBounds="True" />
+        </i:Interaction.Behaviors>
+        <Grid Margin="10,0,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="lblAlphaPadDescription"  HorizontalAlignment="Left" TextWrapping="Wrap" Foreground="White" VerticalAlignment="Center" FontSize="22" Text="AlphaPad" Width="400" />
+            <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" IsEnabled="{Binding CancelButtonIsEnabled}" Visibility="{Binding CancelButtonVisible}" Command="{Binding CloseDialogCommand}" CommandParameter="Cancel" Style="{DynamicResource B_Close}" Click="CancelButton_Click" Width="60" Height="40" Text="X" Margin="0,-1,0,0"/>
+            <Border Grid.Row="1" Background="{DynamicResource GroupBoxBackgroundBrush}" CornerRadius="4" />
+            <StackPanel Grid.Row="1" Margin="10">
+                <vw:TextVarIn x:Name="textVarIn1" TouchpadMember="True" WriteValueCompleted="TextVarIn1_WriteValueCompleted" Height="50" CornerRadius="4" Style="{DynamicResource TouchKeyboardTextVarInStyle}" FontSize="14"/>
+                <vw:TouchKeyboard x:Name="TouchKeyboard" Content="TouchKeyboard" EscapeKeyPressed="TouchKeyboard_EscapeKeyPressed" Style="{DynamicResource AlphaTouchKeyboard}" Height="Auto" Width="Auto" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</vw:View>

@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="HMI.UserControls.PaintType"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:vw="http://inosoft.com/visiwin7"
+            VerticalAlignment="Center" HorizontalAlignment="Center">
+    <vw:GroupBox x:Name="A" Margin="0,10,10,10" Opacity="1" Style="{DynamicResource GB_Group}" Loaded="UserControl_Loaded" Width="340">
+        <StackPanel Margin="5">
+            <vw:TextVarIn x:Name="name" Style="{DynamicResource TVI_Main}" Height="45" FontWeight="Bold" FontSize="17" LocalizableLabelText="@Parameter.Text182" AuthorizationRight="Parameter" TextLengthMin="5" TextLengthMax="25"/>
+            <vw:ComboBox x:Name="painttype" Height="40" StateList="{DynamicResource SC_PaintType}" Margin="0,5,0,0"  Width="250" HorizontalAlignment="Right" LocalizableLabelText="@Parameter.Text53" FontWeight="DemiBold" AuthorizationRight="Parameter"/>
+            <vw:Switch x:Name="solvent"  Margin="0,5,0,0" Width="160" Height="40" HorizontalAlignment="Right" LocalizableLabelText="@Parameter.Text175" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" Style="{DynamicResource S_Status}" AuthorizationRight="Parameter" />
+
+            <vw:Switch x:Name="watchdog"  Margin="0,5,0,0" Width="160" Height="40" HorizontalAlignment="Right" LocalizableLabelText="@Parameter.Text161" LocalizableTextOn="@Buttons.Text19" LocalizableTextOff="@Buttons.Text17" Style="{DynamicResource S_Status}" AuthorizationRight="Parameter" />
+            <vw:NumericVarIn x:Name="setCL" Style="{DynamicResource NVI_Main}" Height="40" Margin="0,5,0,0" LocalizableLabelText="@Parameter.Text183" AuthorizationRight="Parameter" RawLimitMin="0" RawLimitMax="999" />
+            <Grid Margin="0,5,0,0">
+                <vw:GroupBox Style="{DynamicResource GB_Group}" >
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <vw:NumericVarIn x:Name="pump_on" Grid.Column="0" Height="40" Style="{DynamicResource NVI_Main}" Margin="0,0,5,0" LocalizableUnitText="@Units.m" LocalizableLabelText="@Parameter.Lacktyp.Text9" AuthorizationRight="Parameter" RawLimitMax="59" />
+                        <vw:NumericVarIn x:Name="pump_off" Grid.Column="1" Height="40" Style="{DynamicResource NVI_Main}" Margin="5,0,0,0" LocalizableUnitText="@Units.m" LocalizableLabelText="@Parameter.Lacktyp.Text10" AuthorizationRight="Parameter" RawLimitMax="59" />
+                    </Grid>
+                </vw:GroupBox>
+                <vw:Switch x:Name="pump" Margin="0,4,2,0" Foreground="White" Width="160" Height="40" HorizontalAlignment="Right" LocalizableLabelText="@Parameter.Text7" LocalizableTextOn="@Buttons.Text19" LocalizableTextOff="@Buttons.Text17" Style="{DynamicResource S_Status}" VerticalAlignment="Top" AuthorizationRight="Parameter" />
+            </Grid>
+            <vw:GroupBox Margin="0,5,0,0" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text10">
+                <StackPanel Margin="5">
+                    <vw:NumericVarIn x:Name="o_UL" Grid.Column="0" Height="40" Style="{DynamicResource NVI_Main}" LocalizableLabelText="@Parameter.Text160" LocalizableUnitText="@Units.C" AuthorizationRight="Parameter" RawLimitMax="50" />
+                    <vw:NumericVarIn x:Name="o_process" Grid.Column="1" Height="40" Style="{DynamicResource NVI_Main}" LocalizableLabelText="@Parameter.Text35"  LocalizableUnitText="@Units.C" Margin="0,5,0,0" AuthorizationRight="Parameter" RawLimitMax="300"/>
+                    <vw:NumericVarIn x:Name="o_LL" Grid.Column="2" Height="40" Style="{DynamicResource NVI_Main}" LocalizableLabelText="@Parameter.Text37" LocalizableUnitText="@Units.C" Margin="0,5,0,0" AuthorizationRight="Parameter" RawLimitMax="50"/>
+                </StackPanel>
+            </vw:GroupBox>
+            <vw:GroupBox Margin="0,5,0,0" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text78">
+                <StackPanel Margin="5">
+                    <vw:NumericVarIn x:Name="c_UL" Grid.Column="0" Height="40" Style="{DynamicResource NVI_Main}" LocalizableLabelText="@Parameter.Text160" LocalizableUnitText="@Units.C" AuthorizationRight="Parameter" RawLimitMax="50" />
+                    <vw:NumericVarIn x:Name="c_process" Grid.Column="1" Height="40" Style="{DynamicResource NVI_Main}" LocalizableLabelText="@Parameter.Text35"  LocalizableUnitText="@Units.C" Margin="0,5,0,0" AuthorizationRight="Parameter" RawLimitMax="50"/>
+                    <vw:NumericVarIn x:Name="c_LL" Grid.Column="2" Height="40" Style="{DynamicResource NVI_Main}" LocalizableLabelText="@Parameter.Text37" LocalizableUnitText="@Units.C" Margin="0,5,0,0" AuthorizationRight="Parameter" RawLimitMax="50"/>
+                </StackPanel>
+            </vw:GroupBox>
+        </StackPanel>
+    </vw:GroupBox>
+</UserControl>

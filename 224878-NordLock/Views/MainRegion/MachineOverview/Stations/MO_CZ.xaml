@@ -1,0 +1,68 @@
+﻿<vw:View
+	x:Class="HMI.Views.MainRegion.MachineOverview.MO_CZ"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7" xmlns:UC="clr-namespace:HMI.UserControls"
+    Background="{DynamicResource MainViewBackgroundBrush}" Width="1840" Height="1000">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="{DynamicResource FP_Blue_Gradient}">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@MainView.Text28" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,23,170,23" />
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <vw:PictureBox  SymbolResourceKey="StationCZ" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <vw:NavigationButton Background="Transparent" BorderThickness="0" RegionName="MainRegion" ViewName="MO_MainView"/>
+
+            <UC:M_WorkMode_L  HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,15,10" 
+                       Header="@MainView.Text15"
+                        PowerOn="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Steuerspannung Status"
+                        WorkingModeStatus="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 4 Anzeige Betirebsart.Anzeige_Betriebsart"
+                        Automatic="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 4 Betirebsart.Automatik"
+                        Hand="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 4 Betirebsart.Hand"
+                        SetUp="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 4 Betirebsart.Einrichten"
+                        Start="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 4 Betirebsart.Automatik_Start"
+                        StartStatus="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 4 Anzeige Betirebsart.Anzeige_Automatik_Start_Taster"
+                        Stop="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 4 Betirebsart.Automatik_Stop"
+                       />
+
+            <vw:Bar Width="100" Height="244" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,1700,21" VariableName="NLM4.PLC.Blocks.4 Modul 4.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Istwerte.Temperatur" RawLimitMax="50" LocalizableLabelText="@MainView.Text45" LocalizableUnitText="@Units.C" FormatString="{}0">
+                <vw:Bar.Limits>
+                    <vw:Limit EndValue="50" Fill="{DynamicResource FP_Red}" StartValue="40" />
+                    <vw:Limit EndValue="40" Fill="{DynamicResource FP_Yellow}" StartValue="30" />
+                    <vw:Limit EndValue="30" Fill="{DynamicResource FP_LightGreen}" StartValue="20" />
+                    <vw:Limit EndValue="20" StartValue="10" Fill="#FF3399FF" />
+                    <vw:Limit EndValue="10" Fill="#FF0066CC" StartValue="0" />
+
+                </vw:Bar.Limits>
+            </vw:Bar>
+
+
+            <Grid x:Name="Trays" Loaded="Trays_Loaded" Unloaded="Trays_Unloaded" >
+
+            </Grid>
+
+        </Grid>
+        <vw:Button Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="1670,0,0,800" Text="Datenauswahl" Style="{DynamicResource B_Gray}" Tag="4" LocalizableText="@MainView.Text39"  Grid.Row="1" Click="Button_Click" AuthorizationRight="Trend"/>
+        <Line  X1="0" Y1="0" X2="0" Y2="600" Margin="400,110,0,0" Stroke="{DynamicResource FP_Blue_Gradient}" StrokeThickness="7" HorizontalAlignment="Left" VerticalAlignment="Top" Height="500" Grid.Row="1"/>
+        <Line  X1="0" Y1="0" X2="0" Y2="600" Margin="1450,110,0,0" Stroke="{DynamicResource FP_Blue_Gradient}" StrokeThickness="7" HorizontalAlignment="Left" VerticalAlignment="Top" Height="500" Grid.Row="1"/>
+
+
+
+
+
+
+    </Grid>
+
+</vw:View>

@@ -1,0 +1,11 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <DataTemplate x:Key="LB_DashBoard">
+        <Grid Height="40">
+            <vw:TextBlock LocalizableText="{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,0,0" FontSize="16" Foreground="White"/>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

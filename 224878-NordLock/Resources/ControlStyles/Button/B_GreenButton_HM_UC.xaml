@@ -1,0 +1,107 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <Style x:Key="B_GreenButton_HM_UC" TargetType="{x:Type vw:Key}">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="{DynamicResource FP_Gray_Gradient}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vw:Key}">
+                    <Grid>
+                        <Border x:Name="BtnShadow" Background="{DynamicResource FP_Blue_Gradient}" CornerRadius="8"/>
+
+                        <Border x:Name="elips" CornerRadius="7" BorderBrush="Black" BorderThickness="2">
+                            <Border.Background>
+                                <LinearGradientBrush x:Name="btnColor" StartPoint="0.5,0" EndPoint="0.5,1">
+                                    <GradientStop Color="#FF8F8E8E" Offset="0" />
+                                    <GradientStop Color="#FF616060" Offset="1" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                           
+                        </Border>
+                        <ContentPresenter x:Name="cont" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.5" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BtnShadow" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger Property="Tag">
+                            <Trigger.Value>
+                                <sys:String>3</sys:String>
+                            </Trigger.Value>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Name="paint1">
+                                    <Storyboard  >
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[0].(GradientStop.Color)" To="#FF017401" Duration="0:0:0.7"  />
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[1].(GradientStop.Color)" To="#FF025502" Duration="0:0:0.7" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard  BeginStoryboardName="paint1" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="Tag">
+                            <Trigger.Value>
+                                <sys:String>2</sys:String>
+                            </Trigger.Value>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Name="paint2">
+                                    <Storyboard  >
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[0].(GradientStop.Color)" To="#FFFFBE4F" Duration="0:0:0.7"  />
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[1].(GradientStop.Color)" To="#FFFDAE25" Duration="0:0:0.7" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard  BeginStoryboardName="paint2" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="Tag">
+                            <Trigger.Value>
+                                <sys:String>1</sys:String>
+                            </Trigger.Value>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Name="paint3">
+                                    <Storyboard  >
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[0].(GradientStop.Color)" To="#FF0082D4" Duration="0:0:0.7"  />
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[1].(GradientStop.Color)" To="#FF015C95" Duration="0:0:0.7" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard  BeginStoryboardName="paint3" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="Tag">
+                            <Trigger.Value>
+                                <sys:String>0</sys:String>
+                            </Trigger.Value>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Name="paint4">
+                                    <Storyboard  >
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[0].(GradientStop.Color)" To="#FFC14343" Duration="0:0:0.7" />
+                                        <ColorAnimation Storyboard.TargetName="btnColor" Storyboard.TargetProperty="(LinearGradientBrush.GradientStops)[1].(GradientStop.Color)" To="#FFBE2828" Duration="0:0:0.7" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard  BeginStoryboardName="paint4" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Resource dictionary entries should be defined here. -->
+	
+</ResourceDictionary>

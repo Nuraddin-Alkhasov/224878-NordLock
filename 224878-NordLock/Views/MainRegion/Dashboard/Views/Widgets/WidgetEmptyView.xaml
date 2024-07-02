@@ -1,0 +1,21 @@
+﻿<vw:View x:Class="HMI.Dashboard.WidgetEmptyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+		  Width="585" Height="225" Style="{DynamicResource widgetEmptyViewStyle}">
+	
+	<vw:View.Resources>
+		<Style x:Key="widgetEmptyViewStyle" TargetType="{x:Type vw:View}">
+			<Style.Triggers>
+				<DataTrigger Binding="{Binding Path=IsInEditMode, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type vw:Dashboard}}}" Value="False">
+					<Setter Property="Visibility" Value="Hidden" />
+				</DataTrigger>
+			</Style.Triggers>
+		</Style>
+	</vw:View.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Rectangle Fill="{x:Null}" Stroke="{DynamicResource FP_Dark}" StrokeThickness="3" StrokeDashArray="2" RadiusX="5" RadiusY="5" />
+	</Grid>
+
+</vw:View>

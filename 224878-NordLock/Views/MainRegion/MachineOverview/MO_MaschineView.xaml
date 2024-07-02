@@ -1,0 +1,15 @@
+﻿<vw:View
+	x:Class="HMI.Views.MainRegion.MachineOverview.MO_MaschineView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:UC="clr-namespace:HMI.UserControls"
+    Background="Transparent" Width="1840" Height="1000">
+
+    <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded" Unloaded="LayoutRoot_Unloaded">
+
+
+
+      
+    </Grid>
+</vw:View>

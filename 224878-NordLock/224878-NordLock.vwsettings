@@ -1,0 +1,1826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisiWinNET.Settings version="1.0">
+  <Section name="Development">
+    <Section name="Editor">
+      <Section name="DataAccess">
+        <Section name="ChannelsNode">
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="116" />
+          </Section>
+          <Section name="ShortDescriptor">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="243" />
+          </Section>
+          <Section name="Type">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="90" />
+          </Section>
+          <Section name="HierarchBrowseSeparator">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="100" />
+          </Section>
+          <Section name="OpcServerName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="121" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="86" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="DataAccessItemRowObject">
+          <Entry name="ColumnName" type="System.String" value="CalculatedDataType" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="Ascending" />
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="22" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="GroupID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="75" />
+          </Section>
+          <Section name="AccessRights">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="113" />
+          </Section>
+          <Section name="WriteThru">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="21" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="78" />
+          </Section>
+          <Section name="AccessPath">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="259" />
+          </Section>
+          <Section name="MaxVal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="16" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="ItemAccess">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="210" />
+          </Section>
+          <Section name="UnitClassIDItemDependent">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="19" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="MinVal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="17" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="UnitClassIDDisplayDependent">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="18" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="CalculatedDataType">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="64" />
+          </Section>
+          <Section name="FieldSize">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="61" />
+          </Section>
+          <Section name="TpdbItems.Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="663" />
+          </Section>
+          <Section name="DefaultVal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="14" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="MinValItem">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="26" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="MaxValItem">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="25" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="OPCUAAccessRights">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="48" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="GroupNode">
+          <Entry name="ColumnName" type="System.String" value="ItemName" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="Ascending" />
+          <Section name="ReadMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="73" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="151" />
+          </Section>
+          <Section name="WriteMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="87" />
+          </Section>
+          <Section name="PercentDeadband">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="14" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="TimeBias">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="13" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="UpdateRate">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="61" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="DeviceName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="41" />
+          </Section>
+          <Section name="ItemName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="412" />
+          </Section>
+          <Section name="ItemAccess">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="ChannelSubGroupNode">
+          <Section name="ItemName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="327" />
+          </Section>
+          <Section name="ItemAccess">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="UnitClassVDNode">
+          <Section name="Switch">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="271" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="131" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="DataAccessUnitVD">
+          <Section name="y1">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="x2">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="y2">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="DecPointDisp">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="118" />
+          </Section>
+          <Section name="PhysicalUnitText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="77" />
+          </Section>
+          <Section name="x1">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="SwitchID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="167" />
+          </Section>
+        </Section>
+        <Section name="DataAccessUnitLD">
+          <Section name="y1">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="x2">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="y2">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="DecPointDisp">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="118" />
+          </Section>
+          <Section name="PhysicalUnitText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="77" />
+          </Section>
+          <Section name="x1">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="SwitchID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="167" />
+          </Section>
+        </Section>
+        <Section name="UnitClassLDNode">
+          <Section name="Switch">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="207" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="138" />
+          </Section>
+          <Section name="Languages" />
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="DataAccessStrucMembersRowObject">
+          <Section name="UnitClassIDItemDependent">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="15" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="MaxVal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="UnitClassIDDisplayDependent">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="TpdbStructMembers.Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="OrderNum">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="102" />
+          </Section>
+          <Section name="MinVal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="CalculatedDataType">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="150" />
+          </Section>
+          <Section name="DefaultVal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="FieldSize">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="63" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="186" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="MinValItem">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="MaxValItem">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="StructureNode">
+          <Section name="OrderByOffset">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="173" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="462" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="ItemadaptorsNode">
+          <Section name="Name" />
+        </Section>
+        <Section name="MultiplexersNode">
+          <Section name="Name" />
+        </Section>
+      </Section>
+      <Section name="Language">
+        <Section name="FontDataRowObject">
+          <Section name="Size">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="43" />
+          </Section>
+          <Section name="FontName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Italic">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="41" />
+          </Section>
+          <Section name="Strikethrough">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="92" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="170" />
+          </Section>
+          <Section name="Underline">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="77" />
+          </Section>
+          <Section name="Bold">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="39" />
+          </Section>
+        </Section>
+        <Section name="Language">
+          <Section name="LCID" />
+          <Section name="KBLayout">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="Fontclass">
+          <Section name="L1033">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="L1036">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="L1031">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="164" />
+          </Section>
+        </Section>
+        <Section name="TextGroupNode">
+          <Section name="Name" />
+        </Section>
+        <Section name="TextGroup">
+          <Entry name="ColumnName" type="System.String" value="Name" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="None" />
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="211" />
+          </Section>
+          <Section name="Description">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="226" />
+          </Section>
+          <Section name="L1033">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="541" />
+          </Section>
+          <Section name="L1031">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="535" />
+          </Section>
+          <Section name="L2057" />
+          <Section name="L1053">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="Alarm">
+        <Section name="AlarmClassesDataRowObject">
+          <Entry name="ColumnName" type="System.String" value="Comment" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="Ascending" />
+          <Section name="SingleQuit">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="115" />
+          </Section>
+          <Section name="IconActiveAck">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="IconActive">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="ForeColor4">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="ForeColor2">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Acknowledge">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="137" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="IconInactiveAck">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="144" />
+          </Section>
+          <Section name="BackColor1">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="BackColor3">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="13" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="119" />
+          </Section>
+          <Section name="Sign3_Text">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="15" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Sign2_Text">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="16" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Print">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="17" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="BackColor4">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="18" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="ForeColor3">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="19" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="IconInactive">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="20" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="ForeColor1">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="21" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Sign4_Text">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="22" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Sign1_Text">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="23" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="BackColor2">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="24" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Save">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="62" />
+          </Section>
+          <Section name="PlugInExternal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInShared">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Icon3">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="Icon2">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="Icon1">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="Icon4">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="AlarmGroupNode">
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="17" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAck">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarDisabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarPriority">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarState">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Icon">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarDisabledBitNo">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAckBitNo">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarStateBitNo">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInExternal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInShared">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="AlarmDataRowObject">
+          <Entry name="ColumnName" type="System.String" value="Name" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="None" />
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="90" />
+          </Section>
+          <Section name="Type">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="54" />
+          </Section>
+          <Section name="VarEvent">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="424" />
+          </Section>
+          <Section name="VarEventBitNo">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="57" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="627" />
+          </Section>
+          <Section name="Priority">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="50" />
+          </Section>
+          <Section name="ClassID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="91" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="19" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Parameter1">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="20" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAck">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="17" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarState">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="15" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Parameter2">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAckBitno">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="18" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="LowActive">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="14" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarStateBitNo">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="16" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInExternal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInShared">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="ValueAlarmTypeNode">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="146" />
+          </Section>
+          <Section name="ResetMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="160" />
+          </Section>
+          <Section name="AlarmClassMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="250" />
+          </Section>
+          <Section name="TextMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="210" />
+          </Section>
+          <Section name="PriorityMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="212" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="Param2Mode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="StateVarMode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="AckVarMode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Param1Mode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInExternal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInShared">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="DefaultValue">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="BitBlockAlarmTypeNode">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="146" />
+          </Section>
+          <Section name="AlarmClassMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="250" />
+          </Section>
+          <Section name="TextMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="210" />
+          </Section>
+          <Section name="PriorityMode">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="212" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="Param2Mode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="StateVarMode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="AckVarMode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Param1Mode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInExternal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInShared">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="DefaultValue">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="BitBlockAlarmDataRowObject">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="117" />
+          </Section>
+          <Section name="Value">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="64" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="243" />
+          </Section>
+          <Section name="Priority">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="59" />
+          </Section>
+          <Section name="ClassID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="103" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="Parameter1">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="LowActive">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAck">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarState">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Parameter2">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAckBitno">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarStateBitNo">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="13" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInExternal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInShared">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+        <Section name="ValueAlarmDataRowObject">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="117" />
+          </Section>
+          <Section name="Value">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="64" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="243" />
+          </Section>
+          <Section name="Priority">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="59" />
+          </Section>
+          <Section name="ClassID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="103" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="Parameter1">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAck">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarState">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Parameter2">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarAckBitno">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarStateBitNo">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="13" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInExternal">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PlugInShared">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="Trend">
+        <Section name="ArchiveNode">
+          <Section name="ArchiveType">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="190" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="135" />
+          </Section>
+          <Section name="FileChangeEvents">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="173" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="160" />
+          </Section>
+        </Section>
+        <Section name="TrendDataRowObject">
+          <Entry name="ColumnName" type="System.String" value="Name" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="Ascending" />
+          <Section name="FilterDepth">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="19" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="ErrorValue">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="13" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="Maximum">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Filter">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="18" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="184" />
+          </Section>
+          <Section name="TrendVar">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="681" />
+          </Section>
+          <Section name="HysteresisMode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="15" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="108" />
+          </Section>
+          <Section name="SurrogateMax">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Minimum">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Hysteresis">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="14" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="SurrogateMin">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VUpperColor">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="28" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VUpper">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="23" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VLowerColor">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="29" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VDrawMode">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="31" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VLineColor">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="25" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VLineWidth">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="26" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VMin">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="22" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VMax">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="21" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="VLower">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="24" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="Recipe">
+        <Section name="RecipeNode">
+          <Entry name="ColumnName" type="System.String" value="VarRecipe" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="Descending" />
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="15" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="CryptEngine">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="17" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarSave">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarSetValue">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="13" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarLoad">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarWrite">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="10" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarRecipeName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="106" />
+          </Section>
+          <Section name="FilePath">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="215" />
+          </Section>
+          <Section name="SaveChanges">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="16" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarDescription">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarRead">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="118" />
+          </Section>
+          <Section name="FileExtension">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="144" />
+          </Section>
+          <Section name="StandardValue">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="SaveSubRecipes">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="14" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="22" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="VarRecipe">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="764" />
+          </Section>
+          <Section name="DefaultValue">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="180" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="100" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="SubRecipeDataRowObject">
+          <Entry name="ColumnName" type="System.String" value="VarRecipe" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="None" />
+          <Section name="VarRecipe">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="439" />
+          </Section>
+          <Section name="ChildID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="SortIndex" />
+          <Section name="Comment" />
+        </Section>
+        <Section name="RecipeMemberDataRowObject">
+          <Entry name="ColumnName" type="System.String" value="VarRecipe" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="Ascending" />
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="SortIndex">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="77" />
+          </Section>
+          <Section name="VarRecipe">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="653" />
+          </Section>
+          <Section name="DefaultValue">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="Security">
+        <Section name="UserGroupRightNode">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="PermitDelete">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="InvalidateAfterFailedLogOns">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="AutoLogOffTime">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="RenewPassword">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="261" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="15" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+        </Section>
+        <Section name="UserDataRowObject">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="91" />
+          </Section>
+          <Section name="Code">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="105" />
+          </Section>
+          <Section name="UserState">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="241" />
+          </Section>
+          <Section name="Password">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="58" />
+          </Section>
+          <Section name="FullName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="122" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+        </Section>
+        <Section name="LockedPasswords">
+          <Section name="Password" />
+        </Section>
+        <Section name="RightsDataRowObject">
+          <Entry name="ColumnName" type="System.String" value="Name" />
+          <Entry name="SortFlag" type="C1.Win.C1FlexGrid.SortFlags" value="Ascending" />
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="336" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="256" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="Logging">
+        <Section name="CategoryNode">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="97" />
+          </Section>
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="188" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+        </Section>
+        <Section name="EventDataRowObject">
+          <Section name="LanguageText">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="260" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="97" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="Supervision">
+        <Section name="SupervisionGroupNode">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="105" />
+          </Section>
+          <Section name="VarDisabledBitNo">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="184" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarDisabled">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="208" />
+          </Section>
+          <Section name="Type">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="135" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+        </Section>
+        <Section name="SupervisionDataRowObject">
+          <Section name="Parameter1">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="15" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="DefSupervise">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="175" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="17" />
+            <Entry name="width" type="System.Int32" value="70" />
+          </Section>
+          <Section name="Parameter7">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="7" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Parameter2">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="8" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Enabled">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="9" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="VarSet">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="171" />
+          </Section>
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="95" />
+          </Section>
+          <Section name="Parameter5">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="11" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+          <Section name="Parameter4">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="60" />
+          </Section>
+          <Section name="VarSetBitNo">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="154" />
+          </Section>
+          <Section name="Parameter3">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="58" />
+          </Section>
+          <Section name="Parameter6">
+            <Entry name="visible" type="System.Boolean" value="False" />
+            <Entry name="order" type="System.Int32" value="12" />
+            <Entry name="width" type="System.Int32" value="149" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="ProjectConfiguration">
+        <Section name="ComputerNamesConfiguration">
+          <Section name="Value">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="Entry">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="150" />
+          </Section>
+        </Section>
+        <Section name="PlugInPlaceHolders">
+          <Section name="Name">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="PlaceHolder">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="Comment">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="470" />
+          </Section>
+          <Section name="DefaultValue">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+        </Section>
+        <Section name="PlugInDependencies">
+          <Section name="ProjectName">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="1" />
+            <Entry name="width" type="System.Int32" value="120" />
+          </Section>
+          <Section name="ProjectGUID">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="2" />
+            <Entry name="width" type="System.Int32" value="230" />
+          </Section>
+          <Section name="ProjectType">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="3" />
+            <Entry name="width" type="System.Int32" value="100" />
+          </Section>
+          <Section name="ProjectLastModified">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="4" />
+            <Entry name="width" type="System.Int32" value="150" />
+          </Section>
+          <Section name="ProjectVersion">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="5" />
+            <Entry name="width" type="System.Int32" value="100" />
+          </Section>
+          <Section name="VisiWinVersion">
+            <Entry name="visible" type="System.Boolean" value="True" />
+            <Entry name="order" type="System.Int32" value="6" />
+            <Entry name="width" type="System.Int32" value="100" />
+          </Section>
+        </Section>
+        <Section name="CrossReference">
+          <Section name="CrossReferenceItems">
+            <Section name="ColumnWidths">
+              <Entry name="FullName" type="System.Int32" value="813" />
+              <Entry name="Status" type="System.Int32" value="100" />
+              <Entry name="Status1" type="System.Int32" value="196" />
+              <Entry name="System" type="System.Int32" value="100" />
+              <Entry name="UsedIn" type="System.Int32" value="241" />
+              <Entry name="SourceGroup" type="System.Int32" value="96" />
+              <Entry name="Source" type="System.Int32" value="100" />
+              <Entry name="SourceDetail" type="System.Int32" value="100" />
+              <Entry name="NoFont" type="System.Int32" value="100" />
+            </Section>
+          </Section>
+          <Section name="CrossReference">
+            <Section name="Common">
+              <Entry name="LastScanTime" type="System.String" value="16.07.2020 08:44:04" />
+            </Section>
+          </Section>
+          <Section name="CrossReferenceTexts">
+            <Section name="ColumnWidths">
+              <Entry name="FullName" type="System.Int32" value="100" />
+              <Entry name="TextType" type="System.Int32" value="100" />
+              <Entry name="NoText" type="System.Int32" value="100" />
+              <Entry name="Status" type="System.Int32" value="100" />
+              <Entry name="Status1" type="System.Int32" value="100" />
+              <Entry name="System" type="System.Int32" value="100" />
+              <Entry name="UsedIn" type="System.Int32" value="100" />
+              <Entry name="SourceGroup" type="System.Int32" value="100" />
+              <Entry name="Source" type="System.Int32" value="100" />
+              <Entry name="SourceDetail" type="System.Int32" value="100" />
+            </Section>
+          </Section>
+        </Section>
+      </Section>
+    </Section>
+    <Section name="ProjectExplorer">
+      <Entry name="LastSelectedItem" type="System.String" value="224878-NordLock&#x9;224878-NordLock&#x9;Design" />
+    </Section>
+    <Section name="SelectionDialogs">
+      <Section name="Language">
+        <Entry name="LastSelectedTextType" type="System.Int32" value="0" />
+        <Entry name="LastSelectedGroup" type="System.String" value="Protocol" />
+        <Entry name="LastSelectedText" type="System.String" value="Text51" />
+        <Entry name="LastSelectedPrefix" type="System.String" value="Text" />
+        <Section name="Position">
+          <Section name="Grid">
+            <Entry name="Name" type="System.Int32" value="115" />
+            <Entry name="L1031" type="System.Int32" value="209" />
+            <Entry name="Description" type="System.Int32" value="203" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="DataAccess">
+        <Section name="LastSelectedItem">
+          <Entry name="Value" type="System.String" value="NLM4.PLC.Blocks.4 Modul 4.03 Trockner Transport.02 Kettentransport.DB Trockner Transport HMI.PC.Allgemein.Data +" />
+        </Section>
+        <Section name="Position">
+          <Section name="Dialog">
+            <Entry name="Width" type="System.Int32" value="696" />
+            <Entry name="Height" type="System.Int32" value="443" />
+            <Entry name="Top" type="System.Int32" value="298" />
+            <Entry name="Left" type="System.Int32" value="4452" />
+          </Section>
+        </Section>
+      </Section>
+      <Section name="Langauge">
+        <Section name="Position">
+          <Section name="Dialog">
+            <Entry name="Width" type="System.Int32" value="954" />
+            <Entry name="Height" type="System.Int32" value="601" />
+          </Section>
+        </Section>
+      </Section>
+    </Section>
+    <Section name="DataAccess">
+      <Section name="Channels">
+        <Section name="Channel1" />
+        <Section name="NL">
+          <Entry name="Browser" type="System.String" value="NET\SiemensS7\VisiWin.S7.Brw.dll" />
+          <Entry name="BrowserConfig" type="System.String" value="&lt;Config&gt;&lt;Alias Value=&quot;PLC&quot; /&gt;&lt;Line Value=&quot;L1&quot; /&gt;&lt;File Value=&quot;D:\Projects\Shared VM\224878 Nordlock_20210621_1208\224878 Nordlock_20210621_1208.ap15_1&quot; /&gt;&lt;Arrays Value=&quot;True&quot; /&gt;&lt;Structures Value=&quot;True&quot; /&gt;&lt;Messages Value=&quot;True&quot; /&gt;&lt;Project Value=&quot;PLC_Mod 1-3&quot; /&gt;&lt;BlacklistS Value=&quot;&quot; /&gt;&lt;WhitelistS Value=&quot;&quot; /&gt;&lt;BlacklistV Value=&quot;&quot; /&gt;&lt;WhitelistV Value=&quot;&quot; /&gt;&lt;FilterOptionS Value=&quot;None&quot; /&gt;&lt;FilterOptionV Value=&quot;None&quot; /&gt;&lt;Symlist Value=&quot;&quot; /&gt;&lt;Bausteine Value=&quot;&quot; /&gt;&lt;Subblk Value=&quot;&quot; /&gt;&lt;UseAlias Value=&quot;True&quot; /&gt;&lt;StructName Value=&quot;False&quot; /&gt;&lt;Operand Value=&quot;False&quot; /&gt;&lt;Optimized Value=&quot;True&quot; /&gt;&lt;Export Value=&quot;True&quot; /&gt;&lt;ExportFile Value=&quot;224878 Nordlock&quot; /&gt;&lt;AliasOption Value=&quot;ImportAllNodes&quot; /&gt;&lt;AliasLevel Value=&quot;0&quot; /&gt;&lt;IPAddress Value=&quot;127.0.0.1&quot; /&gt;&lt;RackNumber Value=&quot;0&quot; /&gt;&lt;SlotNumber Value=&quot;1&quot; /&gt;&lt;SPSType Value=&quot;1200/1500&quot; /&gt;&lt;AccessType Value=&quot;&quot; /&gt;&lt;Online Value=&quot;False&quot; /&gt;&lt;Openness Value=&quot;False&quot; /&gt;&lt;FilterNodes Value=&quot;False&quot; /&gt;&lt;IgnoreGroupNames Value=&quot;False&quot; /&gt;&lt;Password Value=&quot;&quot; /&gt;&lt;/Config&gt;" />
+          <Entry name="BrowserCompareOption" type="System.Int32" value="1" />
+          <Entry name="DontInitBrowseDialogWithProjectVariables" type="System.Boolean" value="False" />
+        </Section>
+        <Section name="NLM4">
+          <Entry name="Browser" type="System.String" value="NET\SiemensS7\VisiWin.S7.Brw.dll" />
+          <Entry name="BrowserConfig" type="System.String" value="&lt;Config&gt;&lt;Alias Value=&quot;PLC&quot; /&gt;&lt;Line Value=&quot;L1&quot; /&gt;&lt;File Value=&quot;D:\Projects\Shared VM\224878 Nordlock\224878 Nordlock.ap15_1&quot; /&gt;&lt;Arrays Value=&quot;True&quot; /&gt;&lt;Structures Value=&quot;True&quot; /&gt;&lt;Messages Value=&quot;False&quot; /&gt;&lt;Project Value=&quot;PLC_Mod 4&quot; /&gt;&lt;BlacklistS Value=&quot;&quot; /&gt;&lt;WhitelistS Value=&quot;&quot; /&gt;&lt;BlacklistV Value=&quot;&quot; /&gt;&lt;WhitelistV Value=&quot;&quot; /&gt;&lt;FilterOptionS Value=&quot;None&quot; /&gt;&lt;FilterOptionV Value=&quot;None&quot; /&gt;&lt;Symlist Value=&quot;&quot; /&gt;&lt;Bausteine Value=&quot;&quot; /&gt;&lt;Subblk Value=&quot;&quot; /&gt;&lt;UseAlias Value=&quot;True&quot; /&gt;&lt;StructName Value=&quot;False&quot; /&gt;&lt;Operand Value=&quot;False&quot; /&gt;&lt;Optimized Value=&quot;False&quot; /&gt;&lt;Export Value=&quot;False&quot; /&gt;&lt;ExportFile Value=&quot;224878 Nordlock_20210225_1017&quot; /&gt;&lt;AliasOption Value=&quot;ImportAllNodes&quot; /&gt;&lt;AliasLevel Value=&quot;0&quot; /&gt;&lt;IPAddress Value=&quot;127.0.0.1&quot; /&gt;&lt;RackNumber Value=&quot;0&quot; /&gt;&lt;SlotNumber Value=&quot;1&quot; /&gt;&lt;SPSType Value=&quot;1200/1500&quot; /&gt;&lt;AccessType Value=&quot;&quot; /&gt;&lt;Online Value=&quot;False&quot; /&gt;&lt;Openness Value=&quot;False&quot; /&gt;&lt;FilterNodes Value=&quot;False&quot; /&gt;&lt;IgnoreGroupNames Value=&quot;False&quot; /&gt;&lt;Password Value=&quot;&quot; /&gt;&lt;/Config&gt;" />
+          <Entry name="BrowserCompareOption" type="System.Int32" value="1" />
+          <Entry name="DontInitBrowseDialogWithProjectVariables" type="System.Boolean" value="False" />
+        </Section>
+      </Section>
+    </Section>
+    <Section name="SelectDialogs">
+      <Section name="Trend">
+        <Section name="LastSelectedArchive">
+          <Entry name="Value" type="System.String" value="Beschichtung" />
+        </Section>
+        <Section name="LastSelectedTrend">
+          <Entry name="Value" type="System.String" value="SW" />
+        </Section>
+      </Section>
+    </Section>
+  </Section>
+  <Section name="TCPCommunicator">
+    <Section name="TCPSettings">
+      <Entry name="RemoteHost" type="System.String" value="192.168.3.5" />
+      <Entry name="RemotePort" type="System.Int32" value="10116" />
+      <Entry name="Timeout" type="System.Int32" value="3" />
+    </Section>
+  </Section>
+</VisiWinNET.Settings>

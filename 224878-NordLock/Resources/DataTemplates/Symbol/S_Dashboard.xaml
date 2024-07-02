@@ -1,0 +1,22 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Einträge ins SymbolResourceDictionary sollten hier erfolgen -->
+
+    <DataTemplate x:Key="Dashboard">
+        <Image Source="/Resources/Images/Dashboard/Dashboard.png" Stretch="Fill" Width="400" Height="142" />
+    </DataTemplate>
+    <DataTemplate x:Key="D_Add">
+        <Image Source="/Resources/Images/Dashboard/Add.png" Stretch="Fill" Width="60" Height="60" />
+    </DataTemplate>
+    <DataTemplate x:Key="D_Edit">
+        <Image Source="/Resources/Images/Dashboard/Edit.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="D_Delete">
+        <Image Source="/Resources/Images/Dashboard/Delete.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="D_Drag">
+        <Image Source="/Resources/Images/Dashboard/Drag.png" Stretch="Fill" Width="55" Height="55" />
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,0 +1,29 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Einträge ins SymbolResourceDictionary sollten hier erfolgen -->
+    <DataTemplate x:Key="ReportingArrowLeft">
+        <Image Source="/Resources/Images/Reporting/reporting.arrow.left.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="ReportingArrowLeftM">
+        <Image Source="/Resources/Images/Reporting/reporting.arrow.leftm.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="ReportingArrowRight">
+        <Image Source="/Resources/Images/Reporting/reporting.arrow.rigt.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="ReportingArrowRightM">
+        <Image Source="/Resources/Images/Reporting/reporting.arrow.rigtm.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="ReportingPrint">
+        <Image Source="/Resources/Images/Reporting/reporting.printer.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="ReportingLayout">
+        <Image Source="/Resources/Images/Reporting/reporting.layout.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="ReportingCog">
+        <Image Source="/Resources/Images/Reporting/reporting.cog.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="ReportingSave">
+        <Image Source="/Resources/Images/Reporting/reporting.save.png" Stretch="Fill" Width="40" Height="40" />
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,17 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M4_Mani_Rotary_Service"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:UC="clr-namespace:HMI.UserControls"
+         Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <UC:H_Service DeleteReferenceVar="-"
+        StepPositive="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.03 Mani Drehen.DB Mani04 Drehen HMI.PC.Drive.Tippen +"
+        StepPositiveFast="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.03 Mani Drehen.DB Mani04 Drehen HMI.PC.Drive.Tippen + schnell"
+        StepNegative="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.03 Mani Drehen.DB Mani04 Drehen HMI.PC.Drive.Tippen -"
+        StepNegativeFast="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.03 Mani Drehen.DB Mani04 Drehen HMI.PC.Drive.Tippen - schnell"
+        ActualValue="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.03 Mani Drehen.DB Mani04 Drehen HMI.Actual value.Aktuelle Position in °"
+        ActualValueUnit="@Units.grad"
+        SetReferenceVar="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.03 Mani Drehen.DB Mani04 Drehen HMI.PC.Drive.Vorwahl Referenz"
+        ReferenceLogText="@Logging.Service.Text29"/>
+</vw:View>

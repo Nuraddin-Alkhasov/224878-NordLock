@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="HMI.UserControls.KRBasket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        Background="Transparent" >
+    <Grid >
+        <Grid x:Name="A" Opacity="0" Margin="5">
+            <vw:PictureBox x:Name="basket" SymbolResourceKey="StationKRBasket" Width="161" Height="137">
+                <vw:PictureBox.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </vw:PictureBox.Effect>
+            </vw:PictureBox>
+            <Grid x:Name="ismaterial" Opacity="0">
+                <vw:Border x:Name="cl" CornerRadius="30" Background="White" BorderThickness="1" BorderBrush="Black" Margin="4,26,5,21"/>
+                <vw:NumericVarOut x:Name="Value"  BorderThickness="0" Visibility="Hidden" Background="Transparent" Margin="4,26,5,21" HorizontalContentAlignment="Center" />
+            </Grid>
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </StackPanel.Effect>
+                <Border x:Name="discharge" Visibility="Collapsed" Background="{DynamicResource FP_Yellow_Gradient}" Margin="0,0,1,0"  BorderThickness="1" BorderBrush="Black" CornerRadius="3" Width="22" Height="22" >
+                    <vw:TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="16" FontWeight="Bold" Foreground="{DynamicResource FP_Red}" LocalizableText="@MainView.Text84" />
+                </Border>
+                <Border x:Name="clean" Visibility="Collapsed" Background="{DynamicResource FP_Yellow_Gradient}"  BorderThickness="1" BorderBrush="Black" CornerRadius="3" Width="22" Height="22" >
+                    <vw:TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center"  FontSize="16" FontWeight="Bold" Foreground="{DynamicResource FP_Blue}" LocalizableText="@MainView.Text86" />
+                </Border>
+
+            </StackPanel>
+        </Grid>
+        <vw:Button Click="Button_Click" Style="{DynamicResource B_Material}" />
+    </Grid>
+
+</UserControl>

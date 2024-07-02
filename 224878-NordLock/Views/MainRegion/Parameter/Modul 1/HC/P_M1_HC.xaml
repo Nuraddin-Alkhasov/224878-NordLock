@@ -1,0 +1,38 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M1_HC"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}" >
+    <Grid Loaded="P_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="{DynamicResource FP_Blue_Gradient}" Grid.ColumnSpan="3">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@Parameter.Text24" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+            </Border>
+        </Grid>
+        <vw:NavigationButton Grid.Row="1" Background="Transparent" BorderThickness="0" RegionName="MainRegion" ViewName="P_M1_Main"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+            <vw:Region x:Name="Reg" Grid.Column="1" Unloaded="Reg_Unloaded"/>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Grid>
+    </Grid>
+</vw:View>

@@ -1,0 +1,23 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M1_DC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid >
+           <Grid Width="1500" Height="280" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <vw:TextBlock Margin="0,60,0,0" LocalizableText="@HandMenu.Text7" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="700" Height="40" Margin="0,100,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Actual value.Bandantrieb Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_Belt}, StateMode=Value}"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,155,0,55" LocalizableLabelText="@HandMenu.Soll" LocalizableUnitText="@Units.m_min" FormatString="{}0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Set Value.Bandantrieb Geschwindigkeit" RawLimitMin="1" RawLimitMax="32" AuthorizationRight="ManualDrive"/>
+            <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="200" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,155,400,55" LocalizableLabelText="@HandMenu.Ist" LocalizableUnitText="@Units.m_min" FormatString="{}0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Actual value.Bandantrieb Geschwindigkeit"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" LocalizableText="@Buttons.Text34" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.PC.Antrieb.Vorwärts"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" LocalizableText="@Buttons.Text37" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.PC.Antrieb.Rückwärts"/>
+
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center"  Style="{DynamicResource B_Red}" KeyMode="KeyMode" LocalizableText="@Buttons.Text23" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.PC.Antrieb.Aus" />
+            <vw:NumericVarOut Width="160" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top"  FontSize="14" LocalizableLabelText="@HandMenu.Text24" LocalizableUnitText="@Units.kg" FormatString="0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Actual value.Gewicht" Foreground="White" Background="{DynamicResource FP_LightGreen}" LabelText="" Margin="940,230,400,0"/>
+            <vw:Key Width="160" Height="60" Margin="400,0,940,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" LocalizableText="@Buttons.Text50" Style="{DynamicResource B_Gray}" KeyMode="KeyMode" AuthorizationRight="Service" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.PC.Waage.Zero"/>
+            <vw:Key Width="160" Height="60" Margin="590,0,750,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" LocalizableText="@Buttons.Text51" Style="{DynamicResource B_Gray}" KeyMode="KeyMode" AuthorizationRight="Service" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.PC.Waage.Tara"/>
+
+        </Grid>
+
+    </Grid>
+</vw:View>

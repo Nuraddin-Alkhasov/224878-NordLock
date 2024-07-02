@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="HMI.UserControls.VentilatorStatus"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid x:Name="A" Opacity="0" Margin="10" Loaded="UserControl_Loaded" >
+        <Border Width="400" Background="{DynamicResource FP_Dark}" CornerRadius="4">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <vw:TextBlock x:Name="Header" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,10,0,10" FontSize="20" Foreground="White" />
+                <vw:Border Grid.Row="1" Margin="5" CornerRadius="4" Background="White">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Margin="0,20,0,20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <vw:Key x:Name="V_On" BlinkBrush="{DynamicResource FP_Gray_Gradient}" Grid.Row="1" LocalizableText="@Buttons.Text19" Style="{DynamicResource B_Gray_Green}" Height="60" Width="120" KeyMode="KeyMode" AuthorizationRight="Parameter"/>
+                            <vw:Key x:Name="V_Off" Grid.Row="1" LocalizableText="@Buttons.Text17" Grid.Column="1" Style="{DynamicResource B_Gray}" Height="60" Width="120" KeyMode="KeyMode" AuthorizationRight="Parameter"/>
+                        </Grid>
+                        <vw:Border Grid.Row="1" Margin="-5" BorderThickness="5" Height="130" BorderBrush="{DynamicResource FP_Dark}" CornerRadius="4">
+                            <StackPanel>
+                                <vw:TextBlock LocalizableText="@Parameter.Text43" Margin="20,16,0,16" FontWeight="Bold" TextAlignment="Left" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="21" Foreground="Black" />
+                                <Grid Height="60" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <vw:NumericVarOut x:Name="NSTime_Min" Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Center" LocalizableUnitText="@Units.m" Margin="0,0,0,10"  FormatString="{}0"/>
+                                    <vw:NumericVarOut x:Name="NSTime_Sec" Style="{DynamicResource NVO_Main}" Width="120" Height="40" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,10" LocalizableUnitText="@Units.s" FormatString="{}0"/>
+
+                                </Grid>
+
+                            </StackPanel>
+                        </vw:Border>
+                        <vw:Border x:Name="Purge" Visibility="Hidden" Grid.Row="1" Margin="-4,0,-4,0" BorderThickness="5" Height="131" BorderBrush="{DynamicResource FP_Dark}" CornerRadius="4" Background="{DynamicResource FP_Yellow}">
+                            <StackPanel>
+                                <vw:TextBlock LocalizableText="@Parameter.Text44" Margin="20,16,0,16" FontWeight="Bold" TextAlignment="Left" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="21" Foreground="Black" />
+                                <Grid Height="60">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <vw:NumericVarOut x:Name="PTime_Min" Style="{DynamicResource NVO_Main}"  Width="120" Height="40" HorizontalAlignment="Center" LocalizableUnitText="@Units.m" Margin="0,0,0,10"  FormatString="{}0"/>
+                                    <vw:NumericVarOut x:Name="PTime_Sec" Style="{DynamicResource NVO_Main}"  Width="120" Height="40" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,10" LocalizableUnitText="@Units.s" FormatString="{}0"/>
+
+                                </Grid>
+
+                            </StackPanel>
+                        </vw:Border>
+
+                        <vw:TextVarOut x:Name="PS1" BlinkBrush="{DynamicResource FP_Gray_Gradient}" Grid.Row="2" Width="60" Height="60" CornerRadius="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,20,50,10" LocalizableLabelText="@Parameter.Text41" VariableName="__UNLINKED_BSTR" BorderBrush="Black"/>
+                        <vw:TextVarOut x:Name="PS2" BlinkBrush="{DynamicResource FP_Gray_Gradient}" Grid.Row="3" Width="60" Height="60" CornerRadius="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,50,10" LocalizableLabelText="@Parameter.Text42" VariableName="__UNLINKED_BSTR" BorderBrush="Black"/>
+
+                    </Grid>
+                </vw:Border>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

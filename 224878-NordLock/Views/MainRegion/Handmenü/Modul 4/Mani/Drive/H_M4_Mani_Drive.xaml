@@ -1,0 +1,54 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M4_Mani_Drive"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7"
+Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid  Width="1500" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <vw:TextBlock Margin="0,60,0,0" LocalizableText="@HandMenu.Text78" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="700" Height="40" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Actual value.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_M4ManiDrive}, StateMode=Value}"/>
+            <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,155,0,55" LocalizableLabelText="@HandMenu.Soll" LocalizableUnitText="@Units.mm" FormatString="{}0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Set Value.Position in mm"/>
+            <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="200" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,155,400,55" LocalizableLabelText="@HandMenu.Ist" LocalizableUnitText="@Units.mm" FormatString="{}0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Actual value.Aktuelle Position in mm"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Center" LocalizableText="@Buttons.Text24" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.PC.Drive.Ein"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center"  Style="{DynamicResource B_Red}" KeyMode="KeyMode" LocalizableText="@Buttons.Text23" AuthorizationRight="ManualDrive" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.PC.Drive.Aus" />
+            <vw:ComboBox x:Name="Picker" Width="580" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" StateList="{DynamicResource SC_M4ManiDrive}" AuthorizationRight="ManualDrive" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Set Value.Vorwahl Position Textliste" SelectionChanged="ComboBox_SelectionChanged"/>
+
+        </Grid >
+        <Grid Grid.Row="1" x:Name="Buffer" Margin="0,0,0,150" Visibility="Hidden" IsVisibleChanged="Buffer_IsVisibleChanged">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <vw:RadioButton x:Name="btn1" Width="200" Height="100" Grid.Column="0" Grid.Row="0" Text="A" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="0" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn2" Width="200" Height="100" Grid.Column="0" Grid.Row="1" Text="B" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="1" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn3" Width="200" Height="100" Grid.Column="1" Grid.Row="0" Text="C" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="2" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn4" Width="200" Height="100" Grid.Column="1" Grid.Row="1" Text="D" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="3" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn5" Width="200" Height="100" Grid.Column="2" Grid.Row="0" Text="E" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="4" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn6" Width="200" Height="100" Grid.Column="2" Grid.Row="1" Text="F" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="5" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn7" Width="200" Height="100" Grid.Column="3" Grid.Row="0" Text="G" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="6" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn8" Width="200" Height="100" Grid.Column="3" Grid.Row="1" Text="H" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="7" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn9" Width="200" Height="100" Grid.Column="4" Grid.Row="0" Text="I" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="8" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn10" Width="200" Height="100" Grid.Column="4" Grid.Row="1" Text="J" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="9" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn11" Width="200" Height="100" Grid.Column="5" Grid.Row="0" Text="K" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="10" Click="Key_Click"/>
+            <vw:RadioButton x:Name="btn12" Width="200" Height="100" Grid.Column="5" Grid.Row="1" Text="L" FontSize="40" Style="{DynamicResource RB_Switcher}" AuthorizationRight="ManualDrive" Tag="11" Click="Key_Click"/>
+
+        </Grid>
+
+        <vw:TextVarOut LocalizableLabelText="@HandMenu.Text51" Width="300" Height="40" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.03 Mani Drehen.DB Mani04 Drehen HMI.Actual value.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_M4ManiRotary}, StateMode=Value}" Margin="970,305,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <vw:TextVarOut LocalizableLabelText="@HandMenu.Text50" Width="300" Height="40" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.02 Mani Hub.DB Mani04 Hub HMI.Actual value.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_M4ManiLift}, StateMode=Value}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="970,350,0,0"/>
+        <vw:TextVarOut LocalizableLabelText="@HandMenu.Text52" Width="300" Height="40" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.04 Mani Arm.DB Mani04 Arm HMI.Actual value.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_M4ManiArm}, StateMode=Value}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="970,395,0,0"/>
+
+    </Grid>
+</vw:View>

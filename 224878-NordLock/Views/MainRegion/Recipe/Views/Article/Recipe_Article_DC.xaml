@@ -1,0 +1,22 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_DC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" >
+
+    <vw:GroupBox x:Name="A" Opacity="0" Style="{DynamicResource GB_Group}"  Margin="10" Loaded="View_Loaded" Unloaded="A_Unloaded">
+        <StackPanel Margin="10">
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40"  FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.DC.Start weight" LocalizableLabelText="@RecipeSystem.Text67" LocalizableUnitText="@Units.kg" AuthorizationRight="Article" FormatString="{}0.0" RawLimitMin="0" RawLimitMax="40" />
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" FontWeight="Bold" Margin="0,10,0,0"  VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.DC.Max weight" LocalizableLabelText="@RecipeSystem.Text10" LocalizableUnitText="@Units.kg" AuthorizationRight="Article" FormatString="{}0.0" RawLimitMin="0" RawLimitMax="40"/>
+            <vw:RadioButton Style="{DynamicResource RB_Group}" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text64" IsChecked="True" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40"  FontWeight="Bold" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.DC.Speed.Load" LocalizableLabelText="@RecipeSystem.Text68" LocalizableUnitText="@Units.m_min" AuthorizationRight="Article" FormatString="{}0.0" RawLimitMin="1" RawLimitMax="32" />
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold"  VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.DC.Speed.Unload" LocalizableLabelText="@RecipeSystem.Text69" LocalizableUnitText="@Units.m_min" AuthorizationRight="Article" FormatString="{}0.0" RawLimitMin="1" RawLimitMax="32" />
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}"  Height="40" Margin="0,10,0,0" FontWeight="Bold"  VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Feeding.DC.Speed.Fine dosing" LocalizableLabelText="@RecipeSystem.Text70" LocalizableUnitText="@Units.m_min" AuthorizationRight="Article" FormatString="{}0.0" RawLimitMin="1" RawLimitMax="32" />
+                </StackPanel>
+            </vw:RadioButton>
+
+        </StackPanel>
+
+    </vw:GroupBox>
+</vw:View>

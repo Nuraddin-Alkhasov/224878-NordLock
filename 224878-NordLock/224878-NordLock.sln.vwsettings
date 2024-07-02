@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisiWinNET.Settings version="1.0">
+  <Section name="SolutionSettings">
+    <Entry name="SelectedDeviceCommunicator" type="System.String" value="RemoteAccessManager" />
+    <Entry name="ConnectedDeviceLastIpAddress" type="System.String" value="192.168.3.5" />
+    <Entry name="ConnectionPort" type="System.Int32" value="10116" />
+    <Entry name="ConnectionTimeoutInSecond" type="System.Int32" value="3" />
+  </Section>
+  <Section name="TargetDeviceConfigurations">
+    <Section name="192.168.3.5">
+      <Entry name="Port" type="System.Int32" value="7100" />
+      <Entry name="Timeout" type="System.Int32" value="3" />
+      <Entry name="IsSelected" type="System.Boolean" value="True" />
+      <Entry name="PreferredConnectionType" type="VisiWin.Development.Shared.Enums.ConnectionType" value="Auto" />
+      <Section name="Projects">
+        <Section name="224878-NordLock">
+          <Entry name="IsSelected" type="System.Boolean" value="True" />
+          <Entry name="Path" type="System.String" value="Public Projects" />
+          <Entry name="RuntimeVersion" type="System.String" value="7.2" />
+          <Entry name="IsStartProjectUnderDevice" type="System.Boolean" value="True" />
+        </Section>
+      </Section>
+    </Section>
+  </Section>
+</VisiWinNET.Settings>

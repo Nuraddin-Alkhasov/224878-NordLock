@@ -1,0 +1,51 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M2_Tilt_PN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:UC="clr-namespace:HMI.UserControls"
+         Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}" IsVisibleChanged="View_IsVisibleChanged">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <vw:PanoramaNavigation Name="H_M2_Tilt_pn" Grid.Row="1" Orientation="Vertical">
+            <vw:PanoramaNavigation.PanoramaRegions>
+                <vw:PanoramaRegion StartView="H_M2_Tilt" AuthorizationRight="ManualDrive"/>
+                <vw:PanoramaRegion StartView="H_M2_Tilt_Service" AuthorizationRight="Service"/>
+            </vw:PanoramaNavigation.PanoramaRegions>
+        </vw:PanoramaNavigation>
+        <Grid  >
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+            </Border>
+            <vw:TextBlock x:Name="header" LocalizableText="@HandMenu.Text32" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+            <UC:HM_WorkMode Margin="0,5,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"
+                      PowerOn="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Steuerspannung Status"
+                        WorkingModeStatus="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Anzeige Betirebsart.Anzeige_Betriebsart"
+                        Automatic="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Betirebsart.Automatik"
+                        Hand="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Betirebsart.Hand"
+                        SetUp="NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Modul 2 Betirebsart.Einrichten"  />
+            <vw:PictureBox Width="80" Height="80" HorizontalAlignment="Center" BlinkMode="Visibility" IsBlinkEnabled="True" Visibility="{vw:VariableBinding VariableName=NL.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Mobile Panel connected, Converter={StaticResource BoolToVisibility_1_1}}" VerticalAlignment="Center" Margin="800,0,0,0" Symbol="{DynamicResource MOP}">
+                <vw:PictureBox.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </vw:PictureBox.Effect>
+            </vw:PictureBox>
+        </Grid>
+        <ListBox Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,10" Opacity="0.8"
+                 ItemContainerStyle="{DynamicResource LBI_PanoramaNavigation_V}"  Style="{DynamicResource LB_PanoramaNavigation_V}"
+                 SelectedIndex="{Binding SelectedPanoramaRegionIndex, ElementName=H_M2_Tilt_pn, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}">
+            <vw:ListBoxItem />
+            <vw:ListBoxItem Margin="0,10,0,0" />
+        </ListBox>
+        <vw:NavigationButton Grid.Row="1" LocalizableText="@Buttons.Text56" Margin="0,0,20,20" Width="160" Height="80" Style="{DynamicResource B_Gray}" VerticalAlignment="Bottom" HorizontalAlignment="Right" RegionName="MainRegion" ViewName="Hand_M2_Main"/>
+
+    </Grid>
+</vw:View>

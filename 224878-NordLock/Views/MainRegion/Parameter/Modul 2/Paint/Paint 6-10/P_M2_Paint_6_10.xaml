@@ -1,0 +1,10 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M2_Paint_6_10"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+         Width="1840" Height="890" >
+
+    <StackPanel Margin="5,35,0,5" x:Name="P" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Loaded="P_Loaded" Unloaded="P_Unloaded">
+      
+    </StackPanel>
+</vw:View>

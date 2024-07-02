@@ -1,0 +1,39 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M1_DC_P"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7"
+VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+    <Grid x:Name="A" Margin="10" Opacity="0" Loaded="A_Loaded">
+
+        <StackPanel>
+            <Grid >
+                <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text1">
+                    <StackPanel Margin="10">
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text20" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Parameter.Position.Bandlänge" RawLimitMin="5" RawLimitMax="10000" />
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text25" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Parameter.Rückweglänge" RawLimitMin="5" RawLimitMax="300"/>
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text18" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Parameter.Position.Fahrweg Band leer" RawLimitMax="10000" RawLimitMin="5"/>
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text13" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Parameter.Position.Referenz Position" RawLimitMax="10000" RawLimitMin="0"/>
+                    </StackPanel>
+                </vw:GroupBox>
+                <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,55,0" FontSize="14" LocalizableLabelText="@Parameter.Text4" LocalizableUnitText="@Units.mm" Foreground="White" Background="{DynamicResource FP_LightGreen}" FormatString="0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Actual value.Bandantrieb Position" />
+            </Grid>
+            <Grid Margin="0,10,0,0">
+                <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text17">
+                    <StackPanel Margin="10">
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text12" LocalizableUnitText="@Units.m_min" AuthorizationRight="Parameter" FormatString="0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Parameter.Geschwindigkeiten.Restentleer" RawLimitMin="1" RawLimitMax="32" />
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0" LocalizableLabelText="@Parameter.Text11" LocalizableUnitText="@Units.m_min" AuthorizationRight="Parameter"  FormatString="0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Parameter.Geschwindigkeiten.Rückwärts" RawLimitMin="1" RawLimitMax="32"/>
+                    </StackPanel>
+                </vw:GroupBox>
+                <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,55,0" FontSize="14" LocalizableLabelText="@Parameter.Text22" LocalizableUnitText="@Units.m_min" Foreground="White" Background="{DynamicResource FP_LightGreen}" FormatString="0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Actual value.Bandantrieb Geschwindigkeit" />
+            </Grid>
+            <Grid Margin="0,10,0,0">
+                <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text16">
+                    <StackPanel Margin="10">
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text19" LocalizableUnitText="@Units.kg" AuthorizationRight="Parameter"  FormatString="0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Parameter.Differenz leer" RawLimitMax="5"/>
+                    </StackPanel>
+                </vw:GroupBox>
+                <vw:NumericVarOut  Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,55,0" FontSize="14" LocalizableLabelText="@Parameter.Text21" LocalizableUnitText="@Units.kg" Foreground="White" Background="{DynamicResource FP_LightGreen}" FormatString="0.0" VariableName="NL.PLC.Blocks.1 Modul 1.03 Dossing conveyor.DB DC HMI.Actual value.Gewicht" />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</vw:View>

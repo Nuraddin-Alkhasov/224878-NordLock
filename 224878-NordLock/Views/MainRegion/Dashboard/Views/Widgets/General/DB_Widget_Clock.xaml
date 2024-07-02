@@ -1,0 +1,12 @@
+﻿<vw:View x:Class="HMI.Dashboard.DB_Widget_Clock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+		 Width="585" Height="225" >
+
+	<Grid x:Name="LayoutRoot">
+        <Border CornerRadius="5" Background="{DynamicResource FP_Dark}" BorderThickness="1" BorderBrush="Black"/>
+        <vw:Clock HorizontalAlignment="Stretch" DateTimeMode="TimeOnly" FontSize="50" Foreground="White" FontFamily="Segoe UI" FontWeight="Bold"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </Grid>
+
+</vw:View>

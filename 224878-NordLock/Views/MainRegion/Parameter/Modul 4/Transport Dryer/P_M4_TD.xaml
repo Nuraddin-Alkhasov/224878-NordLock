@@ -1,0 +1,43 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M4_TD"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="{DynamicResource FP_Blue_Gradient}" Grid.ColumnSpan="3">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@Parameter.Text108" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+            </Border>
+        </Grid>
+        <vw:NavigationButton Grid.Row="1" Background="Transparent" BorderThickness="0" RegionName="MainRegion" ViewName="P_M4_Main"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.3*"/>
+            </Grid.ColumnDefinitions>
+            <vw:Region x:Name="Reg" Grid.Column="1" Unloaded="Reg_Unloaded"/>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <vw:RadioButton x:Name="btnH_G" Grid.Row="0" Width="200" Height="70" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource RB_Switcher}" LocalizableText="@Buttons.Text57" Checked="G_Checked" AuthorizationRight="Parameter"/>
+
+                <vw:RadioButton x:Name="btnH_P" Grid.Row="1" Width="200" Height="70" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource RB_Switcher}" LocalizableText="@Buttons.Text53" Loaded="P_Loaded" Checked="P_Checked" AuthorizationRight="Parameter"/>
+                <vw:RadioButton x:Name="btnH_B" Grid.Row="2" Width="200" Height="70" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource RB_Switcher}" LocalizableText="@Buttons.Text54" Checked="B_Checked" AuthorizationRight="Parameter"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</vw:View>

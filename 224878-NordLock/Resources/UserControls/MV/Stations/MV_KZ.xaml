@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="HMI.UserControls.MV_KZ"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" xmlns:UC="clr-namespace:HMI.UserControls">
+    <Grid x:Name="A" Opacity="0" Loaded="UserControl_Loaded">
+        <vw:PictureBox SymbolResourceKey="KZ" Width="411" Height="217"  Margin="6,3,3,24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <vw:PictureBox x:Name="Door" SymbolResourceKey="KZDoorOpen" Width="93" Height="84"   Margin="183,160,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <UC:MVTrayVertical x:Name="Tray1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="349,85,0,0"
+                           IsTray="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[2].Status.Tablett.Belegt"
+                           IsDischarge="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[2].Status.Tablett.Function.Discharge"
+
+                           IsMaterial="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[2].Status.Charge.Material vorhanden"
+                           ActualCoatingLayer="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[2].Status.Charge.Beschichtungen.Ist"
+                           SetCoatingLayer="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[2].Status.Charge.Beschichtungen.Soll" 
+                           Module="4" M4_Station="5" CZTray="2" Header="@Status.Text90" Type="Tray" />
+        <UC:MVTrayVertical x:Name="Tray4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,85,0,0"
+                           IsTray="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[13].Status.Tablett.Belegt"
+                           IsDischarge="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[13].Status.Tablett.Function.Discharge"
+                           IsMaterial="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[13].Status.Charge.Material vorhanden"
+                           ActualCoatingLayer="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[13].Status.Charge.Beschichtungen.Ist"
+                           SetCoatingLayer="NLM4.PLC.Blocks.7 Tracking / Kommunikation.DB Tracking Kühlzone.Tablett[13].Status.Charge.Beschichtungen.Soll" 
+                           Module="4" M4_Station="5" CZTray="13" Header="@Status.Text101" Type="Tray" />
+        <Border Height="60" Width="90" CornerRadius="4" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="83,82,0,0" BorderBrush="Black" BorderThickness="1" Background="{DynamicResource FP_Green_Gradient}">
+            <Grid >
+                <vw:NumericVarOut x:Name="CZTemp" Style="{DynamicResource NVO_Main}" Width="84" Height="30" HorizontalAlignment="Left"  Background="{DynamicResource FP_LightGreen_Gradient}" Foreground="White" LocalizableUnitText="@Units.C" Margin="2,0,0,2" Value="500" TextAlignment="Center" VerticalAlignment="Bottom" FormatString="{}0"/>
+                <vw:TextBlock LocalizableText="@Parameter.Text129" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Margin="0,2,0,0"/>
+            </Grid>
+        </Border>
+
+        <Border  Height="60" Width="115" CornerRadius="4" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,16,0,0" BorderBrush="Black" BorderThickness="1" Background="{DynamicResource FP_Blue_Gradient}">
+            <Grid >
+                <vw:NumericVarOut x:Name="czUmluft" Style="{DynamicResource NVO_Main}" Height="30"  Background="{DynamicResource FP_LightGreen_Gradient}" Foreground="White" LocalizableUnitText="@Units.Rpm" Margin="2,0,2,2" Value="2500" TextAlignment="Center" VerticalAlignment="Bottom" FormatString="{}0"/>
+                <vw:TextBlock LocalizableText="@MainView.Text50" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Margin="0,2,0,0"/>
+            </Grid>
+        </Border>
+        <vw:Button Click="Button_Click_1"  Style="{DynamicResource B_Station}" Margin="69,0,69,20" />
+    </Grid>
+
+</UserControl>

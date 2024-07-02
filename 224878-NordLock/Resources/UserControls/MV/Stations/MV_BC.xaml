@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="HMI.UserControls.MV_BC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" >
+    <Grid x:Name="A" Opacity="0" Loaded="UserControl_Loaded">
+        <vw:PictureBox SymbolResourceKey="BC" Width="112" Height="188"  Margin="3" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <vw:PictureBox x:Name="Door" SymbolResourceKey="BCDoorClosed" Width="38" Height="124"   Margin="6,37,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <vw:Button Click="Button_Click_1"  Style="{DynamicResource B_Station}" />
+
+
+    </Grid>
+
+</UserControl>

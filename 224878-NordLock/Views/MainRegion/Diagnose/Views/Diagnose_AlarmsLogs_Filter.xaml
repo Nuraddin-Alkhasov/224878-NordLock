@@ -1,0 +1,39 @@
+﻿<vw:View x:Class="HMI.Diagnose.Diagnose_AlarmsLogs_Filter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="700" Height="350" IsVisibleChanged="View_IsVisibleChanged">
+
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="HistoricalAlarmFilterAdapter"/>
+    </vw:View.DataContext>
+
+    <Grid x:Name="LayoutRoot" Margin="5,0,0,0">
+        <TabControl FontSize="14" TabStripPlacement="Left" BorderThickness="2" BorderBrush="{DynamicResource FP_Dark}">
+            <TabItem x:Name="btn1"  Height="60" Width="200" Style="{DynamicResource TI_Filter}"  Header="{vw:LocalizedTextExtension LocalizedText=@HistoricalAlarms.HistoricalAlarmFilterView.Timespan}" Margin="0,10,0,-10" PreviewTouchDown="Btn1_PreviewTouchDown">
+                <StackPanel>
+                    <vw:ComboBox Height="40" Margin="10,10,10,0" ItemsSource="{Binding TimeSpanFilterTypes}" SelectedIndex="{Binding SelectedTimeSpanFilterTypeIndex}" FontSize="14" AuthorizationRight="Diagnose"/>
+                    <vw:DateTimeVarIn Value="{Binding MinTime, Mode=TwoWay}" IsEnabled="{Binding CustomTimeSpanFilterEnabled}" HorizontalAlignment="Right" Margin="0,10,10,0" VariableName="__UNLINKED_DATE" FormatDate="@LongDate" DateTimeMode="DateTime" Height="40" Width="260" FontSize="14" LocalizableLabelText="@HistoricalAlarms.HistoricalAlarmFilterView.From" AuthorizationRight="Diagnose" FormatTime="@ShortTime" />
+                    <vw:DateTimeVarIn Value="{Binding MaxTime, Mode=TwoWay}" IsEnabled="{Binding CustomTimeSpanFilterEnabled}"  HorizontalAlignment="Right" Margin="0,10,10,0" VariableName="__UNLINKED_DATE" FormatDate="@LongDate" DateTimeMode="DateTime" Height="40" Width="260" FontSize="14" LocalizableLabelText="@HistoricalAlarms.HistoricalAlarmFilterView.To" AuthorizationRight="Diagnose" FormatTime="@ShortTime" />
+                </StackPanel>
+            </TabItem>
+            <TabItem x:Name="btn2"   Style="{DynamicResource TI_Filter}" Height="60" Width="200" Header="{vw:LocalizedTextExtension LocalizedText=@HistoricalAlarms.HistoricalAlarmFilterView.Alarmgroups}" Margin="0,20,0,-20" PreviewTouchDown="Btn2_PreviewTouchDown">
+                <vw:ListBox ItemsSource="{Binding DesiredGroups}" ScrollViewer.CanContentScroll="False" AuthorizationRight="Diagnose" BorderThickness="0" >
+                        <vw:ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <vw:CheckBox LocalizableLabelText="{Binding LocalizableText}" IsChecked="{Binding IsSelected}" Height="35" Margin="10"/>
+                            </DataTemplate>
+                        </vw:ListBox.ItemTemplate>
+                        <vw:ListBox.GroupStyle>
+                            <GroupStyle ContainerStyle="{StaticResource groupContainerStyle}" />
+                        </vw:ListBox.GroupStyle>
+                    </vw:ListBox>
+            </TabItem>
+       </TabControl>
+
+        <Rectangle HorizontalAlignment="Left" VerticalAlignment="Stretch" Fill="{DynamicResource FP_Red}" Margin="200,0,0,0" Width="4" />
+
+
+    </Grid>
+
+</vw:View>

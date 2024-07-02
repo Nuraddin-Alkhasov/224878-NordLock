@@ -1,0 +1,20 @@
+﻿<vw:BaseWindow  
+    x:Class="HMI.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+	vw:ApplicationManager.ApplicationManager="{StaticResource ApplicationManager}"         
+	ResizeMode="NoResize" WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen" Width="1920" Height="1080" >
+    <Grid x:Name="LayoutRoot" UseLayoutRounding="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <vw:Region x:Name="MainRegion" StartView="DB_DashboardView" DesignTimeView="DB_DashboardView" Grid.Row="1" HorizontalAlignment="Right" />
+        <vw:Region x:Name="HeaderRegion" StartView="HeaderView" DesignTimeView="HeaderView" Grid.Row="0" />
+        <vw:Region x:Name="AppBarRegion" StartView="AppbarView" DesignTimeView="AppbarView" Grid.Row="1" HorizontalAlignment="Left"/>
+        <vw:Region x:Name="DialogRegion"  Grid.RowSpan="2" />
+        <vw:Region x:Name="MessageBoxRegion" Grid.RowSpan="2" />
+        <vw:Region x:Name="TouchpadRegion" Grid.RowSpan="2"/>
+    </Grid>
+</vw:BaseWindow>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectFile xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns="clr-namespace:VisiWin.ProjectFileModel;assembly=VisiWin7.ProjectFileModel">
+	<ProjectFile.Systems>
+		<ProjectSystem>
+			<ProjectSystem.ClientConfig>
+				<ClientConfig CurrentLcid="1031" RuntimeStorableObject.State="Modified" />
+			</ProjectSystem.ClientConfig>
+		</ProjectSystem>
+	</ProjectFile.Systems>
+</ProjectFile>

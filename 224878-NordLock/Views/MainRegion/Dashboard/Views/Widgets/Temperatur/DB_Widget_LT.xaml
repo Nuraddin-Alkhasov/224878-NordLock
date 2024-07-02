@@ -1,0 +1,11 @@
+﻿<vw:View  x:Class="HMI.Dashboard.DB_Widget_LT"
+          xmlns:vw="http://inosoft.com/visiwin7"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+          xmlns:UC="clr-namespace:HMI.UserControls"
+          Width="585" Height="225" Background="Transparent">
+    <UC:DBTemperature x:Name="UC"
+        VN_Temperature="NL.PLC.Blocks.2 Modul 2.05 Tauchbecken.DB LTB HMI.Actual value.Dipping Vat.Lack Temperatur"
+        StationName="Dashboard.Text7"
+        TempRange="0.05"/>
+</vw:View>

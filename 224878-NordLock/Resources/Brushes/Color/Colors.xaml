@@ -1,0 +1,29 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Common Colors -->
+    <Color x:Key="BorderColor">Black</Color>
+    <Color x:Key="WhiteFontColor">White</Color>
+    <Color x:Key="ArrowColor">#FF333333</Color>
+    <Color x:Key="VarOutInErrorBackgroundColor">#FFCC0000</Color>
+    <Color x:Key="VarOutInBlueBackgroundColor">#006AB0</Color>
+    <Color x:Key="ListViewErrorSymbolColor">#FF8C0000</Color>
+    <Color x:Key="DialogBackgroundColor">#FFF0F0F0</Color>
+    <Color x:Key="DialogFooterBackgroundColor">#FFE9E9E9</Color>
+    <Color x:Key="ControlViewBackgroundColor">#FFF0F0F0</Color>
+
+    <!-- Shadow Colors -->
+    <Color x:Key="ShadowDarkTopColor">#C05E5E5E</Color>
+    <Color x:Key="ShadowDarkBottomColor">#C0A2A2A2</Color>
+    <Color x:Key="ShadowLightTopColor">#C0A8A8A8</Color>
+    <Color x:Key="ShadowLightBottomColor">#C0D8D8D8</Color>
+
+    <Color x:Key="FP_Red_C">#FFBE2828</Color>
+    <Color x:Key="FP_Gray_C">#FF807F7F</Color>
+    <Color x:Key="FP_Blue_C">#FF006AAD</Color>
+    <Color x:Key="FP_Dark_C">#2b2c2f</Color>
+    <Color x:Key="FP_LightGreen_C">#FF12C312</Color>
+    <Color x:Key="FP_Green_C">#FF025502</Color>
+    <Color x:Key="FP_Yellow_C">#ffbc49</Color>
+
+</ResourceDictionary>

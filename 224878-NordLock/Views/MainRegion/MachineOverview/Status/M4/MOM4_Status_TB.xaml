@@ -1,0 +1,161 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.MachineOverview.MOM4_Status_TB"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:vw="http://inosoft.com/visiwin7" 
+    Width="1920" Height="1080" Background="{DynamicResource DialogSurroundBrush}" IsVisibleChanged="View_IsVisibleChanged">
+
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="StatusTBAdapter"/>
+    </vw:View.DataContext>
+    <Grid Background="{DynamicResource DialogSurroundBrush}" >
+        <vw:Button Background="Transparent" BorderThickness="0"  Command="{Binding Close}"/>
+
+        <Border MinWidth="520" MinHeight="250" MaxWidth="1600" MaxHeight="1080" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+            </Border.Effect>
+            <Grid  Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <vw:TextBlock x:Name="HeaderText" LocalizableText="@Status.Text108"  HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold" />
+                <vw:TextBlock x:Name="SL" Text="{Binding CurrentSL}" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold" Margin="325,20,0,20" />
+                <Border Grid.Row="1" CornerRadius="5" Background="{StaticResource MainViewBackgroundBrush}">
+                    <StackPanel Margin="10" Width="750" >
+                        <vw:GroupBox HeaderText="Header" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Protocol.Text16">
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                                    <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}" Value="{Binding CurrentOrder.Data_1}"  LocalizableLabelText="@DataPicker.Text2" />
+                                    <vw:TextVarOut Style="{DynamicResource TVO_Main}" Value="{Binding CurrentOrder.Data_2}" Height="40" Margin="0,5,0,0"  LocalizableLabelText="@DataPicker.Text1"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                                    <vw:TextVarOut Style="{DynamicResource TVO_Main}" Value="{Binding CurrentOrder.Data_3}" Height="40" LocalizableLabelText="@DataPicker.Text6"/>
+                                    <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}" Value="{Binding CurrentOrder.MR.Name}" LocalizableLabelText="@DataPicker.Text4" Margin="0,5,0,0"/>
+
+                                </StackPanel>
+                                <vw:Button Grid.Column="1"  Style="{DynamicResource B_Material}" Margin="-5,38,-10,-8" Command="{Binding ShowMRData}"/>
+                            </Grid>
+
+
+                        </vw:GroupBox>
+                        <vw:GroupBox HeaderText="Charge" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Protocol.Text38" Margin="0,5,0,0" >
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0"  Margin="0,0,5,0" >
+                                    <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}" LocalizableLabelText="@Status.Text7" Value="{Binding BoxNumber}"/>
+                                    <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text29" Margin="0,5,0,0" Value="{Binding Run}" />
+                                    <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text12" Margin="0,5,0,0" Value="{Binding Charge}" />
+                                    <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text13" Margin="0,5,0,0" Value="{Binding Weight}" />
+                                    <vw:Switch Width="200" Height="40" Margin="0,40,0,0" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text4" AuthorizationRight="Status" Style="{DynamicResource S_Status}" IsChecked="{Binding IsMaterial}" IsEnabled="False"/>
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="5,0,0,0"  >
+                                    <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text17" >
+                                        <Grid Margin="5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Status.Text2" Margin="0,0,5,0" Value="{Binding SetRun}" />
+                                            <vw:TextVarOut Grid.Column="1" Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Status.Text3" Margin="5,0,0,0" Value="{Binding ActualRun}" />
+
+                                        </Grid>
+                                    </vw:GroupBox>
+                                    <vw:TextVarOut x:Name="Paint" Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Status.Text3" Margin="0,5,0,0" Value="{Binding Paint}"/>
+                                    <vw:TextVarOut x:Name="NextPaint" Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Status.Text111" Margin="0,5,0,0" Value="{Binding NextPaint}"/>
+
+                                    <Grid Margin="5,15,0,00" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <vw:Key Width="160" Height="60" HorizontalAlignment="Left" Style="{DynamicResource B_Gray_Green}" AuthorizationRight="Status" LocalizableText="@Buttons.Text8" KeyMode="KeyMode" Command="{Binding UpdateData}"/>
+                                        <vw:Key Grid.Column="1" Width="160" Height="60" HorizontalAlignment="Right" Style="{DynamicResource B_Red}" AuthorizationRight="Status" LocalizableText="@Buttons.Text9" KeyMode="KeyMode" Command="{Binding DeleteData}"/>
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
+                        </vw:GroupBox>
+                        <vw:GroupBox Margin="0,5,0,0" HeaderText="Charge" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text9">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel>
+                                        <vw:Switch Width="200" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text16" AuthorizationRight="Status" Style="{DynamicResource S_Status}" IsChecked="{Binding IsTray}" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                                        <vw:Switch  Width="200" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text14"  AuthorizationRight="Status" Style="{DynamicResource S_Status}" IsChecked="{Binding IsDischarge}"/>
+                                        <vw:Switch  Width="200" Height="40" Margin="0,5,0,0" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text113"  AuthorizationRight="Status" Style="{DynamicResource S_Status}" IsChecked="{Binding IsQC_M}" IsEnabled="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Allgemein.Gerneral.Produktionsmodus.Qualitätsprüfung M.Freigabe}"/>
+
+                                    </StackPanel>
+
+
+                                </Grid>
+                                <Grid Grid.Row="2" Margin="0,5,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0"  Margin="0,0,5,0" >
+                                        <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text11"  >
+                                            <StackPanel Margin="5">
+                                                <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text13" Margin="0,5,0,0" Value="{Binding WeightL}"/>
+                                            </StackPanel>
+                                        </vw:GroupBox>
+
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="5,0,0,0"  >
+                                        <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text12" >
+                                            <StackPanel Margin="5">
+                                                <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text13" Margin="0,5,0,0" Value="{Binding WeightR}" />
+                                            </StackPanel>
+                                        </vw:GroupBox>
+
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </vw:GroupBox>
+
+                        <vw:GroupBox Margin="0,5,0,0" HeaderText="Charge" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text109">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <vw:TextBlock Text="{Binding CurrentSL}" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold" Margin="88,-39,0,79" />
+
+
+                                <vw:Switch Width="200" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text110" AuthorizationRight="Status" Style="{DynamicResource S_Status}" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Shelf.Gesperrt"  />
+
+
+
+
+                            </Grid>
+                        </vw:GroupBox>
+
+
+                    </StackPanel>
+                </Border>
+                <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding Close}" Style="{DynamicResource B_Close}" Width="60" Height="40" Text="X" Margin="0,0,10,0" />
+            </Grid>
+        </Border>
+
+    </Grid>
+
+</vw:View>

@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Einträge ins SymbolResourceDictionary sollten hier erfolgen -->
+
+    <DataTemplate x:Key="Splashscreen">
+        <Image Source="/Resources/Images/Splashscreen.png" Stretch="Fill" Width="510" Height="180" />
+    </DataTemplate>
+    <DataTemplate x:Key="HeaderRegion">
+        <Image Source="/Resources/Images/HeaderRegion.png" Stretch="Fill" Width="100" Height="38" />
+    </DataTemplate>
+    <DataTemplate x:Key="Loading">
+        <Image Source="/Resources/Images/Loading.gif" Stretch="Fill" Width="188" Height="96" />
+    </DataTemplate>
+
+   
+</ResourceDictionary>

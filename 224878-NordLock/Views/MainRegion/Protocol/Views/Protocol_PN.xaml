@@ -1,0 +1,39 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Protocol.Protocol_PN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="1000">
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <vw:PanoramaNavigation  x:Name="pn_protocol"  Orientation="Horizontal" IsManipulationEnabled="False" Grid.Row="1" SelectedPanoramaRegionChanged="Pn_protocol_SelectedPanoramaRegionChanged">
+            <vw:PanoramaNavigation.PanoramaRegions>
+                <vw:PanoramaRegion StartView="Protocol_Orders"/>
+                <vw:PanoramaRegion StartView="Protocol_Charges" AuthorizationRight="Protocol"/>
+            </vw:PanoramaNavigation.PanoramaRegions>
+        </vw:PanoramaNavigation>
+        <Grid Background="{DynamicResource FP_Blue_Gradient}">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@Appbar.lblAuftraege" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,23,170,23" />
+            </Border>
+        </Grid>
+        <ListBox Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" Opacity="0.8"
+                 ItemContainerStyle="{DynamicResource LBI_PanoramaNavigation_H}"  Style="{DynamicResource LB_PanoramaNavigation_H}"
+                 SelectedIndex="{Binding SelectedPanoramaRegionIndex, ElementName=pn_protocol, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}">
+            <vw:ListBoxItem />
+            <vw:ListBoxItem Margin="10,0,0,0" />
+        </ListBox>
+        <vw:Button Width="160" Height="90" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Style="{DynamicResource B_Gray}" LocalizableText="@Buttons.Text5" Margin="1670,0,10,10" Click="Button_Click" AuthorizationRight="Protocol" />
+    </Grid>
+
+</vw:View>

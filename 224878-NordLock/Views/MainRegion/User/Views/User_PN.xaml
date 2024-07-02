@@ -1,0 +1,36 @@
+﻿<vw:View  x:Class="HMI.User.User_PN"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+     Width="1840" Height="1000" >
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <vw:PanoramaNavigation Name="pn_benutzerverwaltung" Grid.Row="1"  Orientation="Horizontal" IsManipulationEnabled="False" SelectedPanoramaRegionChanged="Pn_benutzerverwaltung_SelectedPanoramaRegionChanged">
+            <vw:PanoramaNavigation.PanoramaRegions>
+                <vw:PanoramaRegion StartView="User_Manager"/>
+                <vw:PanoramaRegion StartView="User_GroupManager" AuthorizationRight="UserManagement"/>
+            </vw:PanoramaNavigation.PanoramaRegions>
+        </vw:PanoramaNavigation>
+        <Grid>
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@UserManagement.Text4" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+            </Border>
+        </Grid>
+        <ListBox Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,10" Opacity="0.8"
+                 ItemContainerStyle="{DynamicResource LBI_PanoramaNavigation_H}"  Style="{DynamicResource LB_PanoramaNavigation_H}"
+                 SelectedIndex="{Binding SelectedPanoramaRegionIndex, ElementName=pn_benutzerverwaltung, Mode=TwoWay, NotifyOnTargetUpdated=True, NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}">
+            <vw:ListBoxItem />
+            <vw:ListBoxItem Margin="10,0,0,0" />
+        </ListBox>
+    </Grid>
+</vw:View>

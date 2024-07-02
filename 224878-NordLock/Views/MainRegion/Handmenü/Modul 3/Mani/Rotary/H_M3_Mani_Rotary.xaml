@@ -1,0 +1,17 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M3_Mani_Rotary"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid  Width="1500" Height="250" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <vw:TextBlock Margin="0,60,0,0" LocalizableText="@HandMenu.Text51" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <vw:TextVarOut Width="700" Height="40" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Actual value.Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_M3ManiRotary}, StateMode=Value}"/>
+        <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,155,0,55" LocalizableLabelText="@HandMenu.Soll" LocalizableUnitText="@Units.grad" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Set Value.Position in °"/>
+        <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="200" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,155,400,55" LocalizableLabelText="@HandMenu.Ist" LocalizableUnitText="@Units.grad" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Actual value.Aktuelle Position in °"/>
+        <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Center" LocalizableText="@Buttons.Text24" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.PC.Drive.Ein"/>
+        <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center"  Style="{DynamicResource B_Red}" KeyMode="KeyMode" LocalizableText="@Buttons.Text23" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.PC.Drive.Aus" />
+        <vw:ComboBox x:Name="aaa" Width="580" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" StateList="{DynamicResource SC_M3ManiRotary}" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.3 Modul 3.08 Manipulator.02 Mani Drehen.DB Mani Drehen HMI.Set Value.Vorwahl Position Textliste" />
+
+    </Grid>
+</vw:View>

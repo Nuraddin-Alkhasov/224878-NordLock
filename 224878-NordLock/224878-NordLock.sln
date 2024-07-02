@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "224878-NordLock", "224878-NordLock.csproj", "{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1BA9C30D-FDC2-4B2C-BA0C-4BB9F6C846E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Debug|x86.ActiveCfg = Debug|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Debug|x86.Build.0 = Debug|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Release|Any CPU.ActiveCfg = Release|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Release|Mixed Platforms.Build.0 = Release|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Release|x86.ActiveCfg = Release|x86
+		{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C7325A9-D780-496B-9D41-6A7F8DE880E0}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M2_Rotor_Service"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:UC="clr-namespace:HMI.UserControls"
+         Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <UC:H_Service
+        StepPositive="NL.PLC.Blocks.2 Modul 2.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Tippen +"
+        StepPositiveFast="NL.PLC.Blocks.2 Modul 2.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Tippen + schnell"
+        StepNegative="NL.PLC.Blocks.2 Modul 2.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Tippen -"
+        StepNegativeFast="NL.PLC.Blocks.2 Modul 2.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Tippen - schnell"
+        ActualValue="NL.PLC.Blocks.2 Modul 2.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.Istwerte.Geschwindigkeit an Visu"
+        ActualValueUnit="@Units.Rpm"
+        SetReferenceVar="NL.PLC.Blocks.2 Modul 2.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.Drive.Vorwahl Referenz"
+        ReferenceLogText="@Logging.Service.Text5"
+        DeleteReferenceVar="NL.PLC.Blocks.2 Modul 2.10 Zentrifuge.0 Rotor.DB BS Rotor HMI.PC.General.Refernez löschen"
+        DelReferenceLogText="@Logging.Service.Text17"/>
+</vw:View>

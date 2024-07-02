@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:vw="http://inosoft.com/visiwin7">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_AppBar.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_Dashboard.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_General.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_Handmenu.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_MachineOverview.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_MaterialTracking.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_MessageBox.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_Recipe.xaml" />
+        <ResourceDictionary Source="/224878-NordLock;component/Resources/DataTemplates/Symbol/S_Reporting.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

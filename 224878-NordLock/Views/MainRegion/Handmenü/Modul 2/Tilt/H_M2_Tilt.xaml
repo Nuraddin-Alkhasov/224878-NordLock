@@ -1,0 +1,28 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M2_Tilt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid  Width="1500" Height="250" Grid.Row="1">
+            <vw:TextBlock Margin="0,60,0,0" LocalizableText="@HandMenu.Text31" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="700" Height="40" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.Istwerte.Abstecker Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_Cylinder2}, StateMode=Value}"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Center" LocalizableText="@Buttons.Text36" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.PC.Abstecker.Zu"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center" LocalizableText="@Buttons.Text38" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.PC.Abstecker.Auf" />
+        </Grid>
+
+        <Grid Width="1500" Height="250" >
+            <vw:TextBlock Margin="0,60,0,0" LocalizableText="@HandMenu.Text29" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <vw:TextVarOut Width="700" Height="40" HorizontalContentAlignment="Center" Value="{vw:VariableBinding VariableName=NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.Istwerte.Schwenken Position Textliste, Converter={StaticResource ValueToStateTextConverter}, States={StaticResource TSC_Tilt}, StateMode=Value}"/>
+            <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,155,0,55" LocalizableLabelText="@HandMenu.Soll" LocalizableUnitText="@Units.grad" FormatString="{}0" VariableName="NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.Sollwerte.Position an Panel in Grad"/>
+            <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="200" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,155,400,55" LocalizableLabelText="@HandMenu.Ist" LocalizableUnitText="@Units.grad" FormatString="{}0" VariableName="NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.Istwerte.Position in Grad"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Left" VerticalAlignment="Center" LocalizableText="@Buttons.Text24" Style="{DynamicResource B_Blue}" KeyMode="KeyMode" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.PC.Drive.Ein"/>
+            <vw:Key Width="160" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center"  Style="{DynamicResource B_Red}" KeyMode="KeyMode" LocalizableText="@Buttons.Text23" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.PC.Drive.Aus" />
+            <vw:ComboBox x:Name="aaa" Width="580" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" StateList="{DynamicResource SC_Tilt}" AuthorizationRight="ManualDrive" VariableName="NL.PLC.Blocks.2 Modul 2.15 Schwenken.DB BS Schwenken HMI.Sollwerte.Position Tesxtliste" />
+        </Grid>
+    </Grid>
+</vw:View>

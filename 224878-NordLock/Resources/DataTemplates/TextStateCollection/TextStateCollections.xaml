@@ -1,0 +1,246 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <vw:TextStateCollection x:Key="OperatingMode">
+        <vw:TextState LocalizableText="@Lists.OperatingMode.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.OperatingMode.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.OperatingMode.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.OperatingMode.Text4" Value="3" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="M_OnOff">
+        <vw:TextState Text="@Lists.M_OnOff.Text1" Value="0" />
+        <vw:TextState Text="@Lists.M_OnOff.Text1" Value="1" />
+        <vw:TextState Text="@Lists.M_OnOff.Text2" Value="2" />
+        <vw:TextState Text="@Lists.M_OnOff.Text2" Value="3" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_YesNo">
+        <vw:TextState LocalizableText="@Lists.YesNo.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.YesNo.Text2" Value="1" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Cylinder">
+        <vw:TextState LocalizableText="@Lists.Cylinder.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Cylinder.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Cylinder.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.Cylinder.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.Cylinder.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Locker">
+        <vw:TextState LocalizableText="@Lists.Locker.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Locker.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Locker.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.Locker.Text4" Value="3" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Lift">
+        <vw:TextState LocalizableText="@Lists.Lift.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Lift.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Lift.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.Lift.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.Lift.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Tilt">
+        <vw:TextState LocalizableText="@Lists.Tilt.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text5" Value="4" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text6" Value="5" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text7" Value="6" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text8" Value="7" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text9" Value="8" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text10" Value="9" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text11" Value="10" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text12" Value="11" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text13" Value="12" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text14" Value="13" />
+        <vw:TextState LocalizableText="@Lists.Tilt.Text15" Value="14" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Belt">
+        <vw:TextState LocalizableText="@Lists.Belt.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Belt.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Belt.Text3" Value="2" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_KBD">
+        <vw:TextState LocalizableText="@Lists.KBD.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.KBD.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.KBD.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.KBD.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.KBD.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Cylinder2">
+        <vw:TextState LocalizableText="@Lists.Cylinder2.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Cylinder2.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Cylinder2.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.Cylinder2.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.Cylinder2.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_RotorPlanet">
+        <vw:TextState LocalizableText="@Lists.RotorPlanet.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.RotorPlanet.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.RotorPlanet.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.RotorPlanet.Text4" Value="3" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_LTB">
+        <vw:TextState LocalizableText="@Lists.LTB.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text5" Value="4" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text6" Value="5" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text7" Value="6" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text8" Value="7" />
+        <vw:TextState LocalizableText="@Lists.LTB.Text9" Value="8" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_M3ManiLift">
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text5" Value="4" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text6" Value="5" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text7" Value="6" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text8" Value="7" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text9" Value="8" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text10" Value="9" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text11" Value="10" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text12" Value="11" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text13" Value="12" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text14" Value="13" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text15" Value="14" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text16" Value="15" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text17" Value="16" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text18" Value="17" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text19" Value="18" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text20" Value="19" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text21" Value="20" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text22" Value="21" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text23" Value="22" />
+        <vw:TextState LocalizableText="@Lists.M3ManiLift.Text24" Value="23" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_M3ManiRotary">
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text5" Value="4" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text6" Value="5" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text7" Value="6" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text8" Value="7" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text9" Value="8" />
+        <vw:TextState LocalizableText="@Lists.M3ManiRotary.Text10" Value="9" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_M3ManiArm">
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text5" Value="4" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text6" Value="5" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text7" Value="6" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text8" Value="7" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text9" Value="8" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text10" Value="9" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text11" Value="10" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text12" Value="11" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text13" Value="12" />
+        <vw:TextState LocalizableText="@Lists.M3ManiArm.Text14" Value="13" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Paddle">
+        <vw:TextState LocalizableText="@Lists.Paddle.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Paddle.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Paddle.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.Paddle.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.Paddle.Text5" Value="4" />
+
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_BCTilt">
+        <vw:TextState LocalizableText="@Lists.BCTilt.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.BCTilt.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.BCTilt.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.BCTilt.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.BCTilt.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_Lifter">
+        <vw:TextState LocalizableText="@Lists.Lifter.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.Lifter.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.Lifter.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.Lifter.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.Lifter.Text5" Value="4" />
+    </vw:TextStateCollection>
+  
+    <vw:TextStateCollection x:Key="TSC_HVT">
+        <vw:TextState LocalizableText="@Lists.HVT.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.HVT.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.HVT.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.HVT.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.HVT.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_HNT">
+        <vw:TextState LocalizableText="@Lists.HNT.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.HNT.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.HNT.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.HNT.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.HNT.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_TKZ">
+        <vw:TextState LocalizableText="@Lists.TKZ.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.TKZ.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.TKZ.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.TKZ.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.TKZ.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_TD">
+        <vw:TextState LocalizableText="@Lists.TD.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.TD.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.TD.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.TD.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.TD.Text5" Value="4" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_M4ManiArm">
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text3" Value="2" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text4" Value="3" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text5" Value="4" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text6" Value="5" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text7" Value="6" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text8" Value="7" />
+        <vw:TextState LocalizableText="@Lists.M4ManiArm.Text9" Value="8" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_M4ManiLift">
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text3" Value="3" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text4" Value="4" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text5" Value="5" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text6" Value="6" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text7" Value="7" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text8" Value="8" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text9" Value="9" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text10" Value="10" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text11" Value="11" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text12" Value="12" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text13" Value="13" />
+        <vw:TextState LocalizableText="@Lists.M4ManiLift.Text14" Value="14" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_M4ManiRotary">
+        <vw:TextState LocalizableText="@Lists.M4ManiRotary.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.M4ManiRotary.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.M4ManiRotary.Text3" Value="3" />
+        <vw:TextState LocalizableText="@Lists.M4ManiRotary.Text4" Value="4" />
+        <vw:TextState LocalizableText="@Lists.M4ManiRotary.Text5" Value="6" />
+        <vw:TextState LocalizableText="@Lists.M4ManiRotary.Text6" Value="7" />
+        <vw:TextState LocalizableText="@Lists.M4ManiRotary.Text7" Value="8" />
+    </vw:TextStateCollection>
+    <vw:TextStateCollection x:Key="TSC_M4ManiDrive">
+        <vw:TextState LocalizableText="@Lists.M4ManiDrive.Text1" Value="0" />
+        <vw:TextState LocalizableText="@Lists.M4ManiDrive.Text2" Value="1" />
+        <vw:TextState LocalizableText="@Lists.M4ManiDrive.Text3" Value="3" />
+        <vw:TextState LocalizableText="@Lists.M4ManiDrive.Text4" Value="5" />
+        <vw:TextState LocalizableText="@Lists.M4ManiDrive.Text5" Value="6" />
+        <vw:TextState LocalizableText="@Lists.M4ManiDrive.Text6" Value="7" />
+        <vw:TextState LocalizableText="@Lists.M4ManiDrive.Text7" Value="8" />
+
+    </vw:TextStateCollection>
+    
+</ResourceDictionary>

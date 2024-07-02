@@ -1,0 +1,12 @@
+﻿<vw:View  x:Class="HMI.Dashboard.DB_Widget_KZT"
+          xmlns:vw="http://inosoft.com/visiwin7"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:UC="clr-namespace:HMI.UserControls"
+          Width="585" Height="225" Background="Transparent">
+    <UC:DBTemperature x:Name="UC"
+        VN_Temperature="NLM4.PLC.Blocks.4 Modul 4.08 Heizung / Ventilatoren.04 Kühlzone.DB Kühlzone HMI.Istwerte.Temperatur"
+        StationName="@Dashboard.Text25"
+        TempRange="0.05"/>
+
+</vw:View>

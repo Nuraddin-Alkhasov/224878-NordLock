@@ -1,0 +1,35 @@
+﻿<vw:View x:Class="HMI.NumericTouchpadView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    Width="450" Height="500" KeyboardNavigation.ControlTabNavigation="Once" KeyboardNavigation.TabNavigation="Cycle" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <Border BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+            </Border.Effect>
+        <i:Interaction.Behaviors>
+            <vw:MouseDragElementBehavior ConstrainToParentBounds="True" />
+        </i:Interaction.Behaviors>
+        <Grid Margin="10,0,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" IsEnabled="{Binding CancelButtonIsEnabled}" Visibility="{Binding CancelButtonVisible}" Command="{Binding CloseDialogCommand}" CommandParameter="Cancel" Style="{DynamicResource B_Close}" Click="CancelButton_Click" Width="60" Height="40" Text="X" Margin="0,-1,0,0"/>
+            <TextBlock x:Name="lblNumericPadDescription" Width="350" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="22" Text="NumPad" HorizontalAlignment="Left"/>
+            <Border Background="{DynamicResource GroupBoxBackgroundBrush}" CornerRadius="5" Grid.Row="1" Grid.RowSpan="2">
+                <Grid >
+                    <vw:NumericVarIn x:Name="numericVarIn" Height="50" VerticalAlignment="Top" TouchpadMember="True" WriteValueCompleted="NumericVarIn_WriteValueCompleted" Margin="10,10,10,0" Style="{DynamicResource TouchKeyboardNumericVarInStyle}" FontSize="14"/>
+                    <TextBlock x:Name="lblUnitText" Height="50" Margin="15,10,0,0"  FontSize="20" VerticalAlignment="Top" Text="{Binding UnitText, ElementName=numericVarIn}" HorizontalAlignment="Left" Width="67" />
+                    <vw:NumericVarOut x:Name="lblLimitMaxString" Margin="10,70,10,0"  FontSize="14"  Value="{Binding LimitMax, ElementName=numericVarIn}"  HorizontalAlignment="Right" Width="80" Height="32" VerticalAlignment="Top" LocalizableLabelText="@Text1" />
+                    <vw:NumericVarOut x:Name="lblLimitMinString" Margin="50,70,0,0" FontSize="14"  Value="{Binding LimitMin, ElementName=numericVarIn}" HorizontalAlignment="Left" Width="80" Height="32" VerticalAlignment="Top" LocalizableLabelText="@Text2" />
+                    <vw:TouchKeyboard x:Name="touchkeyboard1" Content="TouchKeyboard" Height="Auto" Width="Auto"  EscapeKeyPressed="Touchkeyboard1_EscapeKeyPressed" Style="{DynamicResource NumericTouchKeyboard}" Margin="10,112,10,10"/>
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Border>
+        </vw:View>

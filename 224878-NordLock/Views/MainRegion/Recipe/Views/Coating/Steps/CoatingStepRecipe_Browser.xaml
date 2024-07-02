@@ -1,0 +1,49 @@
+﻿<vw:View 
+	    x:Class="HMI.Views.MainRegion.Recipe.CoatingStepRecipe_Browser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	    xmlns:vw="http://inosoft.com/visiwin7"
+        xmlns:local="clr-namespace:HMI.Views.MainRegion.Recipe"
+	    Width="1920" Height="1080" Background="{DynamicResource DialogSurroundBrush}">
+
+    <Grid IsVisibleChanged="_IsVisibleChanged">
+        <vw:Button Background="Transparent" BorderThickness="0" Command="{Binding CloseCommand}"/>
+
+        <Border  Width="800" Height="650" BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+            </Border.Effect>
+            <Grid  Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <vw:TextBlock x:Name="HeaderText" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold" LocalizableText="@RecipeSystem.Text52" Width="400" />
+                <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{DynamicResource B_Close}" Width="60" Height="40" Text="X" Command="{Binding CloseCommand}" CommandParameter="False" Margin="0,-1,0,0"/>
+                <StackPanel Grid.Row="1" >
+                    <vw:TextVarIn x:Name="tbName" Style="{DynamicResource TVI_Main}" LocalizableLabelText="@RecipeSystem.Text27"   Value="{Binding NameBuffer, Mode=TwoWay}" VariableName="__UNLINKED_BSTR" Height="40" TextLengthMin="2" TextLengthMax="40" AuthorizationRight="CoatingProgramm" />
+                    <vw:TextVarIn x:Name="tbDescription" Style="{DynamicResource TVI_Main}" LocalizableLabelText="@RecipeSystem.Text28" Margin="0,10,0,0" Value= "{Binding DescriptionBuffer, Mode=TwoWay}"  VariableName="__UNLINKED_BSTR" Height="40" TextLengthMin="2" TextLengthMax="40" AuthorizationRight="CoatingProgramm"/>
+                </StackPanel>
+                <DataGrid Grid.Row="2" x:Name="RBdgv_recipe" ItemsSource="{Binding CoatingStepRecipes}"  SelectedItem="{Binding SelectedCoatingStepRecipe}" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+                    <DataGrid.ItemContainerStyle>
+                        <Style TargetType="DataGridRow">
+                            <EventSetter Event="PreviewTouchDown" Handler="RBdgv_recipe_PreviewTouchDown"/>
+                            <Setter Property="Height" Value="45"/>
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.Text30}" Binding="{Binding Name}" Width="150"/>
+                        <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.Text31}" Binding="{Binding VWR.Description}" Width="211"/>
+                        <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.Text53}" Binding="{Binding VWR.LastChanged, StringFormat=dd.MM.yyyy HH:mm:ss}" ElementStyle="{StaticResource TB_Center}"   Width="180"/>
+                        <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.Text54}" Binding="{Binding VWR.User}" Width="200"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <vw:Button Grid.Row="3" HorizontalAlignment="Left" Height="40" Width="160" LocalizableText="@Buttons.Text10" IsEnabled="{Binding RecipeIsSelected}" Command="{Binding LoadFileToBuffer}" Style="{DynamicResource B_Blue_ns}" AuthorizationRight="CoatingProgramm" />
+                <vw:Button x:Name="btnSave" Grid.Row="3" HorizontalAlignment="Center"  Command="{Binding SaveFileCommand}" Height="40"  Width="160" LocalizableText="@Buttons.Text25" Style="{DynamicResource B_Blue_ns}" AuthorizationRight="CoatingProgramm" />
+                <vw:Button x:Name="btnDelete" Grid.Row="3" HorizontalAlignment="Left" Height="40"  Width="160" LocalizableText="@Buttons.Text9" IsEnabled="{Binding RecipeIsSelected}" Command="{Binding DeleteFileCommand}"  Style="{DynamicResource B_Red_ns}" Margin="618,10,0,10" AuthorizationRight="CoatingProgramm"/>
+            </Grid>
+        </Border>
+    </Grid>
+</vw:View>

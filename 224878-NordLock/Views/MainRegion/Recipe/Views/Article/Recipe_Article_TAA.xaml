@@ -1,0 +1,36 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_Article_TAA"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+
+    <vw:GroupBox x:Name="A" Opacity="0" Style="{DynamicResource GB_Group}"  Margin="10" Loaded="View_Loaded" Unloaded="A_Unloaded">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+
+            <vw:RadioButton x:Name="Vibro" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="True" Style="{DynamicResource RB_Group}"   LocalizableLabelText="@RecipeSystem.Text93" >
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <vw:Switch Width="200" Height="40" Grid.Column="1" HorizontalAlignment="Right" LocalizableTextOn="@Lists.OnOff.Text1" LocalizableTextOff="@Lists.OnOff.Text2" AuthorizationRight="Article" Style="{DynamicResource S_Status}" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Tablett auskippen Auslauf.Klopfen.Ein" ValueChanged="Switch_ValueChanged"/>
+
+                    <vw:NumericVarIn x:Name="hits" Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Tablett auskippen Auslauf.Klopfen.Schläge in Summe" LocalizableLabelText="@RecipeSystem.Text92" AuthorizationRight="Article" RawLimitMax="10" FormatString="{}0"/>
+                </Grid>
+            </vw:RadioButton>
+
+            <vw:RadioButton Grid.Row="1" IsChecked="True" Style="{DynamicResource RB_Group}"   Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text57" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn x:Name="angle" Style="{DynamicResource NVI_Main}" IsEnabled="False" FontWeight="Bold" Height="40" LocalizableLabelText="@RecipeSystem.Text63" LocalizableUnitText="@Units.grad" AuthorizationRight="Article" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Tablett auskippen Auslauf.Kippinterval[1].Angle" Value="180" RawLimitMax="180" RawLimitMin="1" FormatString="{}0.0" />
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text64" LocalizableUnitText="@Units.grad_sec" AuthorizationRight="Article" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Tablett auskippen Auslauf.Kippinterval[1].Tilt speed" RawLimitMax="18" RawLimitMin="1" FormatString="{}0.0"/>
+                    <vw:NumericVarIn Visibility="Collapsed" Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text43" LocalizableUnitText="@Units.s" AuthorizationRight="Article" VariableName="NL.PLC.Blocks.50 HMI.01 PC.DB PC.LD.Station.Tablett auskippen Auslauf.Kippinterval[1].Wait time" RawLimitMax="5" RawLimitMin="0" FormatString="{}0"/>
+                </StackPanel>
+            </vw:RadioButton>
+        </Grid>
+    </vw:GroupBox>
+</vw:View>

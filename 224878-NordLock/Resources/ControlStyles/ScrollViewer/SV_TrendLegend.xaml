@@ -1,0 +1,76 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vw="http://inosoft.com/visiwin7">
+	<!-- Resource dictionary entries should be defined here. -->
+    <Style x:Key="SV_TrendLegend" TargetType="{x:Type ScrollViewer}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="BorderBrush" Value="{DynamicResource ScrollBarBorderBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                    <Grid Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Border BorderThickness="0" Background="{DynamicResource ListHeaderBackgroundBrush}"
+                                    Grid.ColumnSpan="2" Grid.Column="0" MinHeight="{DynamicResource ListHeaderHeight}"
+                                    Grid.Row="0" Uid="Border_80">
+                            <ScrollViewer Focusable="False" HorizontalScrollBarVisibility="Hidden"
+                                              VerticalScrollBarVisibility="Hidden">
+                                <DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter"
+                                                                    Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                            </ScrollViewer>
+                        </Border>
+                        <Border BorderThickness="0" Background="{TemplateBinding Background}" Grid.Column="0"
+                                    Grid.Row="1" Uid="Border_80">
+                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
+                                                        CanContentScroll="{TemplateBinding CanContentScroll}"
+                                                        CanHorizontallyScroll="False" CanVerticallyScroll="False"
+                                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                        Content="{TemplateBinding Content}"
+                                                        KeyboardNavigation.DirectionalNavigation="Local"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Border>
+                        <Border x:Name="ScrollViewerCorner" BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1,1,0,0"
+                                    Background="{Binding Background, ElementName=PART_VerticalScrollBar}"
+                                    Grid.Column="1" Grid.Row="2" Uid="Border_7" />
+                        <ScrollBar x:Name="PART_HorizontalScrollBar" Cursor="Arrow" Grid.Column="0"
+                                       Height="{DynamicResource ScrollBarWidth}"
+                                       Maximum="{TemplateBinding ScrollableWidth}" Minimum="0" MinHeight="30"
+                                       Orientation="Horizontal" Grid.Row="2"
+                                       Style="{DynamicResource HorizontalScrollBarStyle}"
+                                       Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                       Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                       ViewportSize="{TemplateBinding ViewportWidth}" />
+                        <ScrollBar x:Name="PART_VerticalScrollBar" Cursor="Arrow" Grid.Column="1"
+                                       Maximum="{TemplateBinding ScrollableHeight}" MinWidth="30" Minimum="0"
+                                       Orientation="Vertical" Grid.Row="1"
+                                       Style="{DynamicResource VerticalScrollBarStyle}"
+                                       Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                       Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                       ViewportSize="{TemplateBinding ViewportHeight}"
+                                       Width="{DynamicResource ScrollBarWidth}" />
+                        <Border BorderThickness="0" Background="{DynamicResource ShadowLightDownBrush}"
+                                    Grid.ColumnSpan="2" Grid.Column="0" Height="5" MinWidth="{TemplateBinding Width}"
+                                    Grid.Row="1" VerticalAlignment="Top" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Visibility" SourceName="PART_VerticalScrollBar" Value="Collapsed">
+                            <Setter Property="Visibility" TargetName="ScrollViewerCorner" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="Visibility" SourceName="PART_HorizontalScrollBar" Value="Collapsed">
+                            <Setter Property="Visibility" TargetName="ScrollViewerCorner" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

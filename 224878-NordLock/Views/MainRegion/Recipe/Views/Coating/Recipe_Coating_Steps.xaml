@@ -1,0 +1,40 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Coating_Steps"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:local="clr-namespace:HMI.Views.MainRegion.Recipe"
+    Width="1840" Height="880" Background="{StaticResource MainViewBackgroundBrush}" >
+
+    <vw:View.DataContext>
+        <local:RecipeAdapter_CS/>
+    </vw:View.DataContext>
+
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox x:Name="Reg" Grid.Column="1" Grid.RowSpan="3" BorderThickness="0" Content="{Binding Content}"/>
+
+        <vw:NumericVarOut x:Name="v1"  VariableName="Recipe.CoatingStep.Tauchen / Schleudern / Wälzen" Visibility="Collapsed" ValueChanged="V1_ValueChanged"/>
+
+        <vw:RadioButton x:Name="btndiping" Width="200" Height="80" Margin="50,0,0,0" LocalizableText="@RecipeSystem.Text11" Style="{DynamicResource RB_Switcher}" IsChecked="{Binding IsDipChecked}" AuthorizationRight="CoatingProgramm"/>
+        <vw:RadioButton x:Name="btnspining" Grid.Row="1" Width="200" Margin="50,0,0,0" Height="80"  LocalizableText="@RecipeSystem.Text19" Style="{DynamicResource RB_Switcher}" IsChecked="{Binding IsSpinChecked}" AuthorizationRight="CoatingProgramm"/>
+        <vw:RadioButton x:Name="btntilting" Grid.Row="2" Width="200" Margin="50,0,0,0" Height="80"  LocalizableText="@RecipeSystem.Text18" Style="{DynamicResource RB_Switcher}"  IsChecked="{Binding IsTiltChecked}" AuthorizationRight="CoatingProgramm"/>
+        <vw:PictureBox x:Name="Item_Pic" Width="80" Height="80" HorizontalAlignment="Right" VerticalAlignment="Center"  Margin="0,10,10,190"  Grid.Column="1" SymbolResourceKey="{Binding Symbol}" >
+            <vw:PictureBox.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </vw:PictureBox.Effect>
+        </vw:PictureBox>
+        <vw:NumericVarIn x:Name="weight" Style="{DynamicResource NVI_Main}" Grid.Row="1" Grid.Column="1" Width="350" Height="60" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,70,30,0" LocalizableUnitText="@Units.kg" LocalizableLabelText="@RecipeSystem.Text25" RawLimitMax="50" ValueChanged="NumericVarIn_ValueChanged" VariableName="__UNLINKED_I2" Background="{DynamicResource FP_LightGreen}" Foreground="#FFFFFFFF" FontSize="20" FontWeight="Bold"/>
+        <vw:NumericVarOut x:Name="mDreh"  Style="{DynamicResource NVO_Main}" Grid.Row="1" Grid.Column="1" Width="350" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,30,70" LocalizableUnitText="@Units.Rpm" LocalizableLabelText="@RecipeSystem.Text24"  VariableName="__UNLINKED_I2" Background="{DynamicResource FP_Yellow}" Foreground="#FFFFFFFF" FontSize="20" TextAlignment="Center" FontWeight="Bold" />
+
+    </Grid>
+</vw:View>

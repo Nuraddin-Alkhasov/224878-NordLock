@@ -1,0 +1,40 @@
+﻿<vw:View 
+x:Class="HMI.Parameter.P_M3_BC_P"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+    <StackPanel x:Name="A" Margin="10" Opacity="0" Loaded="A_Loaded">
+        <Grid >
+            <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text57" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text58" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.01 Kippen.DB Reinigen Kippen HMI.Parameter.Position.Home" RawLimitMax="180"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0"  LocalizableLabelText="@Parameter.Text56" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.01 Kippen.DB Reinigen Kippen HMI.Parameter.Position.Prüfen" RawLimitMax="180"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0"  LocalizableLabelText="@Parameter.Text55" LocalizableUnitText="@Units.grad" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.01 Kippen.DB Reinigen Kippen HMI.Parameter.Position.Reinigen" RawLimitMax="180"/>
+
+                </StackPanel>
+            </vw:GroupBox>
+            <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,55,0" FontSize="14" LocalizableLabelText="@Parameter.Text4" LocalizableUnitText="@Units.grad" Foreground="White" Background="{DynamicResource FP_LightGreen}" FormatString="{}0.0" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.01 Kippen.DB Reinigen Kippen HMI.Actual value.Kippantrieb Position in °"/>
+        </Grid>
+        <Grid Margin="0,10,0,0">
+            <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text59" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text60" LocalizableUnitText="@Units.Rpm" AuthorizationRight="Parameter" FormatString="0" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.02 Drehen / Greifer / Paddel.DB Reinigen DGP HMI.Parameter.Derhen.Geschwindigkeit U/min" RawLimitMax="30"/>
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0"  LocalizableLabelText="@Parameter.Text61" LocalizableUnitText="@Units.s" AuthorizationRight="Parameter" FormatString="0" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.02 Drehen / Greifer / Paddel.DB Reinigen DGP HMI.Parameter.Derhen.Zeit Sekunden" RawLimitMax="59"/>
+
+                </StackPanel>
+            </vw:GroupBox>
+            <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,55,0" FontSize="14" LocalizableLabelText="@Parameter.Text22" LocalizableUnitText="@Units.Rpm" Foreground="White" Background="{DynamicResource FP_LightGreen}" FormatString="0" VariableName="NL.PLC.Blocks.3 Modul 3.12 Korb Auskippen.01 Kippantrieb.DB Korb Kippantrieb HMI.Actual value.Kippantrieb Position in °"/>
+        </Grid>
+        <Grid Margin="0,10,0,0">
+            <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text62" >
+                <StackPanel Margin="10">
+                    <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text63"  AuthorizationRight="Parameter" FormatString="0" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.00 Allgemein.DB Reinigung Allgemein HMI.Parameter.Klopfen.Schläge in Summe" RawLimitMax="10"/>
+
+                </StackPanel>
+            </vw:GroupBox>
+            <vw:TextBlock Height="25" Width="180" LocalizableText="@Parameter.Text64"  Margin="0,14,194,0" TextAlignment="Right" FontSize="14" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            <vw:Switch  Margin="0,6,50,0" Width="132" Height="34" HorizontalAlignment="Right" LocalizableTextOn="@Buttons.Text19" LocalizableTextOff="@Buttons.Text17" Style="{DynamicResource S_Status}" VerticalAlignment="Top" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.3 Modul 3.10 Reinigung.00 Allgemein.DB Reinigung Allgemein HMI.Parameter.Klopfen.Ein"/>
+        </Grid>
+    </StackPanel>
+
+</vw:View>

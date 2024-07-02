@@ -1,0 +1,45 @@
+﻿<vw:View x:Class="HMI.Parameter.P_M4_Mani_Drive_P"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7"
+VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid x:Name="A" Margin="10" Opacity="0" Loaded="A_Loaded">
+        <vw:GroupBox Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text1">
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <vw:GroupBox Style="{DynamicResource GB_Group}" >
+                    <StackPanel Margin="5" Width="300">
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text142" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 02: Kühlzone aufnehmen" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text137" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 03: HVT" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text145" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 05: Entladen auskippen" RawLimitMin="-150" RawLimitMax="15000" LabelText=""/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text146" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 06: Qualität" RawLimitMin="-150" RawLimitMax="15000" />
+
+                    </StackPanel>
+                </vw:GroupBox>
+
+
+                <vw:GroupBox Margin="10,0,0,0" Style="{DynamicResource GB_Group}" >
+                    <StackPanel Margin="5" Width="300">
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text148" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[0]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text149" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[1]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text150" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[2]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text151" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[3]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text152" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[4]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text153" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[5]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text154" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[6]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text155" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[7]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text156" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[8]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text157" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[9]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text158" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[10]" RawLimitMin="-150" RawLimitMax="15000"/>
+                        <vw:NumericVarIn Margin="0,5,0,0" Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text159" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter"  FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Parameter.Position.Pos 07: Puffer Gasse[11]" RawLimitMin="-150" RawLimitMax="15000"/>
+
+                    </StackPanel>
+                </vw:GroupBox>
+
+            </StackPanel>
+        </vw:GroupBox>
+        <vw:NumericVarOut Width="80"  Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,50,0" LocalizableLabelText="@Parameter.Text4" LocalizableUnitText="@Units.mm" Foreground="White" Background="{DynamicResource FP_LightGreen}" FormatString="{}0.0" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.01 Mani Fahr.DB Mani04 Fahr HMI.Actual value.Aktuelle Position in mm" FontSize="14" />
+    </Grid>
+
+
+
+</vw:View>

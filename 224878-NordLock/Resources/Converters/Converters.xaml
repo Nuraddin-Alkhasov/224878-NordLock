@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vw="http://inosoft.com/visiwin7"
+                    xmlns:vw1="clr-namespace:HMI.Converter">
+
+    <vw:ValueToStateBrushConverter x:Key="ValueToStateBrushConverter"/>
+    <vw:ValueToStateSymbolConverter x:Key="ValueToStateSymbolConverter"/>
+    <vw:ValueToStateTextConverter x:Key="ValueToStateTextConverter"/>
+    
+    <vw1:BoolToIsBlinkEnabled_1_0 x:Key="BoolToIsBlinkEnabled_1_0"/>
+    <vw1:BoolToIsBlinkEnabled_1_1 x:Key="BoolToIsBlinkEnabled_1_1"/>
+    <vw1:BoolToIsEnabled_1_0 x:Key="BoolToIsEnabled_1_0"/>
+    <vw1:BoolToVisibility_1_0 x:Key="BoolToVisibility_1_0"/>
+    <vw1:BoolToVisibility_1_1 x:Key="BoolToVisibility_1_1"/>
+    <vw1:BoolToColor x:Key="BoolToColor"/>
+    
+    <vw1:IntToColor x:Key="IntToColor"/>
+    <vw1:IntToLinearGradientBrush x:Key="IntToLinearGradientBrush"/>
+    
+    <vw1:IntToIsBlinkEnabled_1_1 x:Key="IntToIsBlinkEnabled_1_1"/>
+    <vw1:IntToIsBlinkEnabled_2_1 x:Key="IntToIsBlinkEnabled_2_1"/>
+    <vw1:IntToVisVisibility_0_1 x:Key="IntToVisVisibility_0_1"/>
+    <vw1:IntToVisVisibility_1_1 x:Key="IntToVisVisibility_1_1"/>
+
+   
+    
+</ResourceDictionary>

@@ -1,0 +1,71 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.Recipe.Recipe_Binding"
+	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	    xmlns:vw="http://inosoft.com/visiwin7" 
+        xmlns:local="clr-namespace:HMI.Views.MainRegion.Recipe"
+	    Width="1920" Height="1080" Background="{DynamicResource DialogSurroundBrush}" >
+    <vw:View.DataContext>
+        <local:RecipeBindingAdapter/>
+    </vw:View.DataContext>
+    <Border  Width="1058" Height="600"  HorizontalAlignment="Center" BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5">
+        <Border.Effect>
+            <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+        </Border.Effect>
+        <Grid IsVisibleChanged="Grid_IsVisibleChanged">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="52" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <vw:Label x:Name="HeaderText" LocalizableText="{Binding HeaderLocalizableText}" Text="{Binding HeaderText}" Margin="10,10,0,10" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"  FontWeight="Bold" Height="32" />
+            <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding CloseDialogViewCommand}" Style="{DynamicResource B_Close}" Width="60" Height="35" Text="X" Margin="0,-1,10,0"/>
+            <Border Grid.Row="1" CornerRadius="5" Background="{StaticResource MainViewBackgroundBrush}" Margin="10,0,10,10">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="180"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="dgv_bctor" ItemsSource="{Binding BarcodeList}" SelectedItem="{Binding SelectedBarcode}" AutoGenerateColumns="False" IsReadOnly="True" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <DataGrid.ItemContainerStyle>
+                            <Style TargetType="DataGridRow">
+                                <EventSetter Event="PreviewTouchDown" Handler="DataGridRow_PreviewTouchDown"/>
+                                <Setter Property="Height" Value="45"/>
+                            </Style>
+                        </DataGrid.ItemContainerStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.Text33}" Binding="{Binding BC}" Width="300"/>
+                            <DataGridTextColumn Header="{vw:LocalizedTextBinding LocalizableText=@RecipeSystem.Text1}" Binding="{Binding MR_Name}" Width="500"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <vw:Button x:Name="btnDelete" Text="Löschen" Height="60"  Width="160"  LocalizableText="@Buttons.Text9" IsEnabled="{Binding IsBCToMRSelected}" Command="{Binding DeleteCommand}"  Style="{DynamicResource B_Red}" Grid.Row="3" AuthorizationRight="RecipeBinding"/>
+                        <vw:Button x:Name="btnNew"  Command="{Binding NewCommand}" Height="60"  Width="160" LocalizableText="@Buttons.Text43" Style="{DynamicResource B_Blue}" Grid.Row="0" AuthorizationRight="RecipeBinding" />
+                        <vw:Button x:Name="btnEdit" Command="{Binding EditCommand}" Height="60"  Width="160" LocalizableText="@Buttons.Text18" Style="{DynamicResource B_Blue}" Grid.Row="1" IsEnabled="{Binding IsBCToMRSelected}" AuthorizationRight="RecipeBinding" />
+                    </Grid>
+                    <vw:GroupBox x:Name="dataedit" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@RecipeSystem.Text34" Visibility="{Binding DialogVisible}">
+                        <StackPanel Margin="10">
+                            <vw:TextVarIn x:Name="barcode" Style="{DynamicResource TVI_Main}" Height="40" Value="{Binding SelectedBarcodeBuffer.BC, Mode=TwoWay }" LocalizableLabelText="@RecipeSystem.Text33" VariableName="__UNLINKED_BSTR" AuthorizationRight="RecipeBinding" />
+                            <vw:TextVarOut x:Name="mr" Style="{DynamicResource TVO_Main}" Height="40" Value="{Binding SelectedBarcodeBuffer.MR_Name, Mode=TwoWay }" LocalizableLabelText="@RecipeSystem.Text1" VariableName="__UNLINKED_BSTR" PreviewMouseLeftButtonDown="TextVarOut_PreviewMouseLeftButtonDown" PreviewTouchDown="mr_PreviewTouchDown" Margin="0,10,0,0"/>
+                            <Grid Margin="0,10,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <vw:Button x:Name="btnSave" Command="{Binding SaveCommand}" Height="60"  Width="160" LocalizableText="@Buttons.Text25" Style="{DynamicResource B_Blue_ns}" AuthorizationRight="RecipeBinding"  />
+                                <vw:Button x:Name="btnCancel" Text="Löschen" Height="60"  Width="160"  LocalizableText="@Buttons.Text13" Command="{Binding CloseDialogCommand}"  Style="{DynamicResource B_Red_ns}" Grid.Column="1"/>
+                            </Grid>
+                        </StackPanel>
+                    </vw:GroupBox>
+                </Grid>
+            </Border>
+            <vw:TextBlock LocalizableText="@RecipeSystem.Text32" Margin="10,10,97,10" FontSize="16" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+        </Grid>
+    </Border>
+
+</vw:View>

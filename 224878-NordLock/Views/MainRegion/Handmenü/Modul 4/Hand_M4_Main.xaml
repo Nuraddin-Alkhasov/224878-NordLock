@@ -1,0 +1,40 @@
+﻿<vw:View x:Class="HMI.Handmenu.Hand_M4_Main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="1840" Height="1000" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource MainViewBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="4">
+            <Grid.Effect>
+                <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+            </Grid.Effect>
+            <Border Background="{DynamicResource FP_Blue_Gradient}">
+                <Border.Effect>
+                    <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+                </Border.Effect>
+                <vw:TextBlock x:Name="header" LocalizableText="@HandMenu.Text4" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="48" Margin="50,0,0,0" />
+            </Border>
+        </Grid>
+        <vw:NavigationButton Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Background="Transparent" BorderThickness="0" RegionName="MainRegion" ViewName="Hand_Main"/>
+        <vw:NavigationButton Grid.Column="0" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text42"  SymbolMargin="0,0,0,5"  Grid.Row="1" RegionName="MainRegion" ViewName="Hand_M4_Mani" />
+        <vw:NavigationButton Grid.Column="1" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text64"  SymbolMargin="0,0,0,10"  Grid.Row="1" RegionName="MainRegion" ViewName="H_M4_HVT_PN"/>
+        <vw:NavigationButton Grid.Column="2" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text65"  SymbolMargin="0,0,0,10"  Grid.Row="1" RegionName="MainRegion" ViewName="H_M4_HNT_PN"/>
+        <vw:NavigationButton Grid.Column="3" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text66"  SymbolMargin="0,0,0,5"  Grid.Row="1" RegionName="MainRegion" ViewName="H_M4_TD_PN"/>
+        <vw:NavigationButton Grid.Column="0" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text67"  SymbolMargin="0,0,0,5"  Grid.Row="2" RegionName="MainRegion" ViewName="H_M4_TKZ_PN"/>
+        <vw:NavigationButton Grid.Column="1" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text91"  SymbolMargin="0,0,0,5"  Grid.Row="2" RegionName="MainRegion" ViewName="H_M4_QS" />
+        <vw:NavigationButton Grid.Column="2" Width="320" Height="320" HorizontalAlignment="Center" VerticalAlignment="Center"  Style="{DynamicResource B_Gray_HM}" LocalizableText="@HandMenu.Text84"  SymbolMargin="0,0,0,5"  Grid.Row="2" RegionName="MainRegion" ViewName="H_M4_UnloadingHub" />
+
+    </Grid>
+</vw:View>

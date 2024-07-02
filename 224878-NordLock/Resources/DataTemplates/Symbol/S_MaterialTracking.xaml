@@ -1,0 +1,59 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <DataTemplate x:Key="TrayVerticalNormal">
+        <Image Source="/Resources/Images/MachineOverview/Tray/TrayVerticalNormal.png" Stretch="Fill" Width="30" Height="68" />
+    </DataTemplate>
+    <DataTemplate x:Key="TrayVerticalTilted">
+        <Image Source="/Resources/Images/MachineOverview/Tray/TrayVerticalTilted.png" Stretch="Fill" Width="30" Height="68" />
+    </DataTemplate>
+    <DataTemplate x:Key="TrayVerticalMaterial">
+        <Image Source="/Resources/Images/MachineOverview/Tray/TrayVerticalMaterial.png" Stretch="Fill" Width="30" Height="68" />
+    </DataTemplate>
+    <DataTemplate x:Key="TrayHorizontalNormal">
+        <Image Source="/Resources/Images/MachineOverview/Tray/TrayHorizontalNormal.png" Stretch="Fill" Width="77" Height="28" />
+    </DataTemplate>
+    <DataTemplate x:Key="TrayHorizontalTilted">
+        <Image Source="/Resources/Images/MachineOverview/Tray/TrayHorizontalTilted.png" Stretch="Fill" Width="77" Height="28" />
+    </DataTemplate>
+    <DataTemplate x:Key="TrayHorizontalMaterial">
+        <Image Source="/Resources/Images/MachineOverview/Tray/TrayHorizontalMaterial.png" Stretch="Fill" Width="77" Height="28" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="StationOvenTray">
+        <Image Source="/Resources/Images/MachineOverview/Tray/SOTray.png" Stretch="Fill" Width="37" Height="87" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationCZTray">
+        <Image Source="/Resources/Images/MachineOverview/Tray/SCZTray.png" Stretch="Fill" Width="102" Height="245" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationTBTray">
+        <Image Source="/Resources/Images/MachineOverview/Tray/STBTray.png" Stretch="Fill" Width="194" Height="66" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationQSTray">
+        <Image Source="/Resources/Images/MachineOverview/Tray/SQSTray.png" Stretch="Fill" Width="465" Height="132" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="BasketNormal">
+        <Image Source="/Resources/Images/MachineOverview/Basket/BasketNormal.png" Stretch="Fill" Width="32" Height="40" />
+    </DataTemplate>
+    <DataTemplate x:Key="BasketMaterial">
+        <Image Source="/Resources/Images/MachineOverview/Basket/BasketMaterial.png" Stretch="Fill" Width="32" Height="40" />
+    </DataTemplate>
+    
+    <DataTemplate x:Key="StationLDBasket">
+        <Image Source="/Resources/Images/MachineOverview/Basket/SLDBasket.png" Stretch="Fill" Width="86" Height="110" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationKRBasket">
+        <Image Source="/Resources/Images/MachineOverview/Basket/SKRBasket.png" Stretch="Fill" Width="161" Height="137" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationBCBasket">
+        <Image Source="/Resources/Images/MachineOverview/Basket/SBCBasket.png" Stretch="Fill" Width="159" Height="169" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationCCBasket">
+        <Image Source="/Resources/Images/MachineOverview/Basket/SCCBasket.png" Stretch="Fill" Width="127" Height="109" />
+    </DataTemplate>
+    <DataTemplate x:Key="StationOvenBasket">
+        <Image Source="/Resources/Images/MachineOverview/Basket/SOB.png" Stretch="Fill" Width="39" Height="50" />
+    </DataTemplate>
+</ResourceDictionary>

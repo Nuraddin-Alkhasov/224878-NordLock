@@ -1,0 +1,16 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Recipe.Recipe_Coating_T"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+
+    <vw:GroupBox x:Name="A" Opacity="0"  Style="{DynamicResource GB_Group}" Margin="10" IsVisibleChanged="A_IsVisibleChanged">
+        <StackPanel Margin="10">
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" LocalizableLabelText="@RecipeSystem.Text8" LocalizableUnitText="@Units.Rpm" VariableName="Recipe.CoatingStep.Wälzen.Korbdrehzahl" AuthorizationRight="CoatingProgramm" RawLimitMax="10" RawLimitMin="1" FormatString="{}0.0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" RenderTransformOrigin="0.6,2.85" LocalizableLabelText="@RecipeSystem.Text15" LocalizableUnitText="@Units.s" VariableName="Recipe.CoatingStep.Wälzen.Wälzzeit" AuthorizationRight="CoatingProgramm" RawLimitMax="59" RawLimitMin="0" FormatString="{}0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text13" LocalizableUnitText="@Units.s" VariableName="Recipe.CoatingStep.Wälzen.Reversierzeit" AuthorizationRight="CoatingProgramm" RawLimitMax="59" RawLimitMin="0" FormatString="{}0"/>
+            <vw:NumericVarIn Style="{DynamicResource NVI_Main}" FontWeight="Bold" Height="40" Margin="0,10,0,0" LocalizableLabelText="@RecipeSystem.Text16" LocalizableUnitText="@Units.grad" VariableName="Recipe.CoatingStep.Wälzen.Kippwinkel" AuthorizationRight="CoatingProgramm" RawLimitMax="50" RawLimitMin="0" FormatString="{}0.0"/>
+        </StackPanel>
+    </vw:GroupBox>
+
+</vw:View>

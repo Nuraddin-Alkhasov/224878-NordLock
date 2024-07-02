@@ -1,0 +1,20 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.MachineOverview.MO_DO_Data"
+	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	    xmlns:vw="http://inosoft.com/visiwin7" 
+	    Width="620" Height="240" IsVisibleChanged="View_IsVisibleChanged">
+    <Grid Margin="0,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <vw:TextVarIn x:Name="data1" Width="400" Height="40" HorizontalAlignment="Right" VariableName="__UNLINKED_BSTR"  />
+        <vw:TextVarOut x:Name="mr" Width="400" Height="40" HorizontalAlignment="Right"  VariableName="__UNLINKED_BSTR"  PreviewTouchDown="Mr_TouchDown" PreviewMouseLeftButtonDown="Mr_MouseDoubleClick" Grid.Row="1" ValueChanged="Mr_ValueChanged"/>
+        <vw:TextVarOut x:Name="rd" Width="400" Height="40" HorizontalAlignment="Right" VariableName="__UNLINKED_BSTR"  Grid.Row="2"/>
+        <vw:TextVarOut x:Name="user" Width="400" Height="40" HorizontalAlignment="Right" VariableName="__UNLINKED_BSTR"   Grid.Row="3"/>
+        <vw:NavigationButton Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210"  Background="Transparent" BorderBrush="Transparent" Height="100" RegionName="MessageBoxRegion" ViewName="MO_Status_Recipe" FontWeight="Bold" Margin="-5,10,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+    </Grid>
+</vw:View>

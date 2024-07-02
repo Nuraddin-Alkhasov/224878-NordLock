@@ -1,0 +1,18 @@
+﻿<vw:View
+    x:Class="HMI.Diagnose.EKS"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+	Width="560" Height="260" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <Grid x:Name="LayoutRoot" >
+        <vw:TextVarOut x:Name="status" Height="40" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="0,10,10,0"  VerticalAlignment="Top" Width="320" Background="LightGray" VariableName="__UNLINKED_BSTR" LocalizableLabelText="@EKS.Text6" />
+        <vw:TextVarIn x:Name="data" LostKeyboardFocusBehavior="WriteInput" Height="40" HorizontalAlignment="Right" Margin="0,160,10,60" VerticalAlignment="Center" Width="206" LabelText="Data" TextLengthMin="4"  VariableName="__UNLINKED_BSTR" TextLengthMax="5" AuthorizationRight="EKS"/>
+        <vw:Button x:Name="openConnection" Height="40" Width="160" Style="{DynamicResource B_Gray}"  Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="OpenConnection_Click" AuthorizationRight="EKS" LocalizableText="@EKS.Text1"/>
+        <vw:Button x:Name="closeConnection" Height="40" Width="160" Style="{DynamicResource B_Gray}"   Margin="10,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CloseConnection_Click" AuthorizationRight="EKS" LocalizableText="@EKS.Text2"/>
+        <vw:Button x:Name="readData" Height="40" Width="160" Style="{DynamicResource B_Gray}"  Margin="10,160,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ReadData_Click" AuthorizationRight="EKS" LocalizableText="@EKS.Text4"/>
+        <vw:Button x:Name="writeData" Height="40" Width="160" Style="{DynamicResource B_Gray}"   Margin="10,210,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="WriteData_Click" AuthorizationRight="EKS" LocalizableText="@EKS.Text5"/>
+        <vw:Button x:Name="updateStatus" Height="40" Width="160" Style="{DynamicResource B_Gray}"  Margin="390,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="UpdateStatus_Click" AuthorizationRight="EKS" LocalizableText="@EKS.Text7"/>
+    </Grid>
+
+</vw:View>

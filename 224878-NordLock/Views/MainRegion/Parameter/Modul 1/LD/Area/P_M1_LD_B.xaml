@@ -1,0 +1,32 @@
+﻿<vw:View 
+x:Class="HMI.Parameter.P_M1_LD_B"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+    <Grid x:Name="A" Margin="10" Opacity="0" Loaded="A_Loaded">
+        <vw:GroupBox  Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Parameter.Text8" Background="{DynamicResource FP_Yellow}">
+            <StackPanel Margin="10">
+                <vw:RadioButton  Style="{DynamicResource RB_Group}" LocalizableLabelText="@Parameter.Text6" Background="{DynamicResource FP_Yellow}">
+                    <StackPanel Margin="10">
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.02 Lift.DB LD Lift HMI.Parameter.Bereiche.Übergabe NordLock.OG" FormatString="0"/>
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0"  LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.02 Lift.DB LD Lift HMI.Parameter.Bereiche.Übergabe NordLock.UG" FormatString="0"/>
+                    </StackPanel>
+                </vw:RadioButton>
+                <vw:RadioButton Margin="0,10,0,0" Style="{DynamicResource RB_Group}" LocalizableLabelText="@Parameter.Text9" Background="{DynamicResource FP_Yellow}">
+                    <StackPanel Margin="10">
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.02 Lift.DB LD Lift HMI.Parameter.Bereiche.Kippen.OG" FormatString="0"/>
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0"  LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.02 Lift.DB LD Lift HMI.Parameter.Bereiche.Kippen.UG" FormatString="0"/>
+                    </StackPanel>
+                </vw:RadioButton>
+                <vw:RadioButton Margin="0,10,0,0" Style="{DynamicResource RB_Group}" LocalizableLabelText="@Parameter.Text166" Background="{DynamicResource FP_Yellow}">
+                    <StackPanel Margin="10">
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" LocalizableLabelText="@Parameter.Text92" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.02 Lift.DB LD Lift HMI.Parameter.Bereiche.Warten.OG" FormatString="0"/>
+                        <vw:NumericVarIn Style="{DynamicResource NVI_Main}" Height="40" Margin="0,10,0,0"  LocalizableLabelText="@Parameter.Text91" LocalizableUnitText="@Units.mm" AuthorizationRight="Parameter" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.02 Lift.DB LD Lift HMI.Parameter.Bereiche.Warten.UG" FormatString="0"/>
+                    </StackPanel>
+                </vw:RadioButton>
+            </StackPanel>
+        </vw:GroupBox>
+        <vw:NumericVarOut Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,8,50,0" FontSize="14" LocalizableLabelText="@Parameter.Text4" LocalizableUnitText="@Units.mm" Foreground="White" Background="{DynamicResource FP_LightGreen}" VariableName="NL.PLC.Blocks.1 Modul 1.01 Lifting Tilting Device.02 Lift.DB LD Lift HMI.Actual value.Position" FormatString="0"/>
+
+    </Grid>
+</vw:View>

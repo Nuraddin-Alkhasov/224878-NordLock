@@ -1,0 +1,47 @@
+﻿<vw:View x:Class="HMI.DateTimeTouchpadView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vw="http://inosoft.com/visiwin7"
+             MaxWidth="850" Height="450" KeyboardNavigation.ControlTabNavigation="Once" KeyboardNavigation.TabNavigation="Cycle" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <Border x:Name="OuterBorder" BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5" >
+        <Border.Effect>
+            <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}"/>
+        </Border.Effect>
+        <Grid Margin="10,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="lblPadDescription" TextWrapping="Wrap" VerticalAlignment="Center"  Width="400" Foreground="White" FontSize="22" Text="Date and Time Pad"  HorizontalAlignment="Left"/>
+            <vw:Button x:Name="CancelButton" HorizontalAlignment="Right" VerticalAlignment="Top" IsEnabled="{Binding CancelButtonIsEnabled}" Visibility="Visible" Command="{Binding CloseDialogCommand}" CommandParameter="Cancel" Style="{DynamicResource B_Close}" Click="CancelButton_Click" Width="60" Height="40" IsCancel="True" Text="X" Margin="0,-1,0,0" />
+            <Border x:Name="InnerBorder" Grid.Row="1" Background="{DynamicResource GroupBoxBackgroundBrush}" CornerRadius="4">
+                <Grid x:Name="InnerContentGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Calendar x:Name="calendar" Style="{DynamicResource TimeInputCalendarStyle}" FontSize="48" Margin="10,10,0,10"/>
+                    <Grid x:Name="TimePanel" Grid.Column="1" Margin="0,0,10,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <vw:UpDownNumericVarIn x:Name="hourInput" Width="80" Height="195" HorizontalAlignment="Right" VerticalAlignment="Top" VariableName="__UNLINKED_UI2" Text="0" Style="{DynamicResource UpDownTimeInputStyle}" RawLimitMax="23" Margin="10,10,0,0" Focusable="False" LocalizableLabelText="@[ClientSystem].Components.Time.Common.Hour"/>
+                        <vw:UpDownNumericVarIn x:Name="minuteInput" Grid.Column="1" Width="80" Height="195" HorizontalAlignment="Right" VerticalAlignment="Top" RawLimitMax="59" VariableName="__UNLINKED_UI2" Style="{DynamicResource UpDownTimeInputStyle}" Margin="10,10,0,0" Focusable="False" LocalizableLabelText="@[ClientSystem].Components.Time.Common.Minute"/>
+                        <vw:UpDownNumericVarIn x:Name="secondInput" Grid.Column="2" Width="80" Height="195" HorizontalAlignment="Right" VerticalAlignment="Top" RawLimitMax="59" VariableName="__UNLINKED_UI2" Style="{DynamicResource UpDownTimeInputStyle}" Margin="10,10,0,0" Focusable="False" LocalizableLabelText="@[ClientSystem].Components.Time.Common.Second"/>
+                        <vw:ComboBox x:Name="cboDayHalfSelection" Grid.Column="3" Width="87" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0">
+                            <ComboBoxItem Content="AM"/>
+                            <ComboBoxItem Content="PM"/>
+                        </vw:ComboBox>
+                    </Grid>
+                </Grid>
+            </Border>
+            <vw:Button x:Name="btnEnter" Height="40" VerticalAlignment="Center" Click="BtnEnter_Click" MinWidth="240" Grid.Row="2" LocalizableText="@[ClientSystem].Dialogs.Common.cmdApply" Style="{DynamicResource B_Gray_ns}" HorizontalAlignment="Center"/>
+
+        </Grid>
+    </Border>
+</vw:View>

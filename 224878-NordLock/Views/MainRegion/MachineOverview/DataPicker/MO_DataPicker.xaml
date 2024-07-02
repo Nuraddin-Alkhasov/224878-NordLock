@@ -1,0 +1,63 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.MachineOverview.MO_DataPicker"
+	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:local="clr-namespace:HMI.Views.MainRegion.MachineOverview"
+    Width="1920" Height="1080" >
+    <vw:View.DataContext>
+        <local:DataPickerAdapter/>
+    </vw:View.DataContext>
+
+    <Grid Background="{DynamicResource DialogSurroundBrush}" IsVisibleChanged="_IsVisibleChanged">
+        <vw:Button Background="Transparent" BorderThickness="0" Command="{Binding CloseDataPickerCommand}"/>
+        <Border HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{DynamicResource TouchKeyboardBorderBrush}" BorderThickness="1" Background="{DynamicResource FP_Dark}" CornerRadius="5" Width="600" Height="440">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+            </Border.Effect>
+            <Grid  Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <vw:TextBlock x:Name="HeaderText"  HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="16" FontWeight="Bold" LocalizableText="@DataPicker.Text12" />
+                <Border Grid.Row="1" CornerRadius="5" Background="{StaticResource MainViewBackgroundBrush}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="400"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <vw:TextVarIn x:Name="data1" Height="40" VariableName="__UNLINKED_BSTR" Style="{DynamicResource TVI_Main}" LocalizableLabelText="@DataPicker.Text2" Value="{Binding CurrentOrder.Data_1, Mode=TwoWay}" IsEnabled="{Binding EditEnabled}"  TextLengthMin="1" TextLengthMax="12" IsBlinkEnabled="False" AuthorizationRight="DataSelection"/>
+                        <vw:TextVarIn x:Name="data2" Height="40"  VariableName="__UNLINKED_BSTR" Style="{DynamicResource TVI_Main}"  LocalizableLabelText="@DataPicker.Text1" Grid.Row="1"  Value="{Binding CurrentOrder.Data_2, Mode=TwoWay}" TextLengthMin="1" TextLengthMax="12" IsBlinkEnabled="False" ValueChanged="data1_ValueChanged" AuthorizationRight="DataSelection"/>
+                        <vw:TextVarIn x:Name="data3" Height="40" VariableName="__UNLINKED_BSTR" Style="{DynamicResource TVI_Main}"  LocalizableLabelText="@DataPicker.Text6" Grid.Row="2" Value="{Binding CurrentOrder.Data_3, Mode=TwoWay}" ValueChanged="data3_ValueChanged" IsEnabled="{Binding EditEnabled}" TextLengthMin="1" TextLengthMax="12" IsBlinkEnabled="False" AuthorizationRight="DataSelection"/>
+                        <vw:TextVarOut x:Name="mr" Height="40" Grid.ColumnSpan="2"  VariableName="__UNLINKED_BSTR" Style="{DynamicResource TVO_Main}" LocalizableLabelText="@DataPicker.Text4" Grid.Row="3" IsBlinkEnabled="True" TextLengthMin="1" Value="{Binding CurrentOrder.MR.Name}"/>
+                        <vw:Button Grid.ColumnSpan="2"  Grid.Row="3"  Style="{DynamicResource B_Material}" Margin="-5,-5,-5,-5" Command="{Binding ShowMRData}" Click="Button_Click"  IsBlinkEnabled="False"/>
+
+                        <vw:TextVarOut x:Name="rd" Height="40"  Grid.ColumnSpan="2" VariableName="__UNLINKED_BSTR" Style="{DynamicResource TVO_Main}" LocalizableLabelText="@DataPicker.Text3" Grid.Row="4" TextLengthMin="1" Value="{Binding CurrentOrder.MR.Description}"/>
+                        <vw:TextVarOut x:Name="user" Height="40" Grid.ColumnSpan="2" VariableName="__UNLINKED_BSTR" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@DataPicker.Text5"  Grid.Row="5" TextLengthMin="1" Value="{Binding CurrentOrder.User}"/>
+                        <Border Grid.RowSpan="3" Grid.Column="2" Margin="5,5,0,5" BorderBrush="Black" BorderThickness="3" Background="{DynamicResource FP_Yellow_Gradient}" CornerRadius="5"/>
+                        <vw:PictureBox Grid.RowSpan="3" Grid.Column="2" Margin="5,5,0,5" SymbolResourceKey="Machine_Recipe" Width="80" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <vw:PictureBox.Effect>
+                                <DropShadowEffect Color="{DynamicResource ShadowDarkBottomColor}" />
+                            </vw:PictureBox.Effect>
+                        </vw:PictureBox>
+                    </Grid>
+                </Border>
+                <vw:Button x:Name="LeftButton" Grid.Row="2"  Width="160" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{DynamicResource B_Blue_ns}"  Margin="0,10,0,10" LocalizableText="@Buttons.Text8" Command="{Binding UpdateData}"  IsEnabled="{Binding LoadEnabled}" AuthorizationRight="DataSelection"/>
+                <vw:Button x:Name="RightButton" Grid.Row="2" Width="160" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{DynamicResource B_Red_ns}"  Margin="0,10,0,10" LocalizableText="@Buttons.Text13" Command="{Binding CloseDataPickerCommand}"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+   
+</vw:View>

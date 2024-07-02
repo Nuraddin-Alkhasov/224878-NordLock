@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="HMI.UserControls.HM_WorkMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+        Height="75" Width="205" Background="Transparent" >
+
+    <Grid >
+
+        <vw:Key x:Name="WorkingMode" Height="70" Width="200" Style="{DynamicResource B_GreenButton_HM_UC}" Click="WorkingMode_Click" KeyMode="KeyMode" HorizontalAlignment="Left" VerticalAlignment="Top" AuthorizationRight="OperatingMode" />
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,3452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{2B776FDC-FE4F-4AF8-B578-16CBCF1561FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HMI</RootNamespace>
+    <AssemblyName>224878-NordLock</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FP_ICO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PointOfService, Version=1.12.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Point Of Service\SDK\Microsoft.PointOfService.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VisiWin7.System.WPF" />
+    <Reference Include="VisiWin7.View.WPF" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="VisiWin7.Styles.WPF" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc, processorArchitecture=MSIL">
+      <HintPath>packages\WpfAnimatedGif.2.0.2\lib\net40\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\General\ITrendExport.cs" />
+    <Compile Include="Interfaces\General\IPLCHandshacke.cs" />
+    <Compile Include="Interfaces\Handshackes\IQS2.cs" />
+    <Compile Include="Interfaces\Handshackes\IUnloadingStation.cs" />
+    <Compile Include="Interfaces\Handshackes\IQS1.cs" />
+    <Compile Include="Interfaces\Handshackes\IForplanet.cs" />
+    <Compile Include="Interfaces\Handshackes\IPDOverwrite.cs" />
+    <Compile Include="Interfaces\Handshackes\ITrayBuffer.cs" />
+    <Compile Include="Interfaces\Handshackes\ILiftTiltingDevice.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Custom Objects\ParameterInfo.cs" />
+    <Compile Include="Reporting\Custom Objects\ContentUnderlayNotifer.cs" />
+    <Compile Include="Reporting\Custom Objects\IReportingService.cs" />
+    <Compile Include="Reporting\Custom Objects\RenderFormat.cs" />
+    <Compile Include="Reporting\Custom Objects\Report.rdlc.cs" />
+    <Compile Include="Reporting\Custom Objects\ReportConfiguration.cs" />
+    <Compile Include="Reporting\Custom Objects\ReportingService.cs" />
+    <Compile Include="Reporting\Custom Objects\ReportPrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\Custom Objects\SubReportInfo.cs" />
+    <Compile Include="Reporting\Custom Objects\TaskHelper.cs" />
+    <Compile Include="Reporting\Custom Objects\Util.cs" />
+    <Compile Include="Reporting\DataSets\Protocol\localDB.cs">
+      <DependentUpon>localDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\DataSets\Protocol\localDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>localDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Reports\Adapters\ReportViewAdapter.cs" />
+    <Compile Include="Reporting\Reports\Protocol\Orders\OrdersReport.rdlc.cs" />
+    <Compile Include="Reporting\Reports\Protocol\Charges\ChargesReport.rdlc.cs" />
+    <Compile Include="Reporting\Reports\Protocol\Runs\RunsReport.rdlc.cs" />
+    <Compile Include="Reporting\UC\VisiWinReportViewer.xaml.cs">
+      <DependentUpon>VisiWinReportViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\Views\ReportView.xaml.cs">
+      <DependentUpon>ReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Converters\Bool\Color\BoolToColor.cs" />
+    <Compile Include="Resources\Converters\Bool\Visibility\BoolToVisibility_1_0.cs" />
+    <Compile Include="Resources\Converters\Bool\IsEnabled\BoolToIsEnabled_1_0.cs" />
+    <Compile Include="Resources\Converters\Int\Color\IntToLinearGradientBrush.cs" />
+    <Compile Include="Resources\Converters\Int\Color\IntToColor.cs" />
+    <Compile Include="Resources\Converters\Bool\IsBlinkEnabled\BoolToIsBlinkEnabled_1_0.cs" />
+    <Compile Include="Resources\Converters\Bool\IsBlinkEnabled\BoolToIsBlinkEnabled_1_1.cs" />
+    <Compile Include="Resources\Converters\Int\IsBlinkEnabled\IntToIsBlinkEnabled_1_1.cs" />
+    <Compile Include="Resources\Converters\Int\IsBlinkEnabled\IntToIsBlinkEnabled_2_1.cs" />
+    <Compile Include="Resources\Converters\Int\Visibility\IntToVisVisibility_1_1.cs" />
+    <Compile Include="Resources\Converters\Int\Visibility\IntToVisVisibility_0_1.cs" />
+    <Compile Include="Interfaces\Periferical Devices\IEKS.cs" />
+    <Compile Include="Interfaces\General\IIni.cs" />
+    <Compile Include="Interfaces\General\IBackup.cs" />
+    <Compile Include="Interfaces\General\ITimeSync.cs" />
+    <Compile Include="Interfaces\Protocol\IProtocol.cs" />
+    <Compile Include="Resources\LocalResources.cs" />
+    <Compile Include="Resources\UserControls\Dashboard\DBTemperature.xaml.cs">
+      <DependentUpon>DBTemperature.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\H_Service.xaml.cs">
+      <DependentUpon>H_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\TBTray.xaml.cs">
+      <DependentUpon>TBTray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\QSTray.xaml.cs">
+      <DependentUpon>QSTray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\OvenBasket.xaml.cs">
+      <DependentUpon>OvenBasket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\CCBasket.xaml.cs">
+      <DependentUpon>CCBasket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\BCBasket.xaml.cs">
+      <DependentUpon>BCBasket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\KRBasket.xaml.cs">
+      <DependentUpon>KRBasket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\LDBasket.xaml.cs">
+      <DependentUpon>LDBasket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\CZTray.xaml.cs">
+      <DependentUpon>CZTray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\OvenTray.xaml.cs">
+      <DependentUpon>OvenTray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_Dryer.xaml.cs">
+      <DependentUpon>MV_Dryer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_M4Mani.xaml.cs">
+      <DependentUpon>MV_M4Mani.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_KZ.xaml.cs">
+      <DependentUpon>MV_KZ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_KA.xaml.cs">
+      <DependentUpon>MV_KA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_UnloadStation.xaml.cs">
+      <DependentUpon>MV_UnloadStation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_Shalves.xaml.cs">
+      <DependentUpon>MV_Shalves.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_HNT.xaml.cs">
+      <DependentUpon>MV_HNT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_HVT.xaml.cs">
+      <DependentUpon>MV_HVT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Tracking.xaml.cs">
+      <DependentUpon>Tracking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\OperatingMode\HM_WorkMode.xaml.cs">
+      <DependentUpon>HM_WorkMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_CoatingCabin.xaml.cs">
+      <DependentUpon>MV_CoatingCabin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_KBDMani.xaml.cs">
+      <DependentUpon>MV_KBDMani.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_BC.xaml.cs">
+      <DependentUpon>MV_BC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_KR.xaml.cs">
+      <DependentUpon>MV_KR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Stations\MV_LD.xaml.cs">
+      <DependentUpon>MV_LD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\MVMaterial.xaml.cs">
+      <DependentUpon>MVMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\MVBasket.xaml.cs">
+      <DependentUpon>MVBasket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\MVTrayVertical.xaml.cs">
+      <DependentUpon>MVTrayVertical.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\OperatingMode\WorkModeOption.xaml.cs">
+      <DependentUpon>WorkModeOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\OperatingMode\M_WorkMode_L.xaml.cs">
+      <DependentUpon>M_WorkMode_L.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\OperatingMode\M_WorkMode_R.xaml.cs">
+      <DependentUpon>M_WorkMode_R.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\MV\Pack\MVTrayHorizontal.xaml.cs">
+      <DependentUpon>MVTrayHorizontal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Order_Template.xaml.cs">
+      <DependentUpon>Order_Template.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\PaintType.xaml.cs">
+      <DependentUpon>PaintType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\VentilatorStatus.xaml.cs">
+      <DependentUpon>VentilatorStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Recipe\Recipe_Template.xaml.cs">
+      <DependentUpon>Recipe_Template.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UserControls\Recipe\Recipe_Add.xaml.cs">
+      <DependentUpon>Recipe_Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Custom Objects\CheckJumo.cs" />
+    <Compile Include="Services\Custom Objects\EKS.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Cooling.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Preheating.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Return.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Feeding.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Coating.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Drying.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Unloading.cs" />
+    <Compile Include="Services\Custom Objects\Protocol\Station.cs" />
+    <Compile Include="Services\Custom Objects\Temperature\Material.cs" />
+    <Compile Include="Services\Custom Objects\Temperature\TemperatureAverage.cs" />
+    <Compile Include="Services\Custom Objects\Temperature\PHZTemperatureAverage.cs" />
+    <Compile Include="Services\Custom Objects\VWSafeStart.cs" />
+    <Compile Include="Services\General\Service_PLC_Handshacke.cs" />
+    <Compile Include="Services\Handshackes\Service_H_QS2.cs" />
+    <Compile Include="Services\Handshackes\Service_H_UnloadingStation.cs" />
+    <Compile Include="Services\Handshackes\Service_H_QS1.cs" />
+    <Compile Include="Services\Handshackes\Service_H_Forplanet.cs" />
+    <Compile Include="Services\Handshackes\Service_H_PDOverwrite.cs" />
+    <Compile Include="Services\Periferical Devices\Service_EKS.cs" />
+    <Compile Include="Services\Handshackes\Service_H_TrayBuffer.cs" />
+    <Compile Include="Services\General\Service_Ini.cs" />
+    <Compile Include="Services\General\Service_Backup.cs" />
+    <Compile Include="Services\General\Service_TimeSync.cs" />
+    <Compile Include="Services\Protocol\Service_Protocol.cs" />
+    <Compile Include="Services\Custom Objects\DoBackup.cs" />
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_KZT .xaml.cs">
+      <DependentUpon>DB_Widget_KZT .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_LT.xaml.cs">
+      <DependentUpon>DB_Widget_LT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_OT.xaml.cs">
+      <DependentUpon>DB_Widget_OT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_VZT.xaml.cs">
+      <DependentUpon>DB_Widget_VZT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Diagnose\Views\Periferical Devices\TransportReset.xaml.cs">
+      <DependentUpon>TransportReset.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\DC\H_M1_DC_PN.xaml.cs">
+      <DependentUpon>H_M1_DC_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\DC\H_M1_DC_Service.xaml.cs">
+      <DependentUpon>H_M1_DC_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\DC\H_M1_DC.xaml.cs">
+      <DependentUpon>H_M1_DC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\Hand_M1_Main.xaml.cs">
+      <DependentUpon>Hand_M1_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\HC\H_M1_LD_Lift.xaml.cs">
+      <DependentUpon>H_M1_HC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\HC\H_M1_HC_Service.xaml.cs">
+      <DependentUpon>H_M1_HC_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\HC\H_M1_HC_PN.xaml.cs">
+      <DependentUpon>H_M1_HC_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\KBD\H_M1_KBD.xaml.cs">
+      <DependentUpon>H_M1_KBD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\KBD\H_M1_KBD_PN.xaml.cs">
+      <DependentUpon>H_M1_KBD_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\KBD\H_M1_KBD_Service.xaml.cs">
+      <DependentUpon>H_M1_KBD_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\LD\Tilt\H_M1_LD_Tilt.xaml.cs">
+      <DependentUpon>H_M1_LD_Tilt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\LD\H_M1_LD_PN.xaml.cs">
+      <DependentUpon>H_M1_LD_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\LD\Lift\H_M1_LD_Lift.xaml.cs">
+      <DependentUpon>H_M1_LD_Lift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\LD\Lift\H_M1_LD_Lift_Service.xaml.cs">
+      <DependentUpon>H_M1_LD_Lift_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 1\LD\Lift\H_M1_LD_Lift_PN.xaml.cs">
+      <DependentUpon>H_M1_LD_Lift_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\H_M2_C_PN.xaml.cs">
+      <DependentUpon>H_M2_C_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Hand_M2_Main.xaml.cs">
+      <DependentUpon>Hand_M2_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\LTB\H_M2_LTB.xaml.cs">
+      <DependentUpon>H_M2_LTB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\LTB\H_M2_LTB_PN.xaml.cs">
+      <DependentUpon>H_M2_LTB_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\LTB\H_M2_LTB_Service.xaml.cs">
+      <DependentUpon>H_M2_LTB_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Planet\H_M2_Planet.xaml.cs">
+      <DependentUpon>H_M2_Planet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Planet\H_M2_Planet_PN.xaml.cs">
+      <DependentUpon>H_M2_Planet_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Planet\H_M2_Planet_Service.xaml.cs">
+      <DependentUpon>H_M2_Planet_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Rotor\H_M2_Rotor.xaml.cs">
+      <DependentUpon>H_M2_Rotor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Rotor\H_M2_Rotor_PN.xaml.cs">
+      <DependentUpon>H_M2_Rotor_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Rotor\H_M2_Rotor_Service.xaml.cs">
+      <DependentUpon>H_M2_Rotor_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Tilt\H_M2_Tilt_PN.xaml.cs">
+      <DependentUpon>H_M2_Tilt_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Tilt\H_M2_Tilt.xaml.cs">
+      <DependentUpon>H_M2_Tilt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 2\Tilt\H_M2_Tilt_Service.xaml.cs">
+      <DependentUpon>H_M2_Tilt_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\BC\H_M3_BC_PN.xaml.cs">
+      <DependentUpon>H_M3_BC_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\BC\Rotary\H_M3_BC_Rotary.xaml.cs">
+      <DependentUpon>H_M3_BC_Rotary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\BC\Rotary\H_M3_BC_Rotary_PN.xaml.cs">
+      <DependentUpon>H_M3_BC_Rotary_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\BC\Rotary\H_M3_BC_Rotary_Service.xaml.cs">
+      <DependentUpon>H_M3_BC_Rotary_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\BC\Tilt\H_M3_BC_Tilt.xaml.cs">
+      <DependentUpon>H_M3_BC_Tilt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\BC\Tilt\H_M3_BC_Tilt_PN.xaml.cs">
+      <DependentUpon>H_M3_BC_Tilt_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\BC\Tilt\H_M3_BC_Tilt_Service.xaml.cs">
+      <DependentUpon>H_M3_BC_Tilt_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Hand_M3_Main.xaml.cs">
+      <DependentUpon>Hand_M3_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\KA\H_M3_KA_PN.xaml.cs">
+      <DependentUpon>H_M3_KA_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\KA\Rotary\H_M3_KA_Rotary.xaml.cs">
+      <DependentUpon>H_M3_KA_Rotary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\KA\Rotary\H_M3_KA_Rotary_PN.xaml.cs">
+      <DependentUpon>H_M3_KA_Rotary_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\KA\Rotary\H_M3_KA_Rotary_Service.xaml.cs">
+      <DependentUpon>H_M3_KA_Rotary_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\KA\Tilt\H_M3_KA_Tilt.xaml.cs">
+      <DependentUpon>H_M3_KA_Tilt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\KA\Tilt\H_M3_KA_Tilt_PN.xaml.cs">
+      <DependentUpon>H_M3_KA_Tilt_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\KA\Tilt\H_M3_KA_Tilt_Service.xaml.cs">
+      <DependentUpon>H_M3_KA_Tilt_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Arm\H_M3_Mani_Arm.xaml.cs">
+      <DependentUpon>H_M3_Mani_Arm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Arm\H_M3_Mani_Arm_PN.xaml.cs">
+      <DependentUpon>H_M3_Mani_Arm_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Arm\H_M3_Mani_Arm_Service.xaml.cs">
+      <DependentUpon>H_M3_Mani_Arm_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\H_M3_Mani_PN.xaml.cs">
+      <DependentUpon>H_M3_Mani_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Lift\H_M3_Mani_Lift.xaml.cs">
+      <DependentUpon>H_M3_Mani_Lift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Lift\H_M3_Mani_Lift_PN.xaml.cs">
+      <DependentUpon>H_M3_Mani_Lift_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Lift\H_M3_Mani_Lift_Service.xaml.cs">
+      <DependentUpon>H_M3_Mani_Lift_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Rotary\H_M3_Mani_Rotary.xaml.cs">
+      <DependentUpon>H_M3_Mani_Rotary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Rotary\H_M3_Mani_Rotary_PN.xaml.cs">
+      <DependentUpon>H_M3_Mani_Rotary_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\Mani\Rotary\H_M3_Mani_Rotary_Service.xaml.cs">
+      <DependentUpon>H_M3_Mani_Rotary_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC1\Belt\H_M3_MC1Belt_PN.xaml.cs">
+      <DependentUpon>H_M3_MC1Belt_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC1\Belt\H_M3_MC1Belt.xaml.cs">
+      <DependentUpon>H_M3_MC1Belt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC1\Brush\H_M3_MC1Brush.xaml.cs">
+      <DependentUpon>H_M3_MC1Brush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC1\Brush\H_M3_MC1Brush_PN.xaml.cs">
+      <DependentUpon>H_M3_MC1Brush_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC1\Brush\H_M3_MC1Brush_Service.xaml.cs">
+      <DependentUpon>H_M3_MC1Brush_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC1\H_M3_MC1_PN.xaml.cs">
+      <DependentUpon>H_M3_MC1_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC1\Belt\H_M3_MC1Belt_Service.xaml.cs">
+      <DependentUpon>H_M3_MC1Belt_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC2\H_M3_MC2.xaml.cs">
+      <DependentUpon>H_M3_MC2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC2\H_M3_MC2_PN.xaml.cs">
+      <DependentUpon>H_M3_MC2_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 3\MC2\H_M3_MC2_Service.xaml.cs">
+      <DependentUpon>H_M3_MC2_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Hand_M4_Main.xaml.cs">
+      <DependentUpon>Hand_M4_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\HNT\H_M4_HNT.xaml.cs">
+      <DependentUpon>H_M4_HNT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\HNT\H_M4_HNT_PN.xaml.cs">
+      <DependentUpon>H_M4_HNT_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\HNT\H_M4_HNT_Service.xaml.cs">
+      <DependentUpon>H_M4_HNT_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\HVT\H_M4_HVT.xaml.cs">
+      <DependentUpon>H_M4_HVT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\HVT\H_M4_HVT_PN.xaml.cs">
+      <DependentUpon>H_M4_HVT_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\HVT\H_M4_HVT_Service.xaml.cs">
+      <DependentUpon>H_M4_HVT_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Arm\H_M4_Mani_Arm_PN.xaml.cs">
+      <DependentUpon>H_M4_Mani_Arm_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Arm\H_M4_Mani_Arm.xaml.cs">
+      <DependentUpon>H_M4_Mani_Arm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Arm\H_M4_Mani_Arm_Service.xaml.cs">
+      <DependentUpon>H_M4_Mani_Arm_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Drive\H_M4_Mani_Drive.xaml.cs">
+      <DependentUpon>H_M4_Mani_Drive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Drive\H_M4_Mani_Drive_PN.xaml.cs">
+      <DependentUpon>H_M4_Mani_Drive_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Drive\H_M4_Mani_Drive_Service.xaml.cs">
+      <DependentUpon>H_M4_Mani_Drive_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Hand_M4_Mani.xaml.cs">
+      <DependentUpon>Hand_M4_Mani.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Lift\H_M4_Mani_Lift.xaml.cs">
+      <DependentUpon>H_M4_Mani_Lift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Lift\H_M4_Mani_Lift_Service.xaml.cs">
+      <DependentUpon>H_M4_Mani_Lift_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Lift\H_M4_Mani_Lift_PN.xaml.cs">
+      <DependentUpon>H_M4_Mani_Lift_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Rotary\H_M4_Mani_Rotary.xaml.cs">
+      <DependentUpon>H_M4_Mani_Rotary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Rotary\H_M4_Mani_Rotary_Service.xaml.cs">
+      <DependentUpon>H_M4_Mani_Rotary_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Rotary\H_M4_Mani_Rotary_PN.xaml.cs">
+      <DependentUpon>H_M4_Mani_Rotary_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Tilt\H_M4_Mani_Tilt.xaml.cs">
+      <DependentUpon>H_M4_Mani_Tilt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Tilt\H_M4_Mani_Tilt_Service.xaml.cs">
+      <DependentUpon>H_M4_Mani_Tilt_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Mani\Tilt\H_M4_Mani_Tilt_PN.xaml.cs">
+      <DependentUpon>H_M4_Mani_Tilt_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\QS\H_M4_QS.xaml.cs">
+      <DependentUpon>H_M4_QS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Transport KZ\H_M4_TKZ.xaml.cs">
+      <DependentUpon>H_M4_TKZ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Transport KZ\H_M4_TKZ_PN.xaml.cs">
+      <DependentUpon>H_M4_TKZ_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Transport KZ\H_M4_TKZ_Service.xaml.cs">
+      <DependentUpon>H_M4_TKZ_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Transport Dryer\H_M4_TD.xaml.cs">
+      <DependentUpon>H_M4_TD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Transport Dryer\H_M4_TD_PN.xaml.cs">
+      <DependentUpon>H_M4_TD_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Transport Dryer\H_M4_TD_Service.xaml.cs">
+      <DependentUpon>H_M4_TD_Service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Modul 4\Unload\H_M4_UnloadingHub.xaml.cs">
+      <DependentUpon>H_M4_UnloadingHub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\DataPicker\Adapters\DataPickerAdapter.cs" />
+    <Compile Include="Views\MainRegion\MachineOverview\DataPicker\Custom Objects\Order.cs" />
+    <Compile Include="Views\MainRegion\MachineOverview\MO_MaschineView.xaml.cs">
+      <DependentUpon>MO_MaschineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\OrderPriority\Adapters\Adapter_SetOrderPriority.cs" />
+    <Compile Include="Views\MainRegion\MachineOverview\OrderPriority\Views\MO_SetOrderPriority.xaml.cs">
+      <DependentUpon>MO_SetOrderPriority.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\DataPicker\MO_DataPicker.xaml.cs">
+      <DependentUpon>MO_DataPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\DataPicker\DPR_Selector.xaml.cs">
+      <DependentUpon>DPR_Selector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_Coating_Step_S.xaml.cs">
+      <DependentUpon>MO_Coating_Step_S.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_Coating_Step_T.xaml.cs">
+      <DependentUpon>MO_Coating_Step_T.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_Coating_Step_D.xaml.cs">
+      <DependentUpon>MO_Coating_Step_D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\MO_QS.xaml.cs">
+      <DependentUpon>MO_QS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\MO_TrayBuffer.xaml.cs">
+      <DependentUpon>MO_TrayBuffer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\MO_CZ.xaml.cs">
+      <DependentUpon>MO_CZ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Oven\MO_Oven.xaml.cs">
+      <DependentUpon>MO_Oven.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_CoatingCabin.xaml.cs">
+      <DependentUpon>MO_CoatingCabin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\MO_BasketCleaning.xaml.cs">
+      <DependentUpon>MO_BasketCleaning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\MO_BasketBuffer.xaml.cs">
+      <DependentUpon>MO_BasketBuffer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Stations\MO_LiftandTilter.xaml.cs">
+      <DependentUpon>MO_LiftandTilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Adapters\StatusM4Adapter.cs" />
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Adapters\StatusTBAdapter.cs" />
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Adapters\StatusAdapter.cs" />
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status.xaml.cs">
+      <DependentUpon>MOM4_Status.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_TB.xaml.cs">
+      <DependentUpon>MOM4_Status_TB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status.xaml.cs">
+      <DependentUpon>MO_Status.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status_Basket.xaml.cs">
+      <DependentUpon>MO_Status_Basket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status_BasketF.xaml.cs">
+      <DependentUpon>MO_Status_BasketF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status_Box.xaml.cs">
+      <DependentUpon>MO_Status_Box.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_Tray.xaml.cs">
+      <DependentUpon>MOM4_Status_Tray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_Box.xaml.cs">
+      <DependentUpon>MOM4_Status_Box.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_Basket.xaml.cs">
+      <DependentUpon>MOM4_Status_Basket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_BS.xaml.cs">
+      <DependentUpon>MO_LD_BS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_DC.xaml.cs">
+      <DependentUpon>MO_LD_DC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_HC.xaml.cs">
+      <DependentUpon>MO_LD_HC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_Lift.xaml.cs">
+      <DependentUpon>MO_LD_Lift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 1\OH_M1_Main.xaml.cs">
+      <DependentUpon>OH_M1_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_DC.xaml.cs">
+      <DependentUpon>OH_M1_DC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_BS.xaml.cs">
+      <DependentUpon>OH_M1_BS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_HC.xaml.cs">
+      <DependentUpon>OH_M1_HC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 2\OH_M2_Main.xaml.cs">
+      <DependentUpon>OH_M2_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_Ventilators.xaml.cs">
+      <DependentUpon>OH_M2_Ventilators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_LTB.xaml.cs">
+      <DependentUpon>OH_M2_LTB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_Tilt.xaml.cs">
+      <DependentUpon>OH_M2_Tilt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_Centrifuge.xaml.cs">
+      <DependentUpon>OH_M2_Centrifuge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 3\OH_M3_Main.xaml.cs">
+      <DependentUpon>OH_M3_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_MC2.xaml.cs">
+      <DependentUpon>OH_M3_MC2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_MC1.xaml.cs">
+      <DependentUpon>OH_M3_MC1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_BC.xaml.cs">
+      <DependentUpon>OH_M3_BC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_KA.xaml.cs">
+      <DependentUpon>OH_M3_KA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_Mani.xaml.cs">
+      <DependentUpon>OH_M3_Mani.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\OH_M4_Main.xaml.cs">
+      <DependentUpon>OH_M4_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_Heating.xaml.cs">
+      <DependentUpon>OH_M4_Heating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_Ventilators.xaml.cs">
+      <DependentUpon>OH_M4_Ventilators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_TKZ.xaml.cs">
+      <DependentUpon>OH_M4_TKZ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_TD.xaml.cs">
+      <DependentUpon>OH_M4_TD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_HNT.xaml.cs">
+      <DependentUpon>OH_M4_HNT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_HVT.xaml.cs">
+      <DependentUpon>OH_M4_HVT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_Mani.xaml.cs">
+      <DependentUpon>OH_M4_Mani.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\DC\Position\P_M1_DC_P.xaml.cs">
+      <DependentUpon>P_M1_DC_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\DC\P_M1_DC.xaml.cs">
+      <DependentUpon>P_M1_DC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\HC\Position\P_M1_HC_P.xaml.cs">
+      <DependentUpon>P_M1_HC_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\HC\P_M1_HC.xaml.cs">
+      <DependentUpon>P_M1_HC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\KBD\Position\P_M1_KBD_P.xaml.cs">
+      <DependentUpon>P_M1_KBD_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\KBD\P_M1_KBD.xaml.cs">
+      <DependentUpon>P_M1_KBD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\LD\Area\P_M1_LD_B.xaml.cs">
+      <DependentUpon>P_M1_LD_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\LD\Position\P_M1_LD_P.xaml.cs">
+      <DependentUpon>P_M1_LD_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\LD\P_M1_LD.xaml.cs">
+      <DependentUpon>P_M1_LD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 1\P_M1_Main.xaml.cs">
+      <DependentUpon>P_M1_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\LTB\Area\P_M2_LTB_B.xaml.cs">
+      <DependentUpon>P_M2_LTB_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\LTB\Paint\P_M2_LTB_Paint.xaml.cs">
+      <DependentUpon>P_M2_LTB_Paint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\LTB\Position\P_M2_LTB_P.xaml.cs">
+      <DependentUpon>P_M2_LTB_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\LTB\P_M2_LTB.xaml.cs">
+      <DependentUpon>P_M2_LTB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\Paint\Paint 1-5\P_M2_Paint_1_5.xaml.cs">
+      <DependentUpon>P_M2_Paint_1_5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\Paint\Paint 6-10\P_M2_Paint_6_10.xaml.cs">
+      <DependentUpon>P_M2_Paint_6_10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\Paint\P_M2_Paint.xaml.cs">
+      <DependentUpon>P_M2_Paint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\P_M2_Main.xaml.cs">
+      <DependentUpon>P_M2_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 2\Ventilators\P_M2_Ventilators.xaml.cs">
+      <DependentUpon>P_M2_Ventilators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\BC\Position\P_M3_BC_P.xaml.cs">
+      <DependentUpon>P_M3_BC_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\BC\P_M3_BC.xaml.cs">
+      <DependentUpon>P_M3_BC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\KA\Area\P_M3_KA_B.xaml.cs">
+      <DependentUpon>P_M3_KA_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\KA\P_M3_KA.xaml.cs">
+      <DependentUpon>P_M3_KA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Arm\Area\P_M3_Mani_Arm_B.xaml.cs">
+      <DependentUpon>P_M3_Mani_Arm_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Arm\Position\P_M3_Mani_Arm_P.xaml.cs">
+      <DependentUpon>P_M3_Mani_Arm_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Arm\P_M3_Mani_Arm.xaml.cs">
+      <DependentUpon>P_M3_Mani_Arm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Lift\Area\P_M3_Mani_Lift_B.xaml.cs">
+      <DependentUpon>P_M3_Mani_Lift_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Lift\Position\P_M3_Mani_Lift_P.xaml.cs">
+      <DependentUpon>P_M3_Mani_Lift_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Lift\P_M3_Mani_Lift.xaml.cs">
+      <DependentUpon>P_M3_Mani_Lift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\P_M3_Mani_PN.xaml.cs">
+      <DependentUpon>P_M3_Mani_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Rotary\Area\P_M3_Mani_Rotary_B.xaml.cs">
+      <DependentUpon>P_M3_Mani_Rotary_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Rotary\Position\P_M3_Mani_Rotary_P.xaml.cs">
+      <DependentUpon>P_M3_Mani_Rotary_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\Mani\Rotary\P_M3_Mani_Rotary.xaml.cs">
+      <DependentUpon>P_M3_Mani_Rotary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\HNT\Area\P_M4_HNT_B.xaml.cs">
+      <DependentUpon>P_M4_HNT_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\HNT\Position\P_M4_HNT_P.xaml.cs">
+      <DependentUpon>P_M4_HNT_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\HNT\P_M4_HNT.xaml.cs">
+      <DependentUpon>P_M4_HNT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\HVT\Area\P_M4_HVT_B.xaml.cs">
+      <DependentUpon>P_M4_HVT_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\HVT\Position\P_M4_HVT_P.xaml.cs">
+      <DependentUpon>P_M4_HVT_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\HVT\P_M4_HVT.xaml.cs">
+      <DependentUpon>P_M4_HVT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Arm\Area\P_M4_Mani_Arm_B.xaml.cs">
+      <DependentUpon>P_M4_Mani_Arm_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Arm\Position\P_M4_Mani_Arm_P.xaml.cs">
+      <DependentUpon>P_M4_Mani_Arm_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Arm\P_M4_Mani_Arm.xaml.cs">
+      <DependentUpon>P_M4_Mani_Arm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Drive\Area\P_M4_Mani_Drive_B.xaml.cs">
+      <DependentUpon>P_M4_Mani_Drive_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Drive\Position\P_M4_Mani_Drive_P.xaml.cs">
+      <DependentUpon>P_M4_Mani_Drive_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Drive\P_M4_Mani_Drive.xaml.cs">
+      <DependentUpon>P_M4_Mani_Drive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\FinePos\Position\P_M4_Mani_FinePos_P.xaml.cs">
+      <DependentUpon>P_M4_Mani_FinePos_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\FinePos\P_M4_Mani_FinePos.xaml.cs">
+      <DependentUpon>P_M4_Mani_FinePos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Lift\Area\P_M4_Mani_Lift_B.xaml.cs">
+      <DependentUpon>P_M4_Mani_Lift_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Lift\Position\P_M4_Mani_Lift_P.xaml.cs">
+      <DependentUpon>P_M4_Mani_Lift_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Lift\P_M4_Mani_Lift.xaml.cs">
+      <DependentUpon>P_M4_Mani_Lift.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\P_M4_Mani.xaml.cs">
+      <DependentUpon>P_M4_Mani.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\MC1\Position\P_M3_MC1_P.xaml.cs">
+      <DependentUpon>P_M3_MC1_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\MC1\P_M3_MC1.xaml.cs">
+      <DependentUpon>P_M3_MC1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\MC2\Position\P_M3_MC2_P.xaml.cs">
+      <DependentUpon>P_M3_MC2_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\MC2\P_M3_MC2.xaml.cs">
+      <DependentUpon>P_M3_MC2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 3\P_M3_Main.xaml.cs">
+      <DependentUpon>P_M3_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Rotary\Area\P_M4_Mani_Rotary_B.xaml.cs">
+      <DependentUpon>P_M4_Mani_Rotary_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Rotary\Position\P_M4_Mani_Rotary_P.xaml.cs">
+      <DependentUpon>P_M4_Mani_Rotary_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\Rotary\P_M4_Mani_Rotary.xaml.cs">
+      <DependentUpon>P_M4_Mani_Rotary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\TIlt\Area\P_M4_Mani_Tilt_B.xaml.cs">
+      <DependentUpon>P_M4_Mani_Tilt_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Mani\TIlt\P_M4_Mani_Tilt.xaml.cs">
+      <DependentUpon>P_M4_Mani_Tilt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\P_M4_Main.xaml.cs">
+      <DependentUpon>P_M4_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Temp\Cooling\P_M4_T_KZ_P.xaml.cs">
+      <DependentUpon>P_M4_T_KZ_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Temp\Dreyer\P_M4_T_D_P.xaml.cs">
+      <DependentUpon>P_M4_T_D_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Temp\Predrying\P_M4_T_PD_P.xaml.cs">
+      <DependentUpon>P_M4_T_PD_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Temp\P_M4_Temp.xaml.cs">
+      <DependentUpon>P_M4_Temp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\Area\P_M4_TD_B.xaml.cs">
+      <DependentUpon>P_M4_TD_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\General\P_M4_TD_G.xaml.cs">
+      <DependentUpon>P_M4_TD_G.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\Position\P_M4_TD_P.xaml.cs">
+      <DependentUpon>P_M4_TD_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\P_M4_TD.xaml.cs">
+      <DependentUpon>P_M4_TD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Transport KZ\Area\P_M4_KZ_B.xaml.cs">
+      <DependentUpon>P_M4_KZ_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Transport KZ\Position\P_M4_KZ_P.xaml.cs">
+      <DependentUpon>P_M4_KZ_P.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Transport KZ\P_M4_KZ.xaml.cs">
+      <DependentUpon>P_M4_KZ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Modul 4\Ventilators\P_M4_Ventilators.xaml.cs">
+      <DependentUpon>P_M4_Ventilators.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\MR.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\ActualValues.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\SetValues.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\Remark.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\Run.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\XMLSerializer.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Views\Charges\Protocol_DT_Charges.xaml.cs">
+      <DependentUpon>Protocol_DT_Charges.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\MO_MRData.xaml.cs">
+      <DependentUpon>MO_MRData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Charges\Protocol_DT_Runs.xaml.cs">
+      <DependentUpon>Protocol_DT_Runs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_SetValues.xaml.cs">
+      <DependentUpon>Protocol_SetValues.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_CSV_D.xaml.cs">
+      <DependentUpon>Protocol_CSV_D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_CSV_S.xaml.cs">
+      <DependentUpon>Protocol_CSV_S.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_CSV_T.xaml.cs">
+      <DependentUpon>Protocol_CSV_T.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeAdapter_MR.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeAdapter_Article.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeAdapter_Coating.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\RecipeTemplateData.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\MachineRecipe.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\CoatingRecipe.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\ArticleRecipe.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\CoatingStepRecipe.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\VWRecipe.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\VWVariable.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\ArticleRecipe_Browser.xaml.cs">
+      <DependentUpon>ArticleRecipe_Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article.xaml.cs">
+      <DependentUpon>Recipe_Article.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TAR.xaml.cs">
+      <DependentUpon>Recipe_Article_TAR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TAA.xaml.cs">
+      <DependentUpon>Recipe_Article_TAA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_KA.xaml.cs">
+      <DependentUpon>Recipe_Article_KA.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_HC.xaml.cs">
+      <DependentUpon>Recipe_Article_HC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_DC.xaml.cs">
+      <DependentUpon>Recipe_Article_DC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TB1.xaml.cs">
+      <DependentUpon>Recipe_Article_TB1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TB2.xaml.cs">
+      <DependentUpon>Recipe_Article_TB2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_BS.xaml.cs">
+      <DependentUpon>Recipe_Article_BS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_LD.xaml.cs">
+      <DependentUpon>Recipe_Article_LD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeAdapter_CS.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\Recipe_Coating_PN.xaml.cs">
+      <DependentUpon>Recipe_Coating_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\Recipe_Coating_PR.xaml.cs">
+      <DependentUpon>Recipe_Coating_PR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\Recipe_Coating_Steps.xaml.cs">
+      <DependentUpon>Recipe_Coating_Steps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\CoatingRecipe_Browser.xaml.cs">
+      <DependentUpon>CoatingRecipe_Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\Steps\CoatingStepRecipe_Browser.xaml.cs">
+      <DependentUpon>CoatingStepRecipe_Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\Steps\Recipe_Coating_D.xaml.cs">
+      <DependentUpon>Recipe_Coating_D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\Steps\Recipe_Coating_T.xaml.cs">
+      <DependentUpon>Recipe_Coating_T.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Coating\Steps\Recipe_Coating_S.xaml.cs">
+      <DependentUpon>Recipe_Coating_S.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\MR\Recipe_Binding.xaml.cs">
+      <DependentUpon>Recipe_Binding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\MR\Recipe_Machine.xaml.cs">
+      <DependentUpon>Recipe_Machine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Diagnose\Views\Periferical Devices\Backup.xaml.cs">
+      <DependentUpon>Backup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Trend\Adapters\CurveInformation.cs" />
+    <Compile Include="Views\MainRegion\Trend\Adapters\TrendChartAdapter.cs" />
+    <Compile Include="Views\MainRegion\Trend\Adapters\TrendExportAdapter.cs" />
+    <Compile Include="Views\MainRegion\Trend\Custom Objects\Informations.cs" />
+    <Compile Include="Views\MainRegion\Trend\Custom Objects\TrendExportResult.cs" />
+    <Compile Include="Views\MainRegion\Trend\Custom Objects\TrendExportOptions.cs" />
+    <Compile Include="Views\MainRegion\Trend\Custom Objects\TrendExportSettings.cs" />
+    <Compile Include="Views\MainRegion\Trend\Custom Objects\TrendData.cs" />
+    <Compile Include="Services\General\Service_TrendExport.cs" />
+    <Compile Include="Views\MainRegion\Trend\Views\ExportView.xaml.cs">
+      <DependentUpon>ExportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Trend\Views\TrendChartView.xaml.cs">
+      <DependentUpon>TrendChartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DialogRegion\Service\Views\ServiceScreen.xaml.cs">
+      <DependentUpon>ServiceScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\WaitScreen\Custom Objects\WaitData.cs" />
+    <Compile Include="Views\TouchpadRegion\WaitScreen\Views\WaitScreen.xaml.cs">
+      <DependentUpon>WaitScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_LD.xaml.cs">
+      <DependentUpon>OH_M1_LD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Adapters\DashboardAdapter.cs" />
+    <Compile Include="Views\MainRegion\Dashboard\Views\DB_WidgetSelector.xaml.cs">
+      <DependentUpon>DB_WidgetSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\General\DB_Widget_Calendar.xaml.cs">
+      <DependentUpon>DB_Widget_Calendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\General\DB_Widget_Clock.xaml.cs">
+      <DependentUpon>DB_Widget_Clock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\General\DB_Widget_FP_Logo.xaml.cs">
+      <DependentUpon>DB_Widget_FP_Logo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Notifications\DB_Widget_VP.xaml.cs">
+      <DependentUpon>DB_Widget_VP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod4.xaml.cs">
+      <DependentUpon>DB_Widget_Prod4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod3.xaml.cs">
+      <DependentUpon>DB_Widget_Prod3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod2.xaml.cs">
+      <DependentUpon>DB_Widget_Prod2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod .xaml.cs">
+      <DependentUpon>DB_Widget_Prod .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Diagnose\Adapters\AlarmAdapter.cs" />
+    <Compile Include="Views\MainRegion\Diagnose\Custom Objects\AlarmGroupsFilterItem.cs" />
+    <Compile Include="Views\MainRegion\Diagnose\Custom Objects\AlarmClassFilterItem.cs" />
+    <Compile Include="Views\MainRegion\Diagnose\Custom Objects\AlarmStateFilterItem.cs" />
+    <Compile Include="Views\MainRegion\Diagnose\Custom Objects\HistoricalTimeSpanFilterItem.cs" />
+    <Compile Include="Views\MainRegion\Logging\Adapters\LoggingAdapter.cs" />
+    <Compile Include="Views\MainRegion\Logging\Adapters\LoggingFilterAdapter.cs" />
+    <Compile Include="Views\MainRegion\Logging\Views\LoggingFilterView.xaml.cs">
+      <DependentUpon>LoggingFilterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Logging\Views\LoggingView.xaml.cs">
+      <DependentUpon>LoggingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\DataOverwrite\MO_DO_PStatus.xaml.cs">
+      <DependentUpon>MO_DO_PStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\DataOverwrite\MO_DO_Data.xaml.cs">
+      <DependentUpon>MO_DO_Data.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\DataOverwrite\MO_DataOverwrite.xaml.cs">
+      <DependentUpon>MO_DataOverwrite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Oven\MO_AutoONOFF.xaml.cs">
+      <DependentUpon>MO_AutoONOFF.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\Status\Custom Objects\SP.cs" />
+    <Compile Include="Views\MainRegion\OperatingHours\Views\OperatingHours_Main.xaml.cs">
+      <DependentUpon>OperatingHours_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Filter\Protocol_Filter.xaml.cs">
+      <DependentUpon>Protocol_Filter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Adapters\RecipeBindingAdapter.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\Barcode.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Views\MR\Recipe_Selector.xaml.cs">
+      <DependentUpon>Recipe_Selector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Diagnose\Views\Diagnose_PN.xaml.cs">
+      <DependentUpon>Diagnose_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\Error.cs" />
+    <Compile Include="Resources\Converters\Bool\Visibility\BoolToVisibility_1_1.cs" />
+    <Compile Include="Services\Handshackes\Service_H_LiftTiltingDevice.cs" />
+    <Compile Include="Views\DialogRegion\Dialog\Custom Objects\DialogResultEventArgs.cs" />
+    <Compile Include="Views\DialogRegion\Dialog\Adapters\DialogAdapter.cs" />
+    <Compile Include="Views\EmptyView.xaml.cs">
+      <DependentUpon>EmptyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Custom Objects\UserData.cs" />
+    <Compile Include="Views\MainRegion\User\Custom Objects\GroupData.cs" />
+    <Compile Include="Views\MainRegion\User\Custom Objects\UserRightDataClass.cs" />
+    <Compile Include="Views\MainRegion\Diagnose\Views\Periferical Devices\EKS.xaml.cs">
+      <DependentUpon>EKS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MessageBoxRegion\Custom Objects\MessageBoxTask.cs" />
+    <Compile Include="Views\MessageBoxRegion\MessageBoxView.xaml.cs">
+      <DependentUpon>MessageBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\Charge.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Custom Objects\Order.cs" />
+    <Compile Include="Views\MainRegion\Protocol\Adapters\ProtocolAdapter.cs" />
+    <Compile Include="DB\Custom Objects\LocalDBAdapter.cs" />
+    <Compile Include="Views\MainRegion\Recipe\Custom Objects\RecipeManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include=".editorconfig" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="DB\localDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\VisiWin.Reporting.Components.DataSets.Recipe.RecipeParameterDataSet+RecipeParameterDataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\DataSets\Protocol\localDB.xsc">
+      <DependentUpon>localDB.xsd</DependentUpon>
+    </None>
+    <None Include="Reporting\DataSets\Protocol\localDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>localDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporting\DataSets\Protocol\localDB.xss">
+      <DependentUpon>localDB.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Reporting\Reports\Protocol\Orders\OrdersReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\LocalizedResources\TouchKeyboardLayoutResources.en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Views\AppbarRegion\AppbarView.xaml.cs">
+      <DependentUpon>AppbarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AppbarRegion\Adapters\AppbarViewAdapter.cs" />
+    <Compile Include="Views\MainRegion\Dashboard\Views\DB_DashboardView.xaml.cs">
+      <DependentUpon>DB_DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Dashboard\Views\Widgets\WidgetEmptyView.xaml.cs">
+      <DependentUpon>WidgetEmptyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Diagnose\Views\Diagnose_Alarms.xaml.cs">
+      <DependentUpon>Diagnose_Alarms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Diagnose\Adapters\HistoricalAlarmAdapter.cs" />
+    <Compile Include="Views\MainRegion\Diagnose\Adapters\HistoricalAlarmFilterAdapter.cs" />
+    <Compile Include="Views\MainRegion\Diagnose\Views\Diagnose_AlarmsLogs_Filter.xaml.cs">
+      <DependentUpon>Diagnose_AlarmsLogs_Filter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Diagnose\Views\Diagnose_AlarmsLogs.xaml.cs">
+      <DependentUpon>Diagnose_AlarmsLogs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Handmenü\Hand_Main.xaml.cs">
+      <DependentUpon>Hand_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Parameter\Parameter_Main.xaml.cs">
+      <DependentUpon>Parameter_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Charges\Protocol_Charges.xaml.cs">
+      <DependentUpon>Protocol_Charges.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Orders\Protocol_Orders.xaml.cs">
+      <DependentUpon>Protocol_Orders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Protocol\Views\Protocol_PN.xaml.cs">
+      <DependentUpon>Protocol_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\Recipe_PN.xaml.cs">
+      <DependentUpon>Recipe_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Recipe\Views\MR\MRRecipe_Browser.xaml.cs">
+      <DependentUpon>MRRecipe_Browser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Views\User_PN.xaml.cs">
+      <DependentUpon>User_PN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeaderRegion\HeaderView.xaml.cs">
+      <DependentUpon>HeaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\MachineOverview\MO_MainView.xaml.cs">
+      <DependentUpon>MO_MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Views\User\User_ChangePassword.xaml.cs">
+      <DependentUpon>User_ChangePassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Views\Group\User_GroupManager.xaml.cs">
+      <DependentUpon>User_GroupManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Views\User\User_LogOnOff.xaml.cs">
+      <DependentUpon>User_LogOnOff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Views\User\User_AddChangeUser.xaml.cs">
+      <DependentUpon>User_AddChangeUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Adapters\UserAdapter.cs" />
+    <Compile Include="Views\MainRegion\User\Views\Group\User_AddChangeGroup.xaml.cs">
+      <DependentUpon>User_AddChangeGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\User\Adapters\UserGroupAdapter.cs" />
+    <Compile Include="Views\MainRegion\User\Adapters\UserLogOnOffAdapter.cs" />
+    <Compile Include="Views\MainRegion\User\Views\User\User_Manager.xaml.cs">
+      <DependentUpon>User_Manager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DialogRegion\Dialog\Views\DialogView.xaml.cs">
+      <DependentUpon>DialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\AlphaTouchpadView.xaml.cs">
+      <DependentUpon>AlphaTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\DateTimeTouchpadView.xaml.cs">
+      <DependentUpon>DateTimeTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\TimeTouchpadView.xaml.cs">
+      <DependentUpon>TimeTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\PasswordTouchpadView.xaml.cs">
+      <DependentUpon>PasswordTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\NumericTouchpadView.xaml.cs">
+      <DependentUpon>NumericTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TouchpadRegion\TouchPads\Views\DateTouchpadView.xaml.cs">
+      <DependentUpon>DateTouchpadView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <AppDesigner Include="Properties\" />
+    <Page Include="Reporting\UC\VisiWinReportViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Reporting\Views\ReportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\BrushStateCollection\BrushStateCollections.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Dashboard_Edit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Dashboard_Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Blue_ns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Gray_HM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Gray_Green.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Function.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Station.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Material.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Gray_ns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Green_UC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Start_UC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Stop_UC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Red_ns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Keyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Filter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\Buttons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_WM_HM_UC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_GreenButton_HM_UC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DashboardWidgetHost\DWH_DashBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DashboardWidgetHost\DashboardWidgetHosts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridRow\DataGridRows.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGrid\DataGrids.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGrid\DG_Trend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\GroupBox\GB_Group_ns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\GroupBox\GB_Group.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\GroupBox\GroupBoxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\GroupItem\GI_Filter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\GroupItem\GroupItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBoxItem\LBI_PanoramaNavigation_V.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBox\LB_PanoramaNavigation_V.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBox\LB_PanoramaNavigation_H.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBox\ListBoxes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarOut\NVO_VLSColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ScrollViewer\ScrollViewers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ScrollViewer\SV_TrendLegend.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarIn\NumericVarIns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarIn\NVI_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarOut\NumericVarOuts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NumericVarOut\NVO_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\PasswordVarIn\PasswordVarIns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\PasswordVarIn\PVI_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\RadioButton\RB_RecipeGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextBlock\TextBlocks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextBlock\TB_Center.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextBlock\TB_Right.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarOut\TVO_VLSColor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToggleButton\TB_Dashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TouchKeyboard\TouchKeyboards.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TouchKeyboard\AlphaTouchKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\DataTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\ListBox\LB_DashBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBoxItem\LBI_Diagnose.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBoxItem\ListBoxItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NavigationRadioButton\NavigationRadioButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ProgressBar\PB_Loading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ProgressBar\ProgressBars.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\RadioButton\RB_Group.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\RadioButton\RB_Switcher.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBoxItem\LBI_DashBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\RadioButton\RadioButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Switch\S_Status.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Switch\Switches.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TabItem\TI_Filter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\DataGridRow\DGR_Protocol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_AppBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Close.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TabItem\TabItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarIn\TVI_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarIn\TVI_RecipeBrowser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarIn\TextVarIns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarOut\TextVarOuts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarOut\TVO_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TextVarOut\TVO_Header.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToggleButton\TB_Reports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Red.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\NavigationRadioButton\NRB_AppBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Blue.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\Button\B_Gray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ListBoxItem\LBI_PanoramaNavigation_H.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToggleButton\ToggleButtons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToolBar\TB_Report.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\ToolBar\ToolBars.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\UpDownNumericVarIn\UpDownNumericVarIns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\UpDownNumericVarIn\UDNVI_TimePad.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\LinearGradientBrush\LinearGradientBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes\RadialGradientBrush\RadialGradientBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_MessageBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_AppBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_MachineOverview.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\SymbolStateCollection\SymbolStateCollections.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_MaterialTracking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_Reporting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_Recipe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_Handmenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_Dashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\Symbols.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Converters\Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\DataTemplates\TextStateCollection\TextStateCollections.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\StateCollection\StateCollections.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Brushes\Color\Colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Brushes\SolidColorBrush\SolidColorBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\LocalizedResources\TouchKeyboardLayoutResources.de-DE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\DataTemplates\Symbol\S_General.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ControlStyles\TouchKeyboard\NumericTouchKeyboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\LocalizedResources\TouchKeyboardLayoutResources.sv-SE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Dashboard\DBTemperature.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\H_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\TBTray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\QSTray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\OvenBasket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\CCBasket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\BCBasket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\KRBasket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\LDBasket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\CZTray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\OvenTray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_Dryer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_M4Mani.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_KZ.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_KA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_UnloadStation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_Shalves.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_HNT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_HVT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Tracking.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\OperatingMode\HM_WorkMode.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_CoatingCabin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_KBDMani.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_BC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_KR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Stations\MV_LD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\MVMaterial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\MVBasket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\MVTrayVertical.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\OperatingMode\WorkModeOption.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\OperatingMode\M_WorkMode_L.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\OperatingMode\M_WorkMode_R.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\MV\Pack\MVTrayHorizontal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Order_Template.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\PaintType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\VentilatorStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Recipe\Recipe_Template.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\UserControls\Recipe\Recipe_Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AppbarRegion\AppbarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EmptyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_KZT .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_LT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_OT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Temperatur\DB_Widget_VZT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Diagnose\Views\Periferical Devices\TransportReset.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\DC\H_M1_DC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\DC\H_M1_DC_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\DC\H_M1_DC_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\Hand_M1_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\HC\H_M1_HC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\HC\H_M1_HC_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\HC\H_M1_HC_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\KBD\H_M1_KBD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\KBD\H_M1_KBD_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\KBD\H_M1_KBD_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\LD\Tilt\H_M1_LD_Tilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\LD\H_M1_LD_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\LD\Lift\H_M1_LD_Lift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\LD\Lift\H_M1_LD_Lift_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 1\LD\Lift\H_M1_LD_Lift_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\H_M2_C_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Hand_M2_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\LTB\H_M2_LTB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\LTB\H_M2_LTB_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\LTB\H_M2_LTB_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Planet\H_M2_Planet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Planet\H_M2_Planet_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Planet\H_M2_Planet_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Rotor\H_M2_Rotor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Rotor\H_M2_Rotor_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Centrifuge\Rotor\H_M2_Rotor_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Tilt\H_M2_Tilt_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Tilt\H_M2_Tilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 2\Tilt\H_M2_Tilt_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\BC\H_M3_BC_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\BC\Rotary\H_M3_BC_Rotary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\BC\Rotary\H_M3_BC_Rotary_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\BC\Rotary\H_M3_BC_Rotary_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\BC\Tilt\H_M3_BC_Tilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\BC\Tilt\H_M3_BC_Tilt_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\BC\Tilt\H_M3_BC_Tilt_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Hand_M3_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\KA\H_M3_KA_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\KA\Rotary\H_M3_KA_Rotary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\KA\Rotary\H_M3_KA_Rotary_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\KA\Rotary\H_M3_KA_Rotary_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\KA\Tilt\H_M3_KA_Tilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\KA\Tilt\H_M3_KA_Tilt_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\KA\Tilt\H_M3_KA_Tilt_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Arm\H_M3_Mani_Arm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Arm\H_M3_Mani_Arm_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Arm\H_M3_Mani_Arm_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\H_M3_Mani_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Lift\H_M3_Mani_Lift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Lift\H_M3_Mani_Lift_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Lift\H_M3_Mani_Lift_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Rotary\H_M3_Mani_Rotary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Rotary\H_M3_Mani_Rotary_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\Mani\Rotary\H_M3_Mani_Rotary_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC1\Belt\H_M3_MC1Belt_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC1\Belt\H_M3_MC1Belt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC1\Brush\H_M3_MC1Brush.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC1\Brush\H_M3_MC1Brush_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC1\Brush\H_M3_MC1Brush_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC1\H_M3_MC1_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC1\Belt\H_M3_MC1Belt_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC2\H_M3_MC2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC2\H_M3_MC2_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 3\MC2\H_M3_MC2_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Hand_M4_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\HNT\H_M4_HNT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\HNT\H_M4_HNT_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\HNT\H_M4_HNT_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\HVT\H_M4_HVT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\HVT\H_M4_HVT_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\HVT\H_M4_HVT_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Arm\H_M4_Mani_Arm_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Arm\H_M4_Mani_Arm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Arm\H_M4_Mani_Arm_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Drive\H_M4_Mani_Drive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Drive\H_M4_Mani_Drive_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Drive\H_M4_Mani_Drive_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Hand_M4_Mani.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Lift\H_M4_Mani_Lift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Lift\H_M4_Mani_Lift_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Lift\H_M4_Mani_Lift_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Rotary\H_M4_Mani_Rotary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Rotary\H_M4_Mani_Rotary_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Rotary\H_M4_Mani_Rotary_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Tilt\H_M4_Mani_Tilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Tilt\H_M4_Mani_Tilt_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Mani\Tilt\H_M4_Mani_Tilt_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\QS\H_M4_QS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Transport KZ\H_M4_TKZ.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Transport KZ\H_M4_TKZ_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Transport KZ\H_M4_TKZ_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Transport Dryer\H_M4_TD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Transport Dryer\H_M4_TD_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Transport Dryer\H_M4_TD_Service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Modul 4\Unload\H_M4_UnloadingHub.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\MO_MaschineView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\OrderPriority\Views\MO_SetOrderPriority.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\DataPicker\MO_DataPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\DataPicker\DPR_Selector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_Coating_Step_S.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_Coating_Step_T.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_Coating_Step_D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\MO_QS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\MO_TrayBuffer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\MO_CZ.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Oven\MO_Oven.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\Coating\MO_CoatingCabin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\MO_BasketCleaning.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\MO_BasketBuffer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Stations\MO_LiftandTilter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_TB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status_Basket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status_BasketF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M1-3\MO_Status_Box.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_Tray.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_Box.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\M4\MOM4_Status_Basket.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_BS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_DC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_HC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\Motors\MO_LD_Lift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 1\OH_M1_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_DC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_BS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_HC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 2\OH_M2_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_Ventilators.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_LTB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_Tilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 2\Stations\OH_M2_Centrifuge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 3\OH_M3_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_MC2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_MC1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_BC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_KA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 3\Stations\OH_M3_Mani.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\OH_M4_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_Heating.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_Ventilators.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_TKZ.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_TD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_HNT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_HVT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 4\Stations\OH_M4_Mani.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\DC\Position\P_M1_DC_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\DC\P_M1_DC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\HC\Position\P_M1_HC_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\HC\P_M1_HC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\KBD\Position\P_M1_KBD_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\KBD\P_M1_KBD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\LD\Area\P_M1_LD_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\LD\Position\P_M1_LD_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\LD\P_M1_LD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 1\P_M1_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\LTB\Area\P_M2_LTB_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\LTB\Paint\P_M2_LTB_Paint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\LTB\Position\P_M2_LTB_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\LTB\P_M2_LTB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\Paint\Paint 1-5\P_M2_Paint_1_5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\Paint\Paint 6-10\P_M2_Paint_6_10.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\Paint\P_M2_Paint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\P_M2_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 2\Ventilators\P_M2_Ventilators.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\BC\Position\P_M3_BC_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\BC\P_M3_BC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\KA\Area\P_M3_KA_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\KA\P_M3_KA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Arm\Area\P_M3_Mani_Arm_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Arm\Position\P_M3_Mani_Arm_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Arm\P_M3_Mani_Arm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Lift\Area\P_M3_Mani_Lift_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Lift\Position\P_M3_Mani_Lift_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Lift\P_M3_Mani_Lift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\P_M3_Mani_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Rotary\Area\P_M3_Mani_Rotary_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Rotary\Position\P_M3_Mani_Rotary_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\Mani\Rotary\P_M3_Mani_Rotary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\HNT\Area\P_M4_HNT_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\HNT\Position\P_M4_HNT_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\HNT\P_M4_HNT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\HVT\Area\P_M4_HVT_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\HVT\Position\P_M4_HVT_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\HVT\P_M4_HVT.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Arm\Area\P_M4_Mani_Arm_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Arm\Position\P_M4_Mani_Arm_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Arm\P_M4_Mani_Arm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Drive\Area\P_M4_Mani_Drive_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Drive\Position\P_M4_Mani_Drive_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Drive\P_M4_Mani_Drive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\FinePos\Position\P_M4_Mani_FinePos_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\FinePos\P_M4_Mani_FinePos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Lift\Area\P_M4_Mani_Lift_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Lift\Position\P_M4_Mani_Lift_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Lift\P_M4_Mani_Lift.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\P_M4_Mani.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\MC1\Position\P_M3_MC1_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\MC1\P_M3_MC1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\MC2\Position\P_M3_MC2_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\MC2\P_M3_MC2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 3\P_M3_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Rotary\Area\P_M4_Mani_Rotary_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Rotary\Position\P_M4_Mani_Rotary_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\Rotary\P_M4_Mani_Rotary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\TIlt\Area\P_M4_Mani_Tilt_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Mani\TIlt\P_M4_Mani_Tilt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\P_M4_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Temp\Cooling\P_M4_T_KZ_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Temp\Dreyer\P_M4_T_D_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Temp\Predrying\P_M4_T_PD_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Temp\P_M4_Temp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\Area\P_M4_TD_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\General\P_M4_TD_G.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\Position\P_M4_TD_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Transport Dryer\P_M4_TD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Transport KZ\Area\P_M4_KZ_B.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Transport KZ\Position\P_M4_KZ_P.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Transport KZ\P_M4_KZ.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Modul 4\Ventilators\P_M4_Ventilators.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Charges\Protocol_DT_Charges.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Status\MO_MRData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Charges\Protocol_DT_Runs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_SetValues.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_CSV_D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_CSV_S.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Charges\SetValues\Protocol_CSV_T.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\ArticleRecipe_Browser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TAR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TAA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_KA.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_HC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_DC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TB1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_TB2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_BS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Article\Recipe_Article_LD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\Recipe_Coating_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\Recipe_Coating_PR.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\Recipe_Coating_Steps.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\CoatingRecipe_Browser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\Steps\CoatingStepRecipe_Browser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\Steps\Recipe_Coating_D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\Steps\Recipe_Coating_T.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Coating\Steps\Recipe_Coating_S.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\MR\Recipe_Binding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\MR\Recipe_Machine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Diagnose\Views\Periferical Devices\Backup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Trend\Views\ExportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Trend\Views\TrendChartView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DialogRegion\Service\Views\ServiceScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\WaitScreen\Views\WaitScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\Modul 1\Stations\OH_M1_LD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\DB_WidgetSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\General\DB_Widget_Calendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\General\DB_Widget_Clock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\General\DB_Widget_FP_Logo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Notifications\DB_Widget_VP.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\Statistic\DB_Widget_Prod .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Logging\Views\LoggingFilterView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Logging\Views\LoggingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\DataOverwrite\MO_DO_PStatus.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\DataOverwrite\MO_DO_Data.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\DataOverwrite\MO_DataOverwrite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\Oven\MO_AutoONOFF.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\OperatingHours\Views\OperatingHours_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Filter\Protocol_Filter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\MR\Recipe_Selector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Diagnose\Views\Diagnose_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Diagnose\Views\Periferical Devices\EKS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MessageBoxRegion\MessageBoxView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\DB_DashboardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Dashboard\Views\Widgets\WidgetEmptyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Diagnose\Views\Diagnose_Alarms.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Diagnose\Views\Diagnose_AlarmsLogs_Filter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Diagnose\Views\Diagnose_AlarmsLogs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Handmenü\Hand_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Parameter\Parameter_Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Charges\Protocol_Charges.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Orders\Protocol_Orders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Protocol\Views\Protocol_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\Recipe_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Recipe\Views\MR\MRRecipe_Browser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\User\Views\User_PN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HeaderRegion\HeaderView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\MachineOverview\MO_MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\User\Views\User\User_ChangePassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\User\Views\Group\User_GroupManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\User\Views\User\User_LogOnOff.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\User\Views\User\User_AddChangeUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\User\Views\Group\User_AddChangeGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\User\Views\User\User_Manager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DialogRegion\Dialog\Views\DialogView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\AlphaTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\DateTimeTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\TimeTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\PasswordTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\NumericTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TouchpadRegion\TouchPads\Views\DateTouchpadView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SplashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FP_ICO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.dashboard.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.diagnose.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.handmenu.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.home.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.languages.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.parameters.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.protocol.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.recipe.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.turnoff.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.user.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.usermanagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MessageBox\mb_asterix_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_error_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_exclamation_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_hand_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_information_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_question_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_stop_48x48.png" />
+    <Resource Include="Resources\Images\MessageBox\mb_warning_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\HeaderRegion.png" />
+    <None Include="Resources\Images\Loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Resources\Images\Splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Appbar\appbar.close2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="EKSEthLib">
+      <Guid>{36B62232-F5C4-4B46-BA4A-4B1F3F2C7974}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\MachineOverview\Stations\SQS_Door.png" />
+    <Resource Include="Resources\Images\MachineOverview\Motor.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SBC_SD.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\SCZTray.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\SOTray.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\SQSTray.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\STBTray.png" />
+    <Resource Include="Resources\Images\MachineOverview\Basket\SBCBasket.png" />
+    <Resource Include="Resources\Images\MachineOverview\Basket\SCCBasket.png" />
+    <Resource Include="Resources\Images\MachineOverview\Basket\SKRBasket.png" />
+    <Resource Include="Resources\Images\MachineOverview\Basket\SLDBasket.png" />
+    <Resource Include="Resources\Images\MachineOverview\Basket\SOB.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SBC.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SCC.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SCCLTB.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SCZ.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SKR1.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SKR2.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SLD.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SO.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\SQS.png" />
+    <Resource Include="Resources\Images\MachineOverview\Stations\STB.png" />
+    <Resource Include="Resources\Images\MachineOverview\LiftandTilter1.png" />
+    <Resource Include="Resources\Images\MachineOverview\Dryer.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Rail.png" />
+    <Resource Include="Resources\Images\MachineOverview\KZ.png" />
+    <Resource Include="Resources\Images\MachineOverview\Rail.png" />
+    <Resource Include="Resources\Images\MachineOverview\Basket\BasketMaterial.png" />
+    <Resource Include="Resources\Images\MachineOverview\Basket\BasketNormal.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\TrayHorizontalMaterial.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\TrayHorizontalNormal.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\TrayHorizontalTilted.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\TrayVerticalMaterial.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\TrayVerticalNormal.png" />
+    <Resource Include="Resources\Images\MachineOverview\Tray\TrayVerticalTilted.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani8.png" />
+    <Resource Include="Resources\Images\MachineOverview\QSDoorClosed.png" />
+    <Resource Include="Resources\Images\MachineOverview\QSDoorOpen.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani1.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani2.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani3.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani4.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani5.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani6.png" />
+    <Resource Include="Resources\Images\MachineOverview\M3Mani\M3Mani7.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4ManiFix.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4Mani1.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4Mani2.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4Mani3.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4Mani4.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4Mani5.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4Mani6.png" />
+    <Resource Include="Resources\Images\MachineOverview\M4Mani\M4Mani7.png" />
+    <Resource Include="Resources\Images\MachineOverview\Korb.png" />
+    <Resource Include="Resources\Images\MachineOverview\BC.png" />
+    <Resource Include="Resources\Images\MachineOverview\BCDoorClosed.png" />
+    <Resource Include="Resources\Images\MachineOverview\BCDoorOpen.png" />
+    <Resource Include="Resources\Images\MachineOverview\CoatingCabine.png" />
+    <Resource Include="Resources\Images\MachineOverview\CoatingDoorClosed.png" />
+    <Resource Include="Resources\Images\MachineOverview\CoatingDoorOpen.png" />
+    <Resource Include="Resources\Images\MachineOverview\KBS.png" />
+    <Resource Include="Resources\Images\MachineOverview\KR.png" />
+    <Resource Include="Resources\Images\MachineOverview\LD.png" />
+    <Resource Include="Resources\Images\MachineOverview\OvenBelts.png" />
+    <Resource Include="Resources\Images\MachineOverview\Template.png" />
+    <Resource Include="Resources\Images\MachineOverview\HVT.png" />
+    <Resource Include="Resources\Images\MachineOverview\BBD.png" />
+    <Resource Include="Resources\Images\MachineOverview\Shelves.png" />
+    <Resource Include="Resources\Images\MachineOverview\QSDoor.png" />
+    <Resource Include="Resources\Images\MachineOverview\Box.png" />
+    <Resource Include="Resources\Images\MachineOverview\HNT.png" />
+    <Resource Include="Resources\Images\MachineOverview\KZDoorClosed.png" />
+    <Resource Include="Resources\Images\MachineOverview\KZDoorOpen.png" />
+    <Resource Include="Resources\Images\MachineOverview\TabletHorizontalNormal.png" />
+    <Resource Include="Resources\Images\MachineOverview\TabletHorizontalTilted.png" />
+    <Resource Include="Resources\Images\MachineOverview\Layer00.png" />
+    <Resource Include="Resources\Images\Recipe\machinerecipe.png" />
+    <Resource Include="Resources\Images\Recipe\ArrowDown.png" />
+    <Resource Include="Resources\Images\Recipe\ArrowUp.png" />
+    <Resource Include="Resources\Images\Dashboard\Dashboard.png" />
+    <EmbeddedResource Include="Reporting\Reports\Protocol\Charges\ChargesReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\Reports\Protocol\Runs\RunsReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Maps\World.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="Resources\Images\Appbar\appbar.log.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.filter.png" />
+    <Resource Include="Resources\Images\MobilePanel.png" />
+    <Resource Include="Resources\Images\Appbar\appbar.BS.png" />
+    <Resource Include="Resources\Images\Betriebstunden\Ventilator.png" />
+    <Resource Include="Resources\Images\Dashboard\Add.png" />
+    <Resource Include="Resources\Images\Dashboard\Edit.png" />
+    <Resource Include="Resources\Images\Dashboard\Close.png" />
+    <Resource Include="Resources\Images\Dashboard\Delete.png" />
+    <Resource Include="Resources\Images\Dashboard\Drag.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.arrow.left.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.arrow.leftm.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.arrow.rigt.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.arrow.rigtm.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.cog.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.layout.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.printer.png" />
+    <Resource Include="Resources\Images\Reporting\reporting.save.png" />
+    <Resource Include="Resources\Images\Recipe\dip.png" />
+    <Resource Include="Resources\Images\Recipe\roll.png" />
+    <Resource Include="Resources\Images\Recipe\spin.png" />
+    <Resource Include="Resources\Images\Recipe\article.png" />
+    <Resource Include="Resources\Images\Recipe\coat.png" />
+    <Resource Include="Resources\Images\Recipe\lack.png" />
+    <Resource Include="Resources\Images\Recipe\dip_s.png" />
+    <Resource Include="Resources\Images\Recipe\roll_s.png" />
+    <Resource Include="Resources\Images\Recipe\spin_s.png" />
+    <Resource Include="Resources\Images\Recipe\nor.png" />
+    <Resource Include="Resources\Images\HandMenu\HMLiftandTilter.png" />
+    <Resource Include="Resources\Images\HandMenu\HMForplanet.png" />
+    <Resource Include="Resources\Images\HandMenu\HMManipulator.png" />
+    <Content Include="Libs\ekseth.ocx" />
+    <Content Include="Libs\HHSO4NET.dll" />
+    <Content Include="Libs\HydraSO.dll" />
+    <Content Include="Libs\Microsoft.PointOfService.dll" />
+    <Content Include="Libs\x64\SQLite.Interop.dll" />
+    <Content Include="Libs\x86\SQLite.Interop.dll" />
+    <Content Include="Libs\System.Data.SQLite.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reporting\DataSets\Alarm\" />
+    <Folder Include="Reporting\DataSets\Logging\" />
+    <Folder Include="Reporting\DataSets\Recipe\" />
+    <Folder Include="Reporting\DataSets\Trend\" />
+    <Folder Include="Reporting\DataSets\UserManagement\" />
+    <Folder Include="Reporting\Reports\Recipes\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 1\DC\Area\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 1\HC\Area\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 1\KBD\Area\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 3\BC\Area\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 3\KA\Position\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 3\MC1\Area\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 3\MC2\Area\" />
+    <Folder Include="Views\MainRegion\Parameter\Modul 4\Mani\TIlt\Position\" />
+    <Folder Include="Views\MainRegion\Trend\Service\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Resources\LocalizedResources\*.*" "$(TargetDir)Resources\LocalizedResources\" /S /Y /E
+xcopy "$(ProjectDir)Resources\Maps\*.*" "$(TargetDir)Resources\Maps\" /S /Y /E</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+      <UserProperties VisiWinVersion="7.2" VisiWinProjectName="224878-NordLock" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>

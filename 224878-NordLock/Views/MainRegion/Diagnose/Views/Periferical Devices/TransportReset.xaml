@@ -1,0 +1,42 @@
+﻿<vw:View
+    x:Class="HMI.Diagnose.TransportReset"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vw="http://inosoft.com/visiwin7"
+	Width="500" Height="Auto" Background="{StaticResource MainViewBackgroundBrush}" >
+
+    <Grid x:Name="LayoutRoot" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <vw:GroupBox   Grid.Row="3" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@HandMenu.Text4"  Margin="10" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.6*"/>
+                </Grid.ColumnDefinitions>
+
+                <vw:TextVarOut Width="250" HorizontalAlignment="Center" TextAlignment="Center" BorderThickness="2" VerticalAlignment="Center" FontWeight="Bold" Height="40" Value="{vw:LocalizedTextBinding LocalizableText=@HandMenu.Text66}" Background="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.4 Modul 4.03 Trockner Transport.02 Kettentransport.DB Trockner Transport HMI.Istwert.Status Manueller Transport, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource ButtonActive}, StateMode=Value}" />
+                <vw:Key Grid.Column="1" Width="120" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"  Style="{DynamicResource B_Red_ns}" LocalizableText="@Buttons.Text2" AuthorizationRight="TransportReset" KeyMode="KeyMode" VariableName="NLM4.PLC.Blocks.4 Modul 4.03 Trockner Transport.02 Kettentransport.DB Trockner Transport HMI.Sollwert.Transport Reset" />
+
+                <vw:TextVarOut Grid.Row="1" Width="250" HorizontalAlignment="Center" TextAlignment="Center" BorderThickness="2" FontWeight="Bold" Height="40" Value="{vw:LocalizedTextBinding LocalizableText=@HandMenu.Text67}" Background="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.4 Modul 4.05 Kühlzone Transport.02 Kettentransport.DB Kühlzone Transport HMI.Istwert.Status Manueller Transport, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource ButtonActive}, StateMode=Value}"/>
+                <vw:Key Grid.Row="1" Grid.Column="1" Width="120" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"  Style="{DynamicResource B_Red_ns}" LocalizableText="@Buttons.Text2" AuthorizationRight="TransportReset" KeyMode="KeyMode" VariableName="NLM4.PLC.Blocks.4 Modul 4.05 Kühlzone Transport.02 Kettentransport.DB Kühlzone Transport HMI.Sollwert.Transport Reset" />
+
+                <vw:TextVarOut Grid.Row="2" Width="250" HorizontalAlignment="Center" TextAlignment="Center" BorderThickness="2" FontWeight="Bold" Height="40" Value="{vw:LocalizedTextBinding LocalizableText=@HandMenu.Text42}" Background="{vw:VariableBinding VariableName=NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.Actual value.Status Auftrag, Converter={StaticResource ValueToStateBrushConverter}, States={StaticResource ButtonActive}, StateMode=Value}"/>
+                <vw:Key Grid.Row="2" Grid.Column="1" Width="120" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,10"  Style="{DynamicResource B_Red_ns}" LocalizableText="@Buttons.Text2" AuthorizationRight="TransportReset" VariableName="NLM4.PLC.Blocks.4 Modul 4.07 Manipulator.00 Allgemein.DB Mani04 Allgemein HMI.PC.General.Reset Fahrauftrag Manipulator" KeyMode="KeyMode" />
+
+
+            </Grid>
+        </vw:GroupBox>
+    </Grid>
+
+</vw:View>

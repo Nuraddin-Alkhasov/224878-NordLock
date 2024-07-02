@@ -1,0 +1,102 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7">
+
+    <Style x:Key="NVI_Main" TargetType="{x:Type vw:NumericVarIn}">
+        <Setter Property="Background" Value="{DynamicResource InputBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource InputFontBrush}"/>
+        <Setter Property="BlinkBrush" Value="{DynamicResource InputBlinkBrush}"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="3"/>
+        <Setter Property="LabelText" Value=""/>
+        <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="ValidationErrorTemplate" Value="{DynamicResource EmptyValidationTemplate}"/>
+        <Setter Property="SymbolHorizontalAlignment" Value="Right"/>
+        <Setter Property="SymbolMargin" Value="{DynamicResource LabelMargin}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="TextAlignment" Value="Right"/>
+        <Setter  Property="HorizontalContentAlignment" Value="Right" />
+        <Setter Property="WatermarkTemplate">
+
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Foreground="#FF868686" FontSize="{Binding FontSize, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" Margin="{Binding BorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" Padding="{Binding Padding, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" TextAlignment="{Binding TextAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" Text="{Binding WatermarkText, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type vw:VariableInputControl}}}"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type vw:NumericVarIn}">
+                    <Grid x:Name="Grid" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="BG" Grid.ColumnSpan="3" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding CornerRadius}"/>
+
+                        <TextBlock x:Name="value" FontWeight="{TemplateBinding FontWeight}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Center" Margin="0,0,10,0" Grid.Column="1" Focusable="True" Text="{TemplateBinding Text}" KeyboardNavigation.TabIndex="{TemplateBinding TabIndex}" UseLayoutRounding="{TemplateBinding UseLayoutRounding}" />
+                        <TextBlock x:Name="head" FontWeight="SemiBold" HorizontalAlignment="Left" IsHitTestVisible="False" Margin="10,0,0,0" TextAlignment="Left" Text="{TemplateBinding LabelText}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="Gray"/>
+                        <TextBlock x:Name="unit" FontWeight="SemiBold" Grid.Column="2"  HorizontalAlignment="Left" IsHitTestVisible="False" Margin="0,0,10,0"  TextAlignment="Left" Text="{TemplateBinding UnitText}" VerticalAlignment="Center" Foreground="Gray"/>
+                        <Border x:Name="ConnectionError" BorderBrush="{DynamicResource ConnectionErrorBorderBrush}" BorderThickness="1" Background="{DynamicResource ConnectionErrorBackgroundBrush}" Grid.ColumnSpan="3" CornerRadius="{TemplateBinding CornerRadius}" Visibility="Collapsed"/>
+                        <vw:SymbolPresenter x:Name="ConnectionErrorSymbol" Grid.Column="2" Focusable="False" HorizontalAlignment="Right" Symbol="{DynamicResource ConnectionErrorSymbol}" Visibility="Collapsed" VerticalAlignment="Top">
+                            <vw:SymbolPresenter.ContentTemplate>
+                                <DataTemplate>
+                                    <Image Height="24" Stretch="Fill" Width="24">
+                                        <Image.Source>
+                                            <BitmapImage UriSource="pack://application:,,,/VisiWin7.Styles.WPF;component/Images/connection_error_24x24.png"/>
+                                        </Image.Source>
+                                    </Image>
+                                </DataTemplate>
+                            </vw:SymbolPresenter.ContentTemplate>
+                        </vw:SymbolPresenter>
+                        <Border x:Name="PART_HitArea" Grid.ColumnSpan="3" BorderBrush="Transparent" BorderThickness="0" Background="Transparent" CornerRadius="0"/>
+
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" TargetName="BG" Value="0.3"/>
+                        </Trigger>
+                        <Trigger Property="IsQualityGood" Value="False">
+                            <Setter Property="Visibility" TargetName="ConnectionError" Value="Visible"/>
+                            <Setter Property="Visibility" TargetName="ConnectionErrorSymbol" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="AreAnyTouchesCapturedWithin" Value="True">
+                            <Setter Property="Background" TargetName="BG" Value="{DynamicResource FP_Blue_Gradient}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="value" Value="{DynamicResource InputSelectedFontBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="head" Value="{DynamicResource InputSelectedFontBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="unit" Value="{DynamicResource InputSelectedFontBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseCaptureWithin" Value="True">
+                            <Setter Property="Background" TargetName="BG" Value="{DynamicResource FP_Blue_Gradient}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="value" Value="{DynamicResource InputSelectedFontBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="head" Value="{DynamicResource InputSelectedFontBrush}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="unit" Value="{DynamicResource InputSelectedFontBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsInputValid" Value="False">
+                            <Setter Property="TextElement.Foreground" TargetName="value" Value="{DynamicResource InputSelectedFontBrush}"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Name="flash">
+                                    <Storyboard  >
+                                        <ColorAnimation Storyboard.TargetName="BG" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" To="#FFBE2828" Duration="0:0:1" AutoReverse="True" RepeatBehavior="Forever" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard  BeginStoryboardName="flash" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

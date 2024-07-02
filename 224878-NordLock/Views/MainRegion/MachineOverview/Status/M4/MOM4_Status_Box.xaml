@@ -1,0 +1,24 @@
+﻿<vw:View 
+        x:Class="HMI.Views.MainRegion.MachineOverview.MOM4_Status_Box"
+	    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	    xmlns:vw="http://inosoft.com/visiwin7" Width="750">
+    <vw:GroupBox HeaderText="Charge" Style="{DynamicResource GB_Group}" LocalizableHeaderText="@Status.Text21">
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"  Margin="0,0,5,0" >
+                <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text6" Margin="0,5,0,0" />
+                <vw:TextVarOut Height="40" Style="{DynamicResource TVO_Main}"  LocalizableLabelText="@Protocol.Text13" Margin="0,5,0,0" />
+
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="5">
+                <vw:Switch Width="200" Height="40" HorizontalAlignment="Right" LocalizableTextOn="@Lists.YesNo.Text2" LocalizableTextOff="@Lists.YesNo.Text1" LocalizableLabelText="@Status.Text16" AuthorizationRight="Status" Style="{DynamicResource S_Status}" VariableName="NLM4.PLC.Blocks.50 HMI.01 PC.DB PC.Status.Box.Belegt"/>
+
+            </StackPanel>
+        </Grid>
+       
+    </vw:GroupBox>
+</vw:View>

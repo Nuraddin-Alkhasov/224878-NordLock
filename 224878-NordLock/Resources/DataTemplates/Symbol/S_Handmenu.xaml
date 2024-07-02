@@ -1,0 +1,24 @@
+﻿<ResourceDictionary
+	            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Einträge ins SymbolResourceDictionary sollten hier erfolgen -->
+   
+    <DataTemplate x:Key="HM_KT">
+        <Image Source="/Resources/Images/HandMenu/HMLiftandTilter.png" Stretch="Fill" Width="169" Height="260" />
+    </DataTemplate>
+    <DataTemplate x:Key="HM_FP">
+        <Image Source="/Resources/Images/HandMenu/HMForplanet.png" Stretch="Fill" Width="263" Height="260" />
+    </DataTemplate>
+    <DataTemplate x:Key="HM_M">
+        <Image Source="/Resources/Images/HandMenu/HMManipulator.png" Stretch="Fill" Width="211" Height="260" />
+    </DataTemplate>
+    
+     <DataTemplate x:Key="B_Ventilator">
+        <Image Source="/Resources/Images/Betriebstunden/Ventilator.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MOP">
+        <Image Source="/Resources/Images/MobilePanel.png" Stretch="Fill" Width="80" Height="80" />
+    </DataTemplate>
+
+</ResourceDictionary>

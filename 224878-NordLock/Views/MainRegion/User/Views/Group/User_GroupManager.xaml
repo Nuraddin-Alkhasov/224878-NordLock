@@ -1,0 +1,62 @@
+﻿<vw:View x:Class="HMI.User.User_GroupManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vw="http://inosoft.com/visiwin7"
+         Width="1840" Height="890" Background="{StaticResource MainViewBackgroundBrush}">
+
+    <vw:View.DataContext>
+        <vw:AdapterBinding Name="UserGroupAdapter"/>
+    </vw:View.DataContext>
+
+    <vw:View.Resources>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridSubMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="180"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridSubMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </vw:View.Resources>
+
+    <vw:View.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpenMenu">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonCloseMenu">
+            <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+    </vw:View.Triggers>
+
+    <Grid x:Name="LayoutRoot" Margin="10" IsVisibleChanged="LayoutRoot_IsVisibleChanged">
+        <Grid.Effect>
+            <DropShadowEffect Color="{DynamicResource FP_Gray_C}" />
+        </Grid.Effect>
+        <DataGrid x:Name="dgv_usergroups" ItemsSource="{Binding GroupList}" BorderThickness="2" SelectedItem="{Binding SelectedGroup}" AutoGenerateColumns="False" IsReadOnly="True" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Visible" SelectionMode="Single" SelectionUnit="FullRow">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="PreviewTouchDown" Handler="DataGridRow_PreviewTouchDown"/>
+                    <Setter Property="Height" Value="45"/>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" Header="{vw:LocalizedText DefaultText=Name, LocalizedText=@UserManagement.View.Grid.Group}" FontWeight="Normal" Width="200" />
+                <DataGridTextColumn Binding="{Binding Comment}" Header="{vw:LocalizedText DefaultText=Comment, LocalizedText=@UserManagement.View.Grid.Comment}" FontWeight="Normal" Width="1582" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border x:Name="GridSubMenu" Margin="0,0,-10,0" HorizontalAlignment="Right" CornerRadius="5,0,0,5" Height="160" Width="0" Background="{DynamicResource FP_Dark}">
+            <StackPanel VerticalAlignment="Center" Background="{DynamicResource FP_Dark}" Margin="10">
+                <vw:Button Command="{Binding AddGroupCommand}" LocalizableText="@UserManagement.View.Buttons.Add" Width="160" Height="40" Visibility="Visible" IsEnabled="True" Text="Add" Margin="0,0,0,0" Style="{DynamicResource B_Gray}" AuthorizationRight="UserManagement" />
+                <vw:Button Command="{Binding ChangeGroupCommand}" LocalizableText="@UserManagement.View.Buttons.Change"   Width="160" Height="40" Visibility="Visible" IsEnabled="True" Text="Change"  Margin="0,10,0,0" Style="{DynamicResource B_Gray}" AuthorizationRight="UserManagement" />
+                <vw:Button Command="{Binding RemoveGroupCommand}" LocalizableText="@UserManagement.View.Buttons.Remove" Width="160" Height="40" Visibility="Visible" IsEnabled="True" Text="Remove" Margin="0,10,0,0" Style="{DynamicResource B_Gray}" AuthorizationRight="UserManagement" />
+            </StackPanel>
+        </Border>
+        <vw:Button x:Name="ButtonCloseMenu" Background="{DynamicResource FP_Dark}"  Opacity="0.5" Height="72" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" BorderBrush="{x:Null}"  Click="ButtonCloseMenu_Click"  SymbolHorizontalAlignment="Center" Symbol="{DynamicResource appbar.close2}" Visibility="Collapsed"/>
+        <vw:Button x:Name="ButtonOpenMenu" Background="{DynamicResource FP_Dark}"  Opacity="0.5" Height="72" Width="80" HorizontalAlignment="Right" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Click="ButtonOpenMenu_Click" Symbol="{DynamicResource appbar.close}" SymbolHorizontalAlignment="Center" AuthorizationMode="Visibility" AuthorizationRight="UserManagement" />
+    </Grid>
+</vw:View>

@@ -1,0 +1,17 @@
+﻿<vw:View x:Class="HMI.Handmenu.H_M2_LTB_Service"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:UC="clr-namespace:HMI.UserControls"
+         Width="1840" Height="890" Background="{DynamicResource MainViewBackgroundBrush}">
+
+    <UC:H_Service DeleteReferenceVar="-"
+        StepPositive="NL.PLC.Blocks.2 Modul 2.05 Tauchbecken.DB LTB HMI.PC.Drive.Tippen +"
+        StepPositiveFast="NL.PLC.Blocks.2 Modul 2.05 Tauchbecken.DB LTB HMI.PC.Drive.Tippen + schnell"
+        StepNegative="NL.PLC.Blocks.2 Modul 2.05 Tauchbecken.DB LTB HMI.PC.Drive.Tippen -"
+        StepNegativeFast="NL.PLC.Blocks.2 Modul 2.05 Tauchbecken.DB LTB HMI.PC.Drive.Tippen - schnell"
+        ActualValue="NL.PLC.Blocks.2 Modul 2.05 Tauchbecken.DB LTB HMI.Actual value.Hub.Aktuelle Position in mm"
+        ActualValueUnit="@Units.mm"
+        SetReferenceVar="NL.PLC.Blocks.2 Modul 2.05 Tauchbecken.DB LTB HMI.PC.Drive.Vorwahl Referenz"
+        ReferenceLogText="@Logging.Service.Text7"/>
+</vw:View>

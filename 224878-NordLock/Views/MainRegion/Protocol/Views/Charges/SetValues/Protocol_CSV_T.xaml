@@ -1,0 +1,16 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.Protocol.Protocol_CSV_T"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" >
+
+    <vw:RadioButton x:Name="A" GroupName="g_setvalues" Style="{DynamicResource RB_Group}" Margin="10" LocalizableLabelText="@Protocol.Text49" Opacity="0" IsVisibleChanged="View_IsVisibleChanged">
+        <StackPanel Margin="5">
+            <vw:NumericVarOut x:Name="v1" Style="{DynamicResource NVO_Main}" FontWeight="Bold" Height="40" LocalizableLabelText="@RecipeSystem.Text8" LocalizableUnitText="@Units.Rpm" FormatString="{}0.0" VariableName="__UNLINKED_R4"/>
+            <vw:NumericVarOut x:Name="v2" Style="{DynamicResource NVO_Main}" FontWeight="Bold" Height="40" Margin="0,5,0,0" LocalizableLabelText="@RecipeSystem.Text15" LocalizableUnitText="@Units.s" FormatString="{}0"/>
+            <vw:NumericVarOut x:Name="v3" Style="{DynamicResource NVO_Main}" FontWeight="Bold" Height="40" Margin="0,5,0,0" LocalizableLabelText="@RecipeSystem.Text13" LocalizableUnitText="@Units.s" FormatString="{}0"/>
+            <vw:NumericVarOut x:Name="v4" Style="{DynamicResource NVO_Main}" FontWeight="Bold" Height="40" Margin="0,5,0,0" LocalizableLabelText="@RecipeSystem.Text16" LocalizableUnitText="@Units.grad" FormatString="{}0.0" VariableName="__UNLINKED_R4"/>
+        </StackPanel>
+    </vw:RadioButton>
+
+</vw:View>

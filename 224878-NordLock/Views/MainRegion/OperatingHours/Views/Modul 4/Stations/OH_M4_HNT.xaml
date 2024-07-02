@@ -1,0 +1,35 @@
+﻿<vw:View 
+    x:Class="HMI.Views.MainRegion.OperatingHours.OH_M4_HNT"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    Width="820" Height="570" >
+
+    <vw:GroupBox  Style="{DynamicResource GB_Group}" Margin="10" LocalizableHeaderText="@OperatingHours.Text51">
+        <Grid>
+            <TabControl Margin="10" TabStripPlacement="Left" BorderBrush="black" BorderThickness="1">
+                <TabItem x:Name="btn1"  Height="60" Width="200" Style="{DynamicResource TI_Filter}"  Header="{vw:LocalizedTextExtension LocalizedText=@OperatingHours.Text26}" Margin="0,10,0,-10" PreviewTouchDown="Btn1_PreviewTouchDown" >
+                    <Grid>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="220" Margin="0,40,0,0" Header="{vw:LocalizedTextBinding LocalizableText=@OperatingHours.Text4}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:Key Width="408" Height="60" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource B_Gray}"  LocalizableText="@Buttons.Text2"  Margin="0,0,40,20" KeyMode="KeyMode" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 4.HNT.Fahrwagen.Reset" AuthorizationRight="OperatingHours"/>
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,40,0,0" LocalizableUnitText="@Units.h" AuthorizationRight="Parameter" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 4.HNT.Fahrwagen.Temporär.Hour" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" LocalizableUnitText="@Units.m" AuthorizationRight="Parameter" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 4.HNT.Fahrwagen.Temporär.Minute" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,40,40,0" LocalizableUnitText="@Units.s" AuthorizationRight="Parameter" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 4.HNT.Fahrwagen.Temporär.second" />
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox  HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="500" Height="150" Margin="0,0,0,40" Header="{vw:LocalizedTextBinding LocalizableText=@OperatingHours.Text5}" FontWeight="Bold" FontSize="16" BorderBrush="{DynamicResource FP_Dark}" BorderThickness="3" Foreground="{DynamicResource FP_Dark}">
+                            <Grid>
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40,0,0,0" LocalizableUnitText="@Units.h" AuthorizationRight="Parameter" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 4.HNT.Fahrwagen.Statisch.Hour" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" LocalizableUnitText="@Units.m" AuthorizationRight="Parameter" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 4.HNT.Fahrwagen.Statisch.Minute" />
+                                <vw:NumericVarOut Style="{DynamicResource NVO_Main}" Width="120" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" LocalizableUnitText="@Units.s" AuthorizationRight="Parameter" VariableName="NLM4.PLC.Blocks.50 HMI.00 Allgemein.DB HMI Betriebsstunden.Modul 4.HNT.Fahrwagen.Statisch.second"/>
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+            <Rectangle HorizontalAlignment="Left" VerticalAlignment="Stretch" Fill="{DynamicResource FP_Red}" Margin="211,10,0,10" Width="4"/>
+        </Grid>
+    </vw:GroupBox>
+</vw:View>
